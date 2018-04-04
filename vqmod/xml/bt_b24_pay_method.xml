@@ -1,0 +1,14 @@
+<modification>
+    <id>Add export payment method to Bitrix24 (04.04.2018 15:53)</id>
+    <version>1.0</version>
+    <vqmver>2.0</vqmver>
+    <author>boris_tim</author>
+    <file name="catalog/model/module/b24_order.php">
+        <operation>
+            <search position="after"><![CDATA['ADDRESS_POSTAL_CODE' => $order['payment_postcode'],]]></search>
+            <add><![CDATA[
+            'UF_CRM_1522838105'   => $order['payment_method'],
+]]></add>
+        </operation>
+    </file>
+</modification>
