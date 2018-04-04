@@ -1,0 +1,121 @@
+/******************************************************
+ * @package Pav Opencart Theme Framework for Opencart 1.5.x
+ * @version 1.1
+ * @author http://www.pavothemes.com
+ * @copyright	Copyright (C) Augus 2013 PavoThemes.com <@emai:pavothemes@gmail.com>.All rights reserved.
+ * @license		GNU General Public License version 2
+ *******************************************************/
+
+ .required {
+  color: #FF0000;
+  font-weight: normal;
+  font-size: @font-size-base - 1;
+}
+
+.success, .warning, .attention, .information {
+  padding: 10px 10px 10px 33px;  
+  margin: @line-height-computed 0;
+  color: #555555;
+  .rounded-corners( 5px );
+}
+.success .close, .warning .close, .attention .close, .information .close {
+  float: right;
+  padding-top: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+.attention {
+  background: #FFF5CC url('@{image-theme-path}attention.png') 10px center no-repeat;
+  border: 1px solid #F2DD8C;
+  .rounded-corners( 5px );
+}
+.warning {  
+  background: #FFD1D1 url('@{image-theme-path}warning.png') 10px center no-repeat;
+  border: 1px solid #F8ACAC;
+  .rounded-corners( 5px );
+}
+.success {
+  background: #EAF7D9 url('@{image-theme-path}success.png') 10px center no-repeat;
+  border: 1px solid #BBDF8D;
+  .rounded-corners( 5px );
+}
+.help {
+  color: #999;
+  font-size: 10px;
+  font-weight: normal;  
+  display: block;
+}
+.error {
+  display: block;
+  color: #FF0000;  
+  margin-top: @padding-small-vertical;
+}
+
+.welcome {
+  color: #636E75;  
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: @font-size-base + 7;
+  font-weight: normal;
+  text-shadow: 0 0 1px rgba(0, 0, 0, .01);
+}
+
+h1, .h1 {
+  font-size: @font-size-base * 1.714285714285714;
+  line-height: @input-height-base * 1.5;        
+  small {
+    font-size: @font-size-base * 1.5;
+}    
+@media(max-width: @screen-xs-max){
+    font-size: @font-size-base + 8;
+}
+
+}
+
+h2, .h2 {
+  font-size: @font-size-base * 1.285714285714286;
+  small {
+    
+}
+}
+
+h3, .h3 {
+  font-size: @font-size-base + 5px; 
+  line-height: @input-height-base ; 
+  small {
+    font-size: @font-size-base + 5px;
+}
+}
+
+h4, .h4 {
+  
+  line-height: @input-height-base;
+  small {
+  
+}
+}
+
+h5, .h5 {
+  font-size: @font-size-base - 1px; 
+  line-height: @input-height-base; 
+  small {
+    font-size: @font-size-base - 2px;
+}
+}
+
+h6, .h6 {
+  font-size: @font-size-base - 2px; 
+  line-height: @input-height-base; 
+}
+
+h1,.h1, h2,.h2, h3,.h3, h4,.h4, h5,.h5, h6,.h6{
+  color: @headings-color;
+  text-transform: @headings-transform;    
+  font-family: @headings-font-family;
+}
+
+#content h1{
+  margin-top: @padding-base-vertical * 0;
+  margin-bottom: @line-height-computed;
+  line-height: @line-height-computed + 5;  
+}

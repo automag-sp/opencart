@@ -1,0 +1,604 @@
+// Variables
+// ========================================================================
+@image-theme-path:                 '../image/';
+@font-family-secondary:            'brandon_grotesqueblack';
+@font-family-tertiary:             'brandon_grotesquelight';
+@font-family-quaternary: 		   'brandon_grotesquemedium';
+@font-family-senary: 		       'brandon_grotesque_regularRg';
+@font-family-septenary: 		   'brandon_grotesquethin';
+
+//quaternary, quinary, senary, septenary, octonary, nonary, and denary
+
+// themes colors
+// ========================================================================
+@sky:                  			    #31A8D2;  // Skin sky
+@blue:                              #6087D2;  // Skin blue
+@yellow:                  			#ffc801;  // Skin yellow
+@coral:								#EE6C92;  // Slin Coral
+@rico:								#51BAA9;  // Skin Rico
+@green:                 			#29C76A;  // Skin Green
+@red:                   			#e27f7a;  // Skin Red
+@pink:                  			#c3325f;
+@white:			 				    #FFFFFF;
+@black:							    #000000;
+@cyandark:   						#4e4d49;
+@orange:                			#df995e;
+@aqua: 								#75aab8;
+@turquoise:                         #4ACFD4; // label new
+@nav-border-color-hover:            #e2e2e2;
+@golden-poppy:                      #F2BE01;
+@valencia:      					#D44A4A;
+@tundora:                           #444444;  // Topbar + Vertical Menu Content
+@wild-sand:                         #eeeeee;  // Background Body - default
+@silver:                            #c2c2c2;  // Color text 1
+@boulder:                           #777777;  // Color text 2
+@mercury:                           #E5E5E5;  // border color
+@mandy:                             #e55e5e;  
+@nobel:                             #999999;
+@icon-color:                        #c1c1c1;
+@express:                           #181d2a;
+@picton-blue:                       #5f87d1;
+@biscay: 							#303a55;
+@comet: 							#59627C;
+@east-bay:                          #444C63;
+@bunting: 							#29324b;
+@tangaroa:                          #1C2438;
+@midnight-express:                  #1d1f30;
+@cloud-burst:                       #32394E;
+@slate-grey:                        #687390;
+@midnight-express:                  #252b3d;
+@light-slate-grey:                  #7f8599;
+@white-smoke:                       #f8f8f8;
+@night-rider:                       #333333;
+@scorpion:  						#595959;
+@dim-gray:  						#646464;
+
+@body-bg:                           @wild-sand;
+@theme-color:  				        @sky; 
+@theme-color-secondary:             @mandy;   
+@theme-color-tertiary:              @tundora;
+
+// Icon
+// ========================================================================
+@icon-theme-color:                 	#CCCCCC;
+@icon-theme-hover-color:           	@theme-color;
+@custom-theme-icon: 			   	@nobel;
+
+// Border
+// ========================================================================
+@border-color:				   	   @mercury; 
+
+// Brand
+// ========================================================================
+@brand-border:                     1px solid @border-color;
+@brand-radius:                     0px;
+
+// Iconography
+// ========================================================================
+@theme-font-path:          			"../fonts/";
+
+// Shopping cart
+// ========================================================================
+@cart-icon-bg:                      @theme-color;
+@cart-icon-color:                   @white;
+@cart-icon-font-size:               @font-size-base;
+@cart-heading-color:                @header-heading-color;
+@cart-align-right:                  17px;
+
+@quick-setting-border:              1px solid @scorpion;
+@quick-setting-border-hover:        1px solid @theme-color;
+
+// Wrapper
+// ========================================================================
+@wrapper-bg: 						@white;
+@wrapper-border:                    1px solid @border-color;
+@wrapper-padding:                   15px;
+
+// Carousel
+// ========================================================================
+@carousel-control-border            :1px solid @white;
+@carousel-control-width             :16px;
+@carousel-control-height            :16px;
+@carousel-control-font-size         :12px;
+@carousel-control-color             :@white;
+@carousel-control-border-hover      :@black; 
+@carousel-control-color-hover       :@carousel-control-border-hover;
+@carousel-border                    :1px solid @border-color;
+@carousel-content-border            :0;
+@carousel-bg:                       @white;
+@carousel-control-bg-hover:         @theme-color;
+
+// Link
+// ========================================================================
+@link-color:            @boulder;
+@link-hover-color:      @theme-color;
+
+// Heading and Typo
+// ========================================================================
+@headings-color:           @black;
+@headings-font-family:     @font-family-secondary;
+@headings-transform:       uppercase;
+
+// Breadcrumb
+// ========================================================================
+@breadcrumb-bg:            				transparent;
+@breadcrumb-link-color:    				@link-color;
+@breadcrumb-link-color-hover:  			@theme-color;
+@breadcrumb-padding:                    10px;
+@breadcrumb-margin:                     0;
+@breadcrumb-icon-color:                 #9e9e9e;
+@breadcrumb-font-size:                  @font-size-base;
+
+// Button Dropdown
+// ========================================================================
+@button-dropdown-color:       	    @text-color;
+@button-dropdown-hover-color:       @black;
+@button-dropdown-bg-color:       	transparent;
+@button-dropdown-border-color: 		@border-color;
+@padding-button-dropdown: 			3px 6px;
+@caret-border-color: 				@icon-theme-color;
+
+// Button
+// ========================================================================
+@button-main-bg:  					@theme-color;
+@button-main-color:  				@white;
+@button-main-rounded-corners: 		0;
+@button-main-padding: 			    8px 14px 0px;
+@button-main-font-size:			    @font-size-base;
+@button-main-font-weight:			300;
+@button-main-border:                0;
+@button-main-radius:                0;
+@button-main-bg-hover:              @theme-color-tertiary;
+
+@button-normal-bg:                  transparent;
+@button-normal-color: 				@topbar-color;
+@button-normal-border:              @topbar-border;
+@button-normal-font-size:           @topbar-font-size;
+@button-normal-icon-color:          @button-normal-color;
+@button-normal-border-radius:       0;
+@button-normal-padding:             7px;
+@button-normal-hover-color:         @theme-color;
+@button-normal-icon-hover-color:    @button-normal-hover-color;
+
+@button-addtocart-bg:               @white;
+@button-addtocart-color:            @black;
+@button-addtocart-hover-color:      @theme-color;
+@button-addtocart-bg-hover:         transparent;
+@button-addtocart-border:           1px solid @border-color;
+@button-addtocart-border-2:         0px;
+@button-addtocart-font-size:        10px;
+@button-addtocart-padding:          9px 11px 0;
+@button-addtocart-icon-bg:          @theme-color-tertiary;
+@button-addtocart-icon-color:       @white;
+@button-addtocart-icon-bg-hover:    @theme-color;
+@button-addtocart-icon-border:      0;
+@button-addtocart-height:           32px;
+@button-addtocart-icon-size:        32px;
+@button-addtocart-font-family:      @font-family-base;
+@button-bg-color: 					@theme-color-tertiary;
+
+// Deal
+// ========================================================================
+@deal-countdown-radius:             3px;
+@deal-countdown-color:              @white;
+@deal-countdown-font-family:        @font-family-quaternary;
+@deal-countdown-font-size:          @font-size-base + 3;
+@deal-countdown-bg:                 @theme-color-tertiary;
+@deal-countdown-bg-active:          @theme-color-secondary;
+@deal-countdown-color-active:       @deal-countdown-color;
+
+// Header
+// ========================================================================
+@header-bg:  						@white;
+@header-icon-bg:                    @wild-sand;
+@header-border-color:               1px solid transparent;
+@header-heading-color:              @black;
+@header-text-color:                 @boulder;
+@header-link-color: 				@header-text-color;
+@header-icon-font-size:             @font-size-base + 4;
+
+// Google Map
+// ========================================================================
+@map-box-heading-bg:                @theme-color-secondary;
+@map-box-heading-color:             @white;
+@map-box-heading-top:               -20px;
+@map-box-heading-font:              @font-size-base + 3;
+@map-box-heading-margin:            auto;
+@map-box-heading-padding: 			@padding-base-vertical + 4;
+
+// Tooltip
+// ========================================================================
+@tooltip-font-size:                 10px;
+@tooltip-border-radius:  		    3px;
+
+// Product Block
+// ========================================================================
+@product-content-bg: 				@product-bg-color;
+@product-bg-color:                  @white;
+@product-link-color: 				@link-color;
+@product-name-color: 				@black;
+@product-name-hover-color:          @theme-color;
+@product-name-line-height:          18px;
+@product-name-font-family:          @font-family-base;
+@product-name-font-size: 			@font-size-base + 1;
+@product-border:                    1px solid @border-color;
+@product-border-inner:              0px;
+@product-padding:                   0 0 @padding-small-horizontal * 2 0;
+@product-text-align:                left;
+@product-float:                     left;
+@product-button-bg: 				@theme-color-tertiary;
+@product-button-hover-color:		@white;
+@product-filter-bg:                 @white;
+@product-filter-font-size:          @font-size-base;
+@product-filter-color:              @boulder;
+@product-filter-padding: 			8px;
+@product-container-bg:              @white;
+@product-deals-link-color:          @black;
+@product-deals-link-hover-color:    @theme-color;
+@product-image-border:              0px;
+@product-image-radius:              0px;
+
+@product-price-old-color: 			@boulder;
+@product-price-new-color:           @product-price-color;
+@product-price-color:  				@theme-color;
+@product-price-font-family:         @font-family-senary;
+@product-price-font-size:           @font-size-base;
+
+@product-icon-font-size:            13px;
+@product-icon-border:               1px solid @border-color;
+@product-icon-color:                @icon-color;
+@product-icon-bg:                   @white;
+@product-icon-hover-color:          @theme-color-tertiary;
+
+@product-zoom-bg:                   @theme-color;
+@product-zoom-color:                @white;
+@product-list-padding:              20px 18px;
+
+@product-item-border:               1px solid @border-color;
+
+// Label Control
+// ========================================================================
+@label-control-color:               @black;
+@label-control-font-size: 			@font-size-base;
+@label-control-font-weight:         normal;	
+
+// Pagination
+// ========================================================================
+@pagination-bg:                     transparent;
+@pagination-border:                 1px solid @border-color;
+@pagination-active-bg:              transparent;
+@pagination-active-color: 			@boulder;
+
+// Product Info
+// ========================================================================
+@product-info-padding:              19px;
+@product-info-margin:               20px;
+@product-info-border:               1px solid @border-color;
+@product-info-bg:                   @white;
+
+// Search
+// ========================================================================
+@search-position-top: 				-61px;
+@search-position-right:             42px;
+@search-text-color: 			    @boulder;
+@search-border:                     @border-color;
+@search-bg-color:                   @white-smoke;
+@search-icon-color:                 @tundora;
+@search-padding:                    9px 32px 9px 8px;
+@search-icon-font-size:             @font-size-base + 1;
+@search-font-size:                  @font-size-base;
+@search-font-style:                 italic;
+@search-min-width:                  230px;
+@search-min-height:                 34px;
+@search-button-border:              @border-color;
+@search-button-bg:                  @search-bg-color;
+
+// Contact page
+// ========================================================================
+@contact-bg:                        @body-bg;
+@contact-padding:                   20px;
+@contact-border:                    0;
+@contact-icon-color:                @white;
+@contact-icon-bg:                   lighten(@gray, 30%);
+@contact-icon-font-size:            @font-size-base + 5;
+@contact-icon-hover-bg:             @theme-color;
+@contact-height:                    338px;
+
+// Input
+// ========================================================================
+@input-color:                       @boulder;
+@input-font-size:                   @font-size-base;  
+@input-border:                      1px solid #ededed;
+
+// Htab module
+// ========================================================================
+@htab-border-width:					0px 1px 1px 1px;
+@htab-nav-padding: 					10px 20px;
+@htab-nav-margin:                   0;
+@htab-nav-color: 					#999999;
+@htab-bg: 							@wild-sand;
+@htab-bg-selected: 					@white;
+@htab-nav-selected-color: 			@black;
+@htab-nav-border-color: 			transparent;
+@htab-nav-border-width:             1px 1px 0px 1px;
+@htab-nav-border-style:             solid;
+@htab-nav-border-color-hover:       @border-color;
+@htab-nav-border-color-selected:    @border-color @border-color @htab-bg-selected @border-color;
+@htab-nav-content-padding:          20px;
+@htab-nav-font-size:                12px;
+@htab-nav-font-family:              @font-family-senary;
+
+// Newsletter
+// ========================================================================
+@newsletter-heading-bg:             @theme-color-secondary;
+@newsletter-heading-border:         1px solid @theme-color-secondary;
+@newsletter-content-bg:             @white; 
+@newsletter-content-border:         1px solid @border-color;
+@newsletter-font-family:            @font-family-secondary;
+@newsletter-input-bg:               @white-smoke;
+@newsletter-input-border:           1px solid @mercury;
+@newsletter-button-bg:              @theme-color-tertiary;
+@newsletter-bottom: 				-114px;
+
+
+// List
+// ========================================================================
+@list-line-height:                  25px;
+
+// Mega Menu Module
+// ========================================================================
+@megamenu-bg: 						@white;
+@megamenu-border-color:             @border-color;			    
+@megamenu-border-bottom-color:      @black;
+@megamenu-font-family:              @font-family-base;
+@megamenu-link-color: 				@black;
+@megamenu-link-hover-color:         @theme-color;
+@megamenu-link-bg-hover-color:      @white;
+@megamenu-color: 				    @silver;
+@megamenu-caret:                    @black;
+@megamenu-sub-bg-color: 			@theme-color-tertiary;
+@megamenu-sub-radius:               0px;
+@megamenu-sub-text-color:           @silver;
+@megamenu-sub-link-color: 			@silver;
+@megamenu-sub-shadow:    			2px 2px 2px rgba(0, 0, 0, 0.60);
+@megamenu-sub-padding:              20px;
+@megamenu-sub-min-width:  			234px;
+@megamenu-sub-border:               0;
+@megamenu-sub-font-size:            @font-size-base;
+@megamenu-arrow-bg:                 darken(@megamenu-sub-bg-color, 20%);
+@megamenu-product-name-color:       @white;
+@megamenu-text-align:               left;
+@mainmenu-heading-letter:           3px;
+@megamenu-sub-caret-color:  		@megamenu-sub-text-color;
+@megamenu-name-hover-color:         @theme-color;
+@megamenu-sub-link-hover-color:     @theme-color;
+@megamenu-link-font-size:           @font-size-base + 3;
+@megamenu-link-font-family:         @font-family-quaternary;
+@megamenu-link-hover-border:        @white;
+@mainmenu-heading-title:            @font-family-tertiary;
+@mainmenu-heading-color:            @white;
+@megamenu-line-border:  			1px solid @dim-gray;
+
+
+// Vertical Menu Module
+// ========================================================================
+@vertical-menu-font-family:         @font-family-base;
+@vertical-menu-content-bg:          @theme-color-tertiary;
+@vertical-menu-content-height:      497px;
+@vertical-menu-content-padding:     0;
+@vertical-menu-content-margin:      0;
+@vertical-menu-content-border:      0;
+@vertical-menu-font-size:           13px;
+@vertical-menu-color:               @white;
+@vertical-menu-font-weight:         bold;
+@vertical-menu-link-padding: 		18px 10px 18px 23px;
+@vertical-menu-link-hover-color:    @white;
+@vertical-border-color:             @scorpion;
+@vertical-description-font-size:    11px;          
+@vertical-description-font-style:   italic;
+@vertical-description-color: 	    @nobel;
+@vertical-description-font-weight:  300;
+@vertical-caret-border:             @nobel;
+@vertical-sub-menu-padding:         20px 28px;
+@vertical-sub-menu-width:           215px;
+@vertical-sub-menu-link-color:      @boulder;
+@vertical-sub-menu-link-font-size:  @font-size-base;
+@vertical-sub-menu-link-font:       @font-family-base;
+@vertical-sub-menu-heading-color:   @black;
+@vertical-sub-menu-bg:              @white;
+@vertical-sub-product-link:         @black;
+@vertical-menu-link-hover:          @theme-color;
+@vertical-sub-shadow:  				2px 2px 2px rgba(0, 0, 0, 0.3);
+@vertical-font-size:                @font-size-base + 2;
+@vertical-line-height:              normal;
+
+
+// OffCanvas Menu 
+// ========================================================================
+@offcanvas-menu-bg:                 @theme-color-tertiary;
+@offcanvas-menu-padding:            12px 15px;
+@offcanvas-menu-link-color:         @white;
+@offcanvas-menu-font-size:          @font-size-base + 4;
+@offcanvas-menu-transform:          uppercase;
+@offcanvas-menu-font-family: 		@font-family-secondary;
+@offcanvas-menu-border:             1px solid lighten(@offcanvas-menu-bg, 10%);
+@offcanvas-menu-icon-color:         @white;
+@offcanvas-menu-icon-font-size:     @font-size-base * 2 + 2;
+@offcanvas-menu-icon-padding:       8px 15px;
+@offcanvas-menu-border-caret:       1px solid @white;
+@offcanvas-menu-caret-color:        @white;
+@offcanvas-menu-text-color:         @white;
+@offcanvas-menu-text-fs:            @font-size-base + 1;
+
+
+// Box Modules 
+// ========================================================================
+@box-module-margin-bottom: 			20px;
+@box-module-border-color: 			transparent;
+@box-module-heading-border: 		0px;
+@box-module-heading-transform:      uppercase;
+@box-module-heading-line-height:    normal;
+@box-module-heading-font-family:    @font-family-tertiary;
+@box-module-heading-bg:				@theme-color-tertiary;
+@box-module-heading-padding: 		10px 30px;
+@box-module-heading-font:			@font-family-secondary;
+@box-module-heading-font-size:		@font-size-base + 3;
+@box-module-heading-color:			@white;
+@box-module-content-bg:				@white;
+@box-module-content-border:			1px solid @border-color;
+@box-module-content-padding:		20px;
+@box-module-content-margin:         1px;
+@box-module-content-radius:         0px;
+@box-product-padding:               0;
+@box-heading-letter-spacing:        2px;
+@box-heading-blue-bg:               @theme-color;
+@box-category-border:               1px solid @scorpion;
+@box-category-font-size:            @font-size-base;
+@box-category-color:                @silver;
+
+// Table
+// ========================================================================
+@table-bg-color:                    @wild-sand;
+@table-bg:                          @white;
+
+// Social
+// ========================================================================
+@socials-theme-color:              @black;
+@socials-theme-font-size: 		   10px;
+@socials-theme-font-weight:        300;
+@socials-theme-width:              114px;
+@socials-theme-height:             36px;
+@socials-theme-icon-color:         @white;
+@socials-theme-icon-border:        0;
+@socials-theme-icon-font-size:     @font-size-base + 7;
+@socials-theme-border:             1px solid darken(@border-color, 5%);
+@socials-theme-padding:            11px 10px;
+@socials-theme-margin:             0;
+@socials-theme-outside:            -296px;
+
+
+// Label New & Sale
+// ========================================================================
+@label-border:                      46px solid darken(@theme-color-secondary, 10%);
+@label-color: 						@white;
+@label-font-size:                   11px;
+@label-font-style:                  italic;
+@label-new-bg:                      @turquoise;
+@label-transform:                   lowercase;
+@label-bg-color:                    @theme-color-secondary;
+
+// Filter
+// ========================================================================
+@filter-text-color:  				@black;
+
+// Sidebar
+// ========================================================================
+@sidebar-box-content-bg-color:          @white;
+@sidebar-box-heading-bg-color:          @theme-color-secondary;
+@sidebar-box-margin:                    19px;
+@sidebar-box-padding:                   17px 19px;
+@sidebar-heading-highlight-bg:     		@theme-color;
+@sidebar-content-highlight-bg:     		@theme-color-tertiary;
+@sidebar-content-highlight-border: 		0;
+@sidebar-content-highlight-padding: 	0;
+@sidebar-product-bg:                    @white;
+
+@sidebar-label-w:                       55px;
+@sidebar-label-bg: 						@label-bg-color;
+@sidebar-label-top:                     -10px;
+@sidebar-label-right:                   0;
+@sidebar-label-font-family:             @font-family-senary;
+@sidebar-label-font-size:               @label-font-size + 7;
+@sidebar-label-font-weight:             bold;
+@sidebar-label-font-style:   			normal;
+@sidebar-label-transform:               none;
+
+// Topbar 
+// ========================================================================
+@topbar-bg: 						@theme-color-tertiary;
+@topbar-color: 						@silver;
+@topbar-font-size: 					@font-size-base;
+@topbar-font-weight:                300;
+@topbar-link-color: 				@silver;
+@topbar-link-hover-color: 			@theme-color;
+@color-icon-topbar: 				@icon-theme-color;
+@topbar-padding: 					5px 0;
+@topbar-height:                     30px;
+@topbar-border:                     1px solid #aaaaaa;
+
+// Footer
+// ========================================================================
+@footer-bg: 						@theme-color-tertiary;
+@footer-color: 						@silver;
+@footer-heading-font-size: 			@font-size-base + 3;
+@footer-heading-color: 				@white;
+@footer-heading-padding:            0;
+@footer-link-color: 				@silver;
+@footer-link-hover-color: 			@theme-color;
+@footer-font-size:   	 			@font-size-base;
+@footer-center-padding:           	50px;     
+@footer-content-padding:            15px;
+@footer-content-margin:             0;
+@footer-list-padding:               6px 0;
+@footer-margin:                     20px;
+
+// Powered By / Copyright
+// ========================================================================
+@power-bg:       					transparent;
+@power-color:                       @footer-color;
+@power-link-color:                  @white;
+@power-padding:                     @padding-large-vertical * 3.5;
+
+// Blog
+// ========================================================================
+@blog-border  						:3px solid @border-color;
+@blog-font-size                     :20px;
+@blog-link-color 					:@black;
+@blog-link-hover-color 				:@theme-color;
+@blog-bg          					:@theme-color;
+@blog-height                   		:60px;
+@blog-content-bg                    :@white;
+@blog-created-font 					:@font-family-senary;
+@blog-created-font-secondary        :@font-family-tertiary;
+@blog-link-font                     :@font-family-base;
+@blog-created-bg 					:@theme-color;     
+@blog-created-color 				:@white;
+
+// Slider 
+// ========================================================================
+@slider-text-main-color:            @white;
+@slider-main-font-family: 			@font-family-septenary;
+@slider-main-font-size: 			30px;
+@slider-secondary-font-family: 		@font-family-secondary;
+@slider-secondary-font-size: 		48px;
+@slider-secondary-color: 			#ffde00;
+@slider-secondary-space:            3px;
+@slider-tertiary-font-family: 		@font-family-secondary;
+@slider-tertiary-font-size: 		48px;
+@slider-tertiary-font-weight:       300;
+@slider-tertiary-color:             @white;
+@slider-quaternary-font-family:     @font-family-tertiary;
+@slider-quaternary-bg:              transparent;
+@slider-button-font-size: 			12px;
+@slider-button-font-weight:         300;
+@slider-button-font-family:         @font-family-senary;
+@slider-button-bg:                  @theme-color;
+@slider-button-color:               @white;
+@slider-button-hover-bg-color: 		@theme-color-tertiary;
+@slider-button-border:              0px;
+@slider-button-padding:             2px 20px !important;
+@slider-button-radius:              0;
+
+
+// Responsive
+// ========================================================================
+@respon-topbar-icon:                @white;
+@respon-topbar-icon-font-size:      18px;
+@respon-topbar-search-bg:           @white;
+@respon-topbar-search-icon-color:   @black;
+
+// Align
+// ========================================================================
+@align-center:                      center;
+@align-left:                        left;
+@align-right:                       right;

@@ -1,0 +1,67 @@
+﻿<modification>
+    <id>Free fast order</id>
+    <version>1.0</version>
+    <vqmver>2.1.6</vqmver>
+    <author>RGB</author>
+	<file name="catalog/view/theme/*/template/common/header.tpl">
+		<operation>
+			<search position="after">
+			<![CDATA[
+				<script type="text/javascript" src="catalog/view/javascript/common.js"></script>
+			]]>
+			</search>
+			<add>
+			<![CDATA[
+				<script type="text/javascript" src="catalog/view/javascript/fast_order.js"></script>
+			]]>
+			</add>
+		</operation>
+		<operation>
+			<search position="after">
+      <![CDATA[
+        <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+      ]]>
+			</search>
+			<add>
+			<![CDATA[
+        <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/fast_order.css" />
+			]]>
+			</add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation>
+			<search position="after">
+			<![CDATA[
+				<input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
+			]]>
+			</search>
+			<add>
+			<![CDATA[
+				<a id="fast_order" class="button" />Быстрый заказ</a>
+				<div style="display:none">
+          <div id="fast_order_form">       
+            <input id="product_name" type="hidden" value="<?php echo $heading_title; ?>">
+            <input id="product_price" type="hidden" value="<?php echo ($special ? $special : $price); ?>">
+            <div class="fast_order_center"><?php echo $heading_title; ?> — ваш заказ</div>
+            <div class="fast_order_left">
+              <p>Имя:</p>
+              <p>Телефон:</p>
+              <p>Комментарий:</p>
+            </div>
+            <div class="fast_order_right">
+              <p><input type="text" id="customer_name"/></p>
+              <p><input type="text" id="customer_phone"/></p>
+              <p><input type="text" id="customer_message"/></p>
+            </div>
+            <div class="fast_order_center">
+              <p id="fast_order_result">Пожалуйста, укажите ваше имя и телефон, чтобы мы могли связаться с вами</p>
+              <button class="fast_order_button"><span>Оформить заказ</span></button>
+            </div>
+          </div>
+        </div>
+			]]>
+			</add>
+		</operation>
+	</file>
+</modification>

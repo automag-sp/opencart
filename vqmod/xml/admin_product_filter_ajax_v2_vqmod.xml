@@ -1,0 +1,28 @@
+<modification>
+	<id>фильтр товаров в админке 2</id>
+	<version>1.0</version>
+	<vqmver>1.0.0</vqmver>
+	<author>Kilya</author>
+	
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="after"><![CDATA[public function index() {]]></search>
+			<add><![CDATA[
+			$this->redirect($this->url->link('catalog/product_ajax', 'token=' . $this->session->data['token'], 'SSL'));
+			]]>
+			</add>
+		</operation>
+		</file>
+
+	<file name="/admin/language/russian/catalog/product.php">
+		<operation>
+			<search position="after"><![CDATA[$_['column_action']          	= 'Действие';]]></search>
+			<add><![CDATA[
+			$_['column_category']        = 'Категория';
+			$_['column_manufacturer']    = 'Производитель';
+			]]>
+			</add>
+		</operation>
+	</file>
+
+</modification>

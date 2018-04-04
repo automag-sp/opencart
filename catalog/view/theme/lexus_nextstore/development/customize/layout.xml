@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<themeeditor>
+	<author>pavotheme</author>
+	<name>Live Theme Editor</name>	
+	<layout>		
+		<item>
+			<block>Layout</block>
+			<default>fullwidth</default>
+			<option>
+				<text>Full Width</text>
+				<value>fullwidth</value>
+			</option> 
+			<option>
+				<text>Boxed Large</text>
+				<value>boxed-lg</value>
+			</option>
+			<option>
+				<text>Boxed Medium</text>
+				<value>boxed-md</value>
+			</option> 
+		</item>
+		<item>
+			<block>Quickview</block>
+			<default>0</default>
+			<option>
+				<text>Enable</text>
+				<value>1</value>
+			</option> 
+			<option>
+				<text>Disable</text>
+				<value>0</value>
+			</option>
+		</item>
+
+		
+		<item>
+			<block>logo_type</block>
+			<default>logo-theme</default>
+			<option>
+				<text>Logo In Theme</text>
+				<value>logo-theme</value>
+			</option> 
+			<option>
+				<text>Logo Opencart</text>
+				<value>logo-opencart</value>
+			</option> 
+		</item>
+	</layout>
+</themeeditor>

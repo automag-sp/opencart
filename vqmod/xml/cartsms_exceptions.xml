@@ -1,0 +1,67 @@
+<modification>
+	<id>CartSMS module - exceptions</id>
+	<version>2.0.0</version>
+	<vqmver>2.2.1</vqmver>
+	<author>TOPefekt s.r.o. Lukas Pijak</author>
+        <file name="admin/model/catalog/template_email.php" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+                            if ($order_status_query->num_rows) {
+				]]>
+			</search>
+			<add trim="false"><![CDATA[
+                                    if(file_exists("model/sms/hooks.php"))
+                                    {                          
+                                        require_once("model/sms/hooks.php");
+                                        require_once("model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once($hooks->getLanguageDirectory());
+                            
+                                        if($data['notifySms'] || !isset($data['notifySms']))
+                                        {
+                                            $hooks->changeOrderStatusHook($data["order_status_id"], $data["comment"], $order_info['order_id']);
+                                        }
+                                    }
+				]]>
+			</add>
+		</operation>
+	</file>
+  <file name="catalog/controller/quickcheckout/success.php" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+                                $this->cart->clear();
+				]]>
+			</search>
+			<add trim="false"><![CDATA[                               
+                                                
+                                    if(file_exists("admin/model/sms/hooks.php"))
+                                    {                         
+                                        require_once("admin/model/sms/hooks.php");
+                                        require_once("admin/model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once("admin/".$hooks->getLanguageDirectory());
+                                        if(isset($this->session->data['customer_id']))
+                                        {
+                                            $sms_customer_id = $this->session->data['customer_id'];
+                                        } else {
+                                            $sms_customer_id = -1;
+                                        }
+                            
+                                        if(!isset($comment))
+                                        {
+                                            $comment = "";
+                                        }
+                                        
+                                        $optOut = ((isset($_SESSION["SMS_IN_CART"]))?(intval($_SESSION["SMS_IN_CART"])):(true));      
+                                        
+                                        $hooks->orderAddHook($sms_customer_id, $this->session->data['order_id'], $comment, $optOut);
+                                                              
+                                        $hooks->outOfStock($this->config->get('config_store_id'));
+                                        unset($_SESSION["SMS_IN_CART"]);
+                                    }
+				]]>
+			</add>
+    </operation>
+	</file>
+</modification>
+        

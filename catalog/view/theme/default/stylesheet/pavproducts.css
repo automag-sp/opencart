@@ -1,0 +1,38 @@
+.pav-category-products .box-content{
+	background-color: #FFF
+}
+
+.cat-products-block{
+		position:relative;
+		margin-bottom: 20px;
+		border: solid 1px #f4f4f4;
+		background-color: #FFFFFF
+	}
+	/** block header **/
+	.cat-products-block .block-head{
+			background-color:#f4f4f4;
+
+		}
+		.cat-products-block .block-head h3{
+			padding: 6px 12px; 
+			font-size: 120%;
+			font-weight: bold;
+			margin: 0
+		}	
+
+	/***** block content *********/
+	.cat-products-block  .block-content{
+			background-color:#FFFFFF;
+			margin: 12px;
+			position: relative;
+
+		}
+
+		.cat-products-block .carousel-controls {
+			position: absolute;
+			top: -38px;
+			right: 0;
+			z-index: 6;
+			width: 130px
+		}
+

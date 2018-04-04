@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+
+	<id>Customer Account Page with Images v2.0</id>
+	<version>1.0.0</version>
+	<vqmver>2.0.0</vqmver>
+	<author><![CDATA[<a onClick="window.open('http://www.opencart.com/index.php?route=extension/extension&filter_username=frymi');" title="View all OpenCart extension by frymi">frymi</a>]]></author>
+
+	<file name="catalog/view/theme/*/template/account/account.tpl">
+
+    <operation>
+			<search position="before"><![CDATA[<?php echo $column_left; ?><?php echo $column_right; ?>]]></search>
+			<add><![CDATA[
+
+<style type="text/css">
+/* --- Account --- */	
+.shortcuts {text-align:left; margin:5px 0 25px 0;}
+.shortcuts ul {list-style:none; margin:0; padding:0;}
+.shortcuts li 
+{
+	width: 120px; height: 120px; line-height:normal; display:inline-block;
+	vertical-align:top; padding:10px 10px; border:1px solid #dbdee1; margin: 10px 10px 0px 0px;
+	float:left; text-align:center; overflow:hidden; 
+	/* -moz-border-radius:7px; -webkit-border-radius:7px; border-radius:7px; */
+	background:#fff;
+}
+.shortcuts li a {text-decoration: none;}
+.shortcuts li:hover {border:1px solid #aaa; background: #f5f5f5;}
+.shortcuts li img {padding: 8px 20px 12px 14px;}
+.shortcuts li h6 {color: #333; font-size:11px; margin:0; padding:0;}
+.shortcuts .clear {overflow:hidden; width:100%;}
+</style>
+
+      ]]></add>
+		</operation>
+		
+    <operation>
+			<search position="replace" offset="8"><![CDATA[<h2><?php echo $text_my_account; ?></h2>]]></search>
+			<add><![CDATA[           
+  <h2><span><?php echo $text_my_account; ?></span></h2>
+  <div class="shortcuts cf">
+    <ul>
+      <li><a href="<?php echo $edit; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/edit.png" alt="<?php echo $text_edit; ?>"><br /><?php echo $text_edit; ?></a></li>
+      <li><a href="<?php echo $password; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/password.png" alt="<?php echo $text_password; ?>"><br /><?php echo $text_password; ?></a></li>
+      <li><a href="<?php echo $address; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/delivery.png" alt="<?php echo $text_address; ?>"><br /><?php echo $text_address; ?></a></li>
+      <!-- <li><a href="<?php echo $wishlist; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/wishlist.png" alt="<?php echo $text_wishlist; ?>"><br /><?php echo $text_wishlist; ?></a></li> -->
+      <li><a href="<?php echo $newsletter; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/newsletter.png" alt="<?php echo $text_my_newsletter; ?>"><br /><?php echo $text_newsletter; ?></a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>        
+      ]]></add>
+		</operation>
+    
+    <operation>
+			<search position="replace" offset="12"><![CDATA[<h2><?php echo $text_my_orders; ?></h2>]]></search>
+			<add><![CDATA[
+  <h2><span><?php echo $text_my_orders; ?></span></h2>
+  <div class="shortcuts cf">
+    <ul>
+      <li><a href="<?php echo $order; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/orders.png" alt="Order History"><br /><?php echo $text_order; ?></a></li>
+      <li><a href="<?php echo $download; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/download.png" alt="<?php echo $text_download; ?>"><br /><?php echo $text_download; ?></a></li>
+      <?php if ($reward) { ?>
+      <li><a href="<?php echo $reward; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/reward.png" alt="<?php echo $text_reward; ?>"><br /><?php echo $text_reward; ?></a></li>
+      <?php } ?>
+      <li><a href="<?php echo $return; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/return.png" alt="<?php echo $text_return; ?>"><br /><?php echo $text_return; ?></a></li>
+      <!-- <li><a href="<?php echo $transaction; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/trans.png" alt="<?php echo $text_transaction; ?>"><br /><?php echo $text_transaction; ?></a></li> -->
+      <!-- <li><a href="<?php echo $recurring; ?>"><img class="account_img" src="catalog/view/theme/<?php echo $this->config->get('config_template') ?>/image/account/recurring.png" alt="<?php echo $text_recurring; ?>"><br /><?php echo $text_recurring; ?></a></li> -->
+    </ul>
+    <div class="clear"></div>    
+  </div>           
+      ]]></add>
+		</operation>
+    
+    <operation>
+			<search position="replace" offset="5"><![CDATA[<h2><?php echo $text_my_newsletter; ?></h2>]]></search>
+			<add><![CDATA[
+    <!-- class="clear" -->
+    <div style="overflow:hidden;width:100%;"></div>          
+      ]]></add>
+		</operation>
+    
+	</file>
+  
+</modification>

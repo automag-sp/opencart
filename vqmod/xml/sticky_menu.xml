@@ -1,0 +1,35 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<modification>
+<id>Sticky Menu for OpenCart 1.5.1.x</id>
+<version>1.5.x</version>
+<vqmver required="true">2.4.0</vqmver>
+<author>lomik</author>
+<file name="catalog/view/theme/*/template/common/header.tpl">
+<operation error="skip">
+<search position="before">
+<![CDATA[ </head> ]]>
+</search>
+<add>
+<![CDATA[
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.sticky.js"></script> <script type="text/javascript"> $(document).ready(function() { $("#scroll").sticky({ }); }); </script> <style type="text/css"> #scroll{width:980px; height:40px; padding-bottom: 15px; margin-left:auto; margin-right:auto; z-index:9999;} </style>
+]]>
+</add>
+</operation>
+<operation error="skip">
+<search position="before">
+<![CDATA[ <div id="menu"> ]]>
+</search>
+<add>
+<![CDATA[ <section id="topbar"> ]]>
+</add>
+</operation>
+<operation error="skip">
+<search position="before">
+<![CDATA[ <div id="notification"></div> ]]>
+</search>
+<add>
+<![CDATA[ </div> ]]>
+</add>
+</operation>
+</file>
+</modification>

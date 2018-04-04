@@ -1,0 +1,49 @@
+<modification>
+	<id>Pavo Deals</id>
+	<version>1.0.0</version>
+	<vqmver>2.3.0</vqmver>
+	<author>PavoThemes</author>
+	<file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation  error="abort">
+			<search position="before"><![CDATA[
+				<?php if ($profiles): ?>
+			]]></search>
+			<add><![CDATA[
+				 <?php if($special){
+			        echo $this->getChild('module/pavdeals/pavdeal', $product_id);
+			      }?>
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/category.tpl">
+		<operation  error="abort">
+			<search position="before"><![CDATA[
+				<?php if ($product['rating']) { ?>
+			]]></search>
+			<add><![CDATA[
+				 <?php if($product['special']){ ?>
+				  	<div class="pavdeal">
+			         <?php echo $this->getChild('module/pavdeals/pavdeal', $product['product_id']); ?>
+			         </div>
+			     <?php }?>
+			]]></add>
+		</operation>
+		<operation error="abort">
+			<search position="before"><![CDATA[var rating = $(element).find('.rating').html();]]></search>
+			<add><![CDATA[
+				 var pavdeal = $(element).find('.pavdeal').html();
+				 if (pavdeal != null) {
+			        html += '<div class="pavdeal">' + pavdeal  + '</div>';
+			     }
+			]]></add>
+		</operation>
+		<operation error="abort">
+			<search position="after"><![CDATA[$(element).html(html);]]></search>
+			<add><![CDATA[
+				if(typeof("initCountDown") != "undefined"){
+				 initCountDown(".pavdeal_countdown");
+				}
+			]]></add>
+		</operation>
+	</file>
+</modification>

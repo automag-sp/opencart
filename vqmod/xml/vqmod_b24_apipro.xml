@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <id>Opencart_B24</id>
+    <version>1.0</version>
+    <author>http://апипро.рус</author>
+
+    <file name="catalog/model/checkout/order.php">
+        <operation error="log">
+            <search position="after"><![CDATA[
+            	public function confirm($order_id, $order_status_id, $comment = '', $notify = false) {
+            ]]></search>
+            <add><![CDATA[
+               	$this->load->model('module/b24_order');
+            	$this->model_module_b24_order->addOrder($order_id);
+            	]]>
+            </add>
+        </operation>
+    </file>
+
+     <file name="catalog/model/account/customer.php">
+        <operation error="log">
+            <search position="after" index="1"><![CDATA[
+            	$this->language->load('mail/customer');
+            ]]></search>
+            <add><![CDATA[
+            	$this->load->model('module/b24_customer');
+            	$this->model_module_b24_customer->addCustomer($customer_id);
+            
+            	]]>
+            </add>
+        </operation>
+        <operation error="log">
+          <search position="after" index="1"><![CDATA[
+            	$this->db->query("UPDATE " . DB_PREFIX . "customer SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+            ]]></search>
+            <add><![CDATA[
+            	$customer_id = (int)$this->customer->getId();
+            	$this->load->model('module/b24_customer');
+            	$this->model_module_b24_customer->editCustomer($customer_id);
+            	]]>
+            </add>
+        </operation>
+    </file>
+
+     <file name="catalog/model/account/address.php">
+        <operation error="log">
+            <search position="before" index='1'><![CDATA[
+            	return $address_id;
+            ]]></search>
+            <add><![CDATA[
+            	$isDefault = !empty($data['default']);
+            	$this->load->model('module/b24_customer');
+            	$this->model_module_b24_customer->editAddress($address_id, $isDefault);
+            	]]>
+            </add>
+        </operation>
+
+         <operation error="log">
+            <search position="after" index='1' offset='1'><![CDATA[
+            	public function editAddress($address_id, $data) {
+            ]]></search>
+            <add><![CDATA[
+            	$isDefault = !empty($data['default']);
+            	$this->load->model('module/b24_customer');
+            	$this->model_module_b24_customer->editAddress($address_id, $isDefault);
+            	]]>
+            </add>
+        </operation>
+
+    </file>
+
+    <file name="system/startup.php">
+        <operation error="log">
+            <search position="after"><![CDATA[
+            	require_once(DIR_SYSTEM . 'library/template.php');
+            ]]></search>
+            <add><![CDATA[
+            	include_once $_SERVER['DOCUMENT_ROOT'] . '/b24_api/include/config.php';
+            	]]>
+            </add>
+        </operation>
+    </file>
+
+</modification>

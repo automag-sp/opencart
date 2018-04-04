@@ -1,0 +1,493 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family:tahoma,verdana;
+    font-size: 80%;
+}
+
+.top_right_menu
+{
+    font-size: 11px;
+    text-align: center;
+    color:#405461;
+}
+
+.top_right_menu a
+{
+    color:#405461;
+    text-decoration: none;
+}
+
+.main_date
+{
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial;
+    color: #676767;
+}
+
+.menu a
+{
+    text-decoration: none;
+    color: #405461;
+    font-family: Tahoma, Verdana;
+    font-size: 15px;
+}
+
+.menu 
+{
+    list-style-image: url("../images/arrow1.png");
+    list-style-type: none;
+    margin: 0;
+}
+
+.left_menu_tbl
+{
+    background-image: url("../images/left_menu_bg.png");
+    background-position: 0 0;
+    background-repeat: repeat-y;
+}
+
+.menu li
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.search_block
+{
+    background-image: url("../images/header_center.png");
+    width: 515px;
+    height: 198px;
+}
+
+.cart_block
+{
+    background-image: url("../images/header_rigth.png");
+    width: 270px;
+    height: 197px;
+}
+
+.cart_struct
+{
+    width: 270px;
+    height: 197px;
+    font-family: Tahoma, Verdana;;
+    font-size: 17px;
+    color: #fff;
+}
+
+a.cart_btn1
+{
+    width:  112px;
+    height: 25px;
+    display: block;
+    padding-top: 5px;
+    background-image: url("../images/cart_btn1.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    font-family: Tahoma, Verdana;;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.cart_btn2
+{
+    width:  132px;
+    height: 25px;
+    display: block;
+    padding-top: 5px;
+    background-image: url("../images/cart_btn2.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    font-family: Tahoma, Verdana;;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.cart_login
+{
+    font-family: Tahoma, Verdana;;
+    font-size: 15px;
+    color: #676767;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer
+{
+    background-image: url("../images/footer_bg.gif");
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    height: 70px;
+    color: #676767;
+    font-size: 13px;
+    font-weight: bold;
+    padding-top:25px;
+}
+
+#search_field
+{
+    border: 0px;
+    margin-left:116px;
+    margin-top:14px;
+    /*background-color: #d00;*/
+    height: 15px;
+    width: 340px;
+    /*text-align: right;*/
+}
+
+.main_tbl
+{
+    background-image: url("../images/main_bg.jpg");
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-color: #fff;
+}
+
+.mod-articles-category-date {
+    color: #405461;
+    font-size: 12px;
+    padding: 5px 0px;
+}
+
+.mod-articles-category-introtext {
+    color: #405461;
+    font-size: 12px;
+}
+
+h4 {
+    color: #c8081e;
+    font-size: 15px;
+    margin: 2px;
+}
+h4 a {
+    color: #c8081e;
+}
+
+.mod-articles-module-title {
+    width: 98px;
+    height: 26px;
+    padding: 5px 10px 0 10px;
+    margin: 25px 0 2px 0;
+    font-size: 17px;
+    color:white;
+    background: #c8081e;
+}
+
+.header, h2 span {
+    padding: 6px 10px 6px 10px;
+    margin: 25px 0 2px 0;
+    font-size: 17px;
+    color:white;
+    background: #c8081e;
+}
+
+.header a, h2 span a {
+    color:white;
+}
+
+a img {
+    border: none;
+}
+
+.required {
+    color:red;
+}
+
+table.guayaquil_tablecatalog tbody tr th, .guayaquil_categoryitem_selected, table.guayaquil_tablecatalog tbody tr th, tr.over, table.guayaquil_table tbody tr th, tr.g_highlight_over, tr.g_highlight_lock {
+    background: #c8081e;
+    color: white;
+}
+
+.g_ToolbarButton:hover {background: #c8081e !important;}
+
+div.g_highlight_over, div.g_highlight_lock {
+    border: 2px solid #c8081e !important;
+}
+
+div.guayaquil_floatunitlist_box_hover {
+    background: #c8081e !important;
+    color: white !important;
+}
+
+.guayaquil_categoryitem_selected a, tr.over a, div.g_highlight_over a, div.g_highlight_lock a, tr.g_highlight_over a, tr.g_highlight_lock a {
+    background: #c8081e;
+    color: white;
+}
+
+.guayaquil_table {
+    font-size: 80%;
+}
+
+.breadcrumbs {
+    font-size: 70%;
+}
+
+.search_btn {
+	cursor: pointer;
+}
+
+.auto_data_table 
+{
+    font-size: 10px;
+}
+
+.auto_data_table .search_panel input
+{
+    width: 50px;
+    border: 1px solid #777;
+}
+
+.auto_data_table .search_panel input, select
+{
+    width: 100px;
+    border: 1px solid #777;
+}
+
+.pre_page a
+{
+    color: #00f;
+    font-weight: normal;
+    display: inline;
+    padding: 10px;
+}
+
+.pre_page div
+{
+    display: inline;
+}
+
+.pre_page div.limit
+{
+    display: block;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.pre_page a
+{
+    color: #00f;
+    font-weight: normal;
+    display: inline;
+    padding: 10px;
+}
+
+.pre_page span
+{
+    color: #000;
+    font-weight: bold;
+    display: inline;
+    padding: 10px;
+}
+
+.input_date
+{
+    margin-right: 5px;
+}
+
+.red_text
+{
+    color: #f00;
+}
+
+.search_result_tbl, .search_top_tbl {
+    font-size: 70%;
+}
+
+.s_search_field1 {
+    width: 60px;
+}
+
+.i_search_field {
+    width:80px;
+}
+
+#td_increase {
+    width: 150px;
+}
+
+.search_group_header {
+    border-bottom: dashed #000000 1px;
+}
+
+#add_detail_tbl {
+    margin: 40px 20px 10px 20px;
+}
+
+#add_detail_tbl tr {
+    height: 30px;
+}
+
+.search_top_tbl {
+    background: #ddd;
+    border: solid #eee 1px;
+    width:100%;
+}
+
+.cart_inp1 {
+    width:25px;
+}
+
+.cart_inp2 {
+    width:60px;
+}
+
+.PathDataRow {
+    border-left: solid #C8081E 2px;
+}
+
+.pane-sliders {
+    margin: 18px 0 0;
+    position: relative;
+}
+.pane-sliders .title {
+    color: #666666;
+    cursor: pointer;
+    margin: 0;
+    padding: 2px 2px 2px 5px;
+}
+#content-pane {
+    margin: 8px 10px 15px 15px;
+}
+.pane-sliders .panel {
+    border: 1px solid #CCCCCC;
+    margin-bottom: 3px;
+}
+.pane-sliders .panel h3 {
+    background: none repeat scroll 0 0 #FAFAFA;
+    color: #666666;
+}
+.pane-sliders .content {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.pane-sliders .adminlist {
+    border: 0 none;
+    font-size: 1em;
+}
+.pane-sliders .adminlist td {
+    border: 0 none;
+}
+.pane-toggler span {
+    background: url("../images/j_arrow.png") no-repeat scroll 5px 50% transparent;
+    padding-left: 20px;
+}
+.pane-toggler-down span {
+    background: url("../images/j_arrow_down.png") no-repeat scroll 5px 50% transparent;
+    padding-left: 20px;
+}
+.pane-toggler-down {
+    border-bottom: 1px solid #CCCCCC;
+}
+h3.pane-toggler-down a:hover, h3.pane-toggler a:hover {
+    text-decoration: none;
+}
+.pane-slider.pane-hide {
+    display: none;
+}
+.pane-slider ol li {
+    list-style: none outside none;
+    margin-left: -25px;
+    margin-top: 10px;
+}
+input#jformparams_link_titles1, input#jformparams_show_title1, input#jformparams_link_category1 {
+    margin-left: 13px;
+}
+div#position-icon.pane-sliders div.pane-down div.icon-wrapper {
+    margin: 5px 0;
+}
+div#position-icon.pane-sliders div.pane-down .icon-wrapper .icon {
+    margin: 0;
+    padding: 5px 0 5px 10px;
+}
+div#position-icon.pane-sliders .icon {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+dl.tabs {
+    float: left;
+    margin: 10px 0 -1px;
+    z-index: 50;
+}
+dl.tabs dt {
+    background: none repeat scroll 0 0 #F0F0F0;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    color: #666666;
+    float: left;
+    margin-left: 3px;
+    padding: 4px 10px;
+}
+dl.tabs dt.open {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-bottom: 1px solid #F9F9F9;
+    color: #000000;
+    z-index: 100;
+}
+div.current {
+    border: 1px solid #CCCCCC;
+    clear: both;
+    padding: 10px;
+}
+div.current dd {
+    margin: 0;
+    padding: 0;
+}
+dl#content-pane.tabs {
+    margin: 1px 0 0;
+}
+.container-pagination {
+    text-align:center;
+}
+
+.pagination {
+    list-style-type:none;
+    margin: 0 auto;
+    display: table;
+}
+.pagination LI {
+    float:left;
+    padding-right: 8px;
+}
+
+.pagination SPAN.pagenav {
+    font-weight: bold;
+}
+
+.pagination span, .pagination a {
+    padding: 10px 5px;
+}
+
+.pagination A.pagenav {
+    color: #898989;
+    text-decoration:none;
+}
+
+.pagination A.pagenav:hover {
+    text-decoration:underline;
+}
+
+.browseProductImage {
+    max-height: 65px;
+    max-width: 65px;
+}
+
+a#forward-tecdoc-button {
+    display:none;
+}
+
+.single-select-tecdoc {
+    margin:5px;
+}
+
+.single-select-tecdoc >div {
+    display:inline-block;
+}

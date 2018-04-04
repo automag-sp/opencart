@@ -1,0 +1,6 @@
+# Выключить обработку модулем mod_charset
+<IfModule mod_charset.c>
+  CharsetDisable On
+</IfModule>
+
+php_flag display_errors on

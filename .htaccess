@@ -1,0 +1,37 @@
+Options +FollowSymlinks
+
+# Prevent Directoy listing
+Options -Indexes
+
+# Prevent Direct Access to files
+<FilesMatch "\.(tpl|ini|log)">
+ Order deny,allow
+ Deny from all
+</FilesMatch>
+<FilesMatch "\.well-know">
+ Order deny,allow
+ Allow from all
+</FilesMatch>
+
+# SEO URL Settings
+
+# If your opencart installation does not run on the main web folder make sure you folder it does run in ie. / becomes /shop/
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^80$
+RewriteRule .* http://automag-sp.ru%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST}   ^www\.          [NC]
+RewriteCond %{HTTP_HOST}   (.+)$
+RewriteRule ^(.*)          http://automag-sp.ru/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} //
+RewriteCond %{THE_REQUEST} !://
+RewriteRule .* /$0 [R=301,L]
+
+RewriteRule ^sitemap.xml$ index.php?route=feed/google_sitemap [L]
+RewriteRule ^googlebase.xml$ index.php?route=feed/google_base [L]
+RewriteRule ^download/(.*) /index.php?route=error/not_found [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
+RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
