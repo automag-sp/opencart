@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<themeeditor>
+	<version value="1.4">
+	<ccc available="true" />
+	<guest_checkout available="true" />
+	<one_page_checkout available="true" />
+	<store_locator available="true" />
+	</version>
+	<author>themelexus</author>
+<name>Live Theme Editor</name>	
+<selectors>
+	<items>
+		<header>Body Content</header>
+		<match>body</match>		
+		<item>
+			<type>text</type>
+			<label>Background Color</label>
+			<selector>body</selector>
+			<attrs>background-color</attrs>
+		</item>
+		<item>
+		<type>image</type>
+			<label>Background Image</label>
+			<selector>body</selector>
+			<attrs>background-image</attrs>
+		</item> 		
+
+	 	<item>
+			<type>fontsize</type>
+			<label>Font-Size</label>
+			<selector>body,body #page</selector>
+			<attrs>font-size</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Text Color</label>
+			<selector>body,body #page</selector>
+			<attrs>color</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Link Color</label>
+			<selector>body a,body #page a</selector>
+			<attrs>color</attrs>
+		</item> 
+	</items>
+ 
+	<items>
+		<header>TopBar</header>
+		<match>topbar</match>
+		<item>
+			<type>text</type>
+			<label>Background Color</label>
+			<selector>#topbar</selector>
+			<attrs>background-color</attrs>
+		</item> 
+	 	<item>
+			<type>text</type>
+			<label>Color Text</label>
+			<selector>#topbar,#topbar .btn-dropdown span</selector>
+			<attrs>color</attrs>
+		</item> 
+	 	<item>
+			<type>text</type>
+			<label>Color Link</label>
+			<selector>#topbar a,#topbar .btn.btn-theme-normal</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Border Color</label>
+			<selector>#topbar,#topbar .links li,#topbar .btn.btn-theme-normal</selector>
+			<attrs>border-color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Icon Color</label>
+			<selector>#topbar .fa,#topbar .btn.btn-theme-normal .fa</selector>
+			<attrs>color</attrs>
+		</item>
+	</items>
+	<items>
+		<header>Header</header>
+		<match>header-main</match>
+		<item>
+			<type>text</type>
+			<label>Background Color</label>
+			<selector>#header-main</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>image</type>
+			<label>Background Image</label>
+			<selector>#header-main</selector>
+			<attrs>background-image</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Color Text</label>
+			<selector>
+				#header-main,#header-main h1,#header-main h2,#header-main h3,#header-main h4,#header-main h5,#header-main h6
+			</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Color Link</label>
+			<selector>#header-main a,#header-main #cart a .fa</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Icon Background</label>
+			<selector>#header-main .support .media .pull-left,#header #cart .media .pull-left</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Icon Color</label>
+			<selector>#header-main .fa,#header #cart .icon-cart</selector>
+			<attrs>color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Icon Arrow</label>
+			<selector>#header-main .support .shapes,.shapes.left</selector>
+			<attrs>border-right-color</attrs>
+		</item>
+	</items>
+	<items>
+		<header>Main Menu</header>
+		<match>pav-mainnav</match>	
+		<item>
+			<type>text</type>
+			<label>Background Color</label>
+			<selector>#pav-mainnav,#pav-mainnav .navbar-default</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>image</type>
+			<label>Background Image</label>
+			<selector>#pav-mainnav,#pav-mainnav .navbar-default</selector>
+			<attrs>background-image</attrs>
+		</item>
+
+	 	<item>
+			<type>text</type>
+			<label>Color Link</label>
+			<selector>.pav-megamenu .navbar-nav > li > a</selector>
+			<attrs>color</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Border Color</label>
+			<selector>#pav-mainnav .navbar-nav > li > a</selector>
+			<attrs>border-color</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Input Bg</label>
+			<selector>
+				#search .input-search,#search .button-search
+			</selector>
+			<attrs>background-color</attrs>
+		</item>		
+
+		<item>
+			<type>text</type>
+			<label>Input Border</label>
+			<selector>
+				#search .input-search,#search .button-search
+			</selector>
+			<attrs>border-color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Input Color</label>
+			<selector>
+				#search .input-search,#search .button-search
+			</selector>
+			<attrs>color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Icon Color</label>
+			<selector>
+				#search .button-search .fa
+			</selector>
+			<attrs>color</attrs>
+		</item>	
+
+
+	</items>
+
+	<!-- Vertical Menu -->
+
+	<items>
+		<header>Vertical Menu</header>
+		<match>pav-verticalmenu</match>	
+		
+		<item>
+			<type>text</type>
+			<label>Title Bg</label>
+			<selector>#pav-verticalmenu .box-heading</selector>
+			<attrs>background-color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Title Color</label>
+			<selector>#pav-verticalmenu .box-heading</selector>
+			<attrs>color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Text Color</label>
+			<selector>
+				<![CDATA[
+					#pav-verticalmenu .navbar-nav > li > a .menu-icon .menu-title
+				]]>
+			</selector>
+			<attrs>color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Description Color</label>
+			<selector>
+				<![CDATA[
+					#pav-verticalmenu .navbar-nav > li > a .menu-icon .menu-desc
+				]]>
+			</selector>
+			<attrs>color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Border Color</label>
+			<selector>
+				<![CDATA[
+					#pav-verticalmenu .navbar-nav > li
+				]]>
+			</selector>
+			<attrs>border-color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Background Color</label>
+			<selector>#pav-verticalmenu .box-content</selector>
+			<attrs>background-color</attrs>
+		</item>
+
+		<item>
+			<type>image</type>
+			<label>Background Image</label>
+			<selector>#pav-verticalmenu .box-content</selector>
+			<attrs>background-image</attrs>
+		</item>
+	
+
+	</items>
+
+	
+	<items>
+		<header>Footer</header>
+		<match>footer-center</match>
+		<item>
+			<type>text</type>
+			<label>Background Color</label>
+			<selector>#footer</selector>
+			<attrs>background-color</attrs>
+		</item> 
+
+		<item>
+			<type>image</type>
+			<label>Background Image</label>
+			<selector>#footer</selector>
+			<attrs>background-image</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Text Color</label>
+			<selector>
+				#footer,#footer .box .box-heading,#footer .box.pavgooglemap .box-heading,#powered				
+			</selector>
+			<attrs>color</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Link Color</label>
+			<selector>#footer a</selector>
+			<attrs>color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Google Map Bg</label>
+			<selector>#footer .box.pavgooglemap .box-heading</selector>
+			<attrs>background-color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Google Map Icon</label>
+			<selector>#footer .box.pavgooglemap .shapes.bottom</selector>
+			<attrs>border-top-color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Google Map Color</label>
+			<selector>#footer .box.pavgooglemap .box-heading</selector>
+			<attrs>color</attrs>
+		</item>
+
+		
+
+	</items>
+
+</selectors>
+
+<elements>
+	<items>
+		<header>Products</header>
+		<match>product</match>
+		<item>
+			<type>text</type>
+			<label>Product Name</label>
+			<selector>.product-block .name a</selector>
+			<attrs>color</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Color Price</label>
+			<selector>.price</selector>
+			<attrs>color</attrs>
+		</item>  		
+
+
+		<item>
+			<type>text</type>
+			<label>Color Price New</label>
+			<selector>.price .price-new</selector>
+			<attrs>color</attrs>
+		</item>  		
+ 		<item>
+			<type>text</type>
+			<label>Color Price Old</label>
+			<selector>.price .price-old</selector>
+			<attrs>color</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Icon Color</label>
+			<selector>
+				.btn.btn-shopping-cart .fa,.product-block .product-icon
+			</selector>
+			<attrs>color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Color Add To Cart</label>
+			<selector>
+				.btn.btn-shopping-cart span + span
+			</selector>
+			<attrs>color</attrs>
+		</item> 
+
+
+		<item>
+			<type>text</type>
+			<label>Icon Cart Bg</label>
+			<selector>
+				.btn.btn-shopping-cart .fa
+			</selector>
+			<attrs>background-color</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Icon Cart Color</label>
+			<selector>
+				.btn.btn-shopping-cart .fa
+			</selector>
+			<attrs>color</attrs>
+		</item> 
+
+		<item>
+			<type>text</type>
+			<label>Button border</label>
+			<selector>
+				.btn.btn-shopping-cart span + span,.product-block .product-icon
+			</selector>
+			<attrs>border-color</attrs>
+		</item>
+
+		
+		<item>
+			<type>text</type>
+			<label>Bg Sale</label>
+			<selector>
+				.product-label
+			</selector>
+			<attrs>border-top-color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Color Sale</label>
+			<selector>.product-label-special</selector>
+			<attrs>color</attrs>
+		</item>
+
+		<item>
+			<type>text</type>
+			<label>Quick View Bg</label>
+			<selector>.product-block .pav-colorbox</selector>
+			<attrs>background-color</attrs>
+		</item>
+
+
+		<item>
+			<type>text</type>
+			<label>Quick View Color</label>
+			<selector>
+				.product-block .pav-colorbox,.product-block .pav-colorbox .fa,
+				.product-block .pav-colorbox span
+			</selector>
+			<attrs>color</attrs>
+		</item>
+
+		
+
+	</items>
+
+</elements>
+</themeeditor>

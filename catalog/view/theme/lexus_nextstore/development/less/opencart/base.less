@@ -1,0 +1,380 @@
+/******************************************************
+ * @package Pav Opencart Theme Framework for Opencart 1.5.x
+ * @version 1.1
+ * @author http://www.pavothemes.com
+ * @copyright	Copyright (C) Augus 2013 PavoThemes.com <@emai:pavothemes@gmail.com>.All rights reserved.
+ * @license		GNU General Public License version 2
+ *******************************************************/
+
+/**
+* BASE CSS STYLES
+*/
+html {
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+body {
+	background-color: @body-bg;
+	color: @text-color;
+    font-size: @font-size-base;
+	margin: 0px;
+	padding: 0px;        
+    overflow-x:hidden;
+    font-weight: 300;    
+}
+
+#page {
+    /*position: relative;*/    
+}
+
+.content{
+    ul{
+        list-style: none outside none;
+    }
+}
+
+font{
+    font-size: @font-size-base;
+    font-family: @font-family-base;
+}
+
+ol, ul {    
+    margin: 0;
+    padding: 0;
+    li{
+        line-height: @list-line-height;
+    }
+}
+
+button, .btn{
+    &:focus,&:hover,&:active{       
+        outline: none;
+    }
+}
+
+label{
+    color: @label-control-color;
+}
+
+.fs9{ font-size:@font-size-base - 3 ; }
+.fs10{ font-size:@font-size-base + 1; }
+.fs11{ font-size:@font-size-base - 1 ; }
+.fs12{ font-size:@font-size-base; }
+.fs13{ font-size:@font-size-base + 4; }
+.fs14{ font-size:@font-size-base + 5; }
+.fs15{ font-size:@font-size-base + 6; }
+.fs16{ font-size:@font-size-base + 7; }
+
+.welcome {
+	color: #636E75;
+	font: Verdana;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	font-size: 32px;
+	font-weight: normal;
+	text-shadow: 0 0 1px rgba(0, 0, 0, .01);
+}
+
+a {    
+    img {
+        border: none;
+    }
+    &:hover, &:focus {
+        text-decoration: none;  
+        outline: none; 
+        color: @link-hover-color;   
+    }    
+    cursor: pointer;
+    outline: none;
+}
+
+b, strong{
+    color: @black;
+    font-weight: 400;
+}
+
+/* TABLE STYLE */
+table{
+    background-color: @table-bg;
+}
+
+
+table.list {
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 1px solid @table-border-color;
+    border-left: 1px solid @table-border-color;
+    margin-bottom: 20px;
+    thead {
+        td {            
+            padding: 0px 5px;
+        }
+    }
+    .center {
+        text-align: center;
+        padding: 7px;
+    }
+    tbody {
+        td {
+            padding: 0px 5px;
+        }
+    }
+    td {
+        border-right: 1px solid @table-border-color;
+        border-bottom: 1px solid @table-border-color;
+    }
+    .right {
+        text-align: right;
+        padding: 7px;
+    }
+    .left {
+        text-align: left;
+        padding: 7px;
+    }
+}
+table.list thead td a, .list thead td {
+    text-decoration: none;
+    color: #222222;
+    font-weight: bold;
+}
+input.large-field, select.large-field {
+    width: percentage(.65);
+}
+table.form {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    & > * {
+        & > * {
+            & > td {
+                color: #000000;
+            }
+        }
+    }
+    td {
+        padding: 4px;
+    }
+    tr {
+        td:first-child {
+            width: 170px;
+        }
+    }
+}
+table.radio {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0;
+    display: table;
+    td {
+        padding: 5px;
+        label {
+            display: block;
+        }
+        input[type="radio"]{
+            margin: 0;
+        }
+    }
+    tr {
+        td:first-child {
+            width: 1px;
+            input {
+                margin-top: 1px;
+            }
+        }
+    }
+    tr.highlight:hover {
+        td {
+            background: lighten(@border-color, 5%);
+            cursor: pointer;
+        }
+    }
+}
+
+/*  PAGINATION STYLE */
+
+.pagination{    
+    .rounded-corners(0);        
+    display: block;    
+    margin:0;          
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+    border-left: 1px solid @border-color;
+    border-right: 1px solid @border-color;
+    background-color: @product-bg-color;
+    &.paging{
+        padding: @padding-small-horizontal @padding-small-horizontal * 2;        
+    }    
+    .links {
+        float: left;        
+        a,b{ 
+        .inline-block();        
+        .rounded-corners(0px);
+        .size(28px,28px);
+        .transition(background-color 350ms ease-in);
+        padding: 0;       
+        line-height: 30px;
+        text-decoration: none;  
+        margin: 0 3px 0 0;                 
+        text-align: center;   
+        font-weight: normal;
+        background-color: @pagination-bg;
+        &:hover{
+            background-color: @pagination-active-bg;
+            color: @pagination-active-color;        
+            border: @pagination-border;            
+        }       
+    }
+    b{
+        background-color: @pagination-active-bg;
+        color: @pagination-active-color;        
+        border: @pagination-border;    
+    }
+}
+    .results {
+        float: right;    
+        font-style: italic;
+    }
+}
+
+.main-column{
+    .pagination{
+        .results{
+            padding-top: @padding-base-vertical;
+        }
+    }
+}
+
+/* button */
+.buttons {
+    .clearfix();            
+    .center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .right {
+        float: right;
+        text-align: right;
+    }
+    .left {
+        float: left;
+        text-align: left;
+    }
+    &.no-padding{
+        padding: 0;
+        border: 0;
+    }
+}
+
+/* tab style */
+.htabs{  
+    ul{
+        border-bottom: 1px solid @htab-nav-border-color-hover;
+        li{
+            margin: 0;
+            a {
+                color: @htab-nav-color;
+                text-align: center;
+                text-transform: uppercase;
+                padding: @htab-nav-padding;
+                background-color: @htab-bg;
+                margin: @htab-nav-margin;
+                font-size: @htab-nav-font-size;
+                font-family: @htab-nav-font-family;
+                border-width: @htab-nav-border-width;
+                border-color: @htab-nav-border-color;
+                .rounded-corners(0);
+                &.selected {
+                    color: @htab-nav-selected-color;
+                    background-color: @htab-bg-selected;
+                    border-color: @htab-nav-border-color-selected;
+                    display: block;
+                    margin-bottom: 0;
+                    margin-top: -7px;
+                    padding-top: 17px;
+                    top: 1px;
+                    &:hover{
+                        background-color: @htab-bg-selected;
+                        border-color: @htab-nav-border-color-hover;
+                    }
+                }
+                &:hover{                    
+                    background-color: @htab-bg;
+                    border-color: @htab-bg;
+                }
+            }
+        }
+    }      
+}
+
+/* links style */
+
+.links {    
+    margin: 0;
+    padding: 0;    
+    li{
+        display: inline;        
+        text-transform: uppercase; 
+        line-height: normal;     
+        a{
+            margin:0 @padding-base-vertical;  
+            &:hover{
+                color: @theme-color;    
+            }      
+        }        
+    }               
+}
+
+//
+// Color box
+// --------------------------------------------------
+#colorbox{
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+//
+// Labels
+// --------------------------------------------------
+.product-label{
+    .size(0,0);
+    border-top: @label-border;        
+    color: @label-color;
+    font-size: @label-font-size;
+    font-style: @label-font-style;
+    text-transform: @label-transform;
+    position:absolute;
+    top: 0;        
+    z-index: 10;      
+    span{
+        position: absolute;        
+        top: -35px;
+        line-height: 10px;        
+    }  
+    &.product-label-new{
+        left: 0px;
+        border-right: 46px solid transparent;   
+        border-top: 46px solid @label-new-bg;  
+        span{            
+            left: 5px;          
+            .rotate(-50deg);  
+        }           
+    }
+    &.product-label-special{
+        right: 1px;
+        border-left: 46px solid transparent; 
+        span{
+            right: 3px;
+            .rotate(50deg);
+        }  
+    }
+}
+
+.tooltip-inner { 
+    border-radius: @tooltip-border-radius;
+}
+

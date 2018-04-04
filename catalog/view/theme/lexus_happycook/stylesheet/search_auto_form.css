@@ -1,0 +1,41 @@
+.box {position: relative;}
+.filter-box {
+height: 221px; width: 274px; border: 1px solid #CCC; margin: 0px 17px 20px; padding: 7px; box-shadow: 0px 0px 26px 1px #ACACAC; display: inline-block; background: #E6E6E6;
+}
+.filter-box h4:after, .filter-box h4:before {content: ''; position: absolute;}
+.filter-box h4 {text-align: center; position: relative; color: white; margin: 0 -18px 10px -18px; padding: 7px 0; background: #9C9C9C; -moz-box-shadow: 0 2px 0 rgba(0,0,0,.3); -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, .3); box-shadow: 0 2px 0 rgba(0, 0, 0, .3); clear: both;}
+.filter-box h4:before, .filter-box h4:after {border-style: solid; border-color: transparent; bottom: -10px;}
+.filter-box h4:before {border-width: 0 10px 10px 0; border-right-color: #555; left: 0;}
+.filter-box h4:after {border-width: 0 0 10px 10px; border-left-color: #555; right: 0;}
+.filter-content {
+/*background: url('/catalog/view/image/bg-tires.gif') center right no-repeat !important;*/
+position: relative;
+}
+.filter-content select {margin: 2px 0px; height: 23px;}
+.filter-content .button {float: right; margin: 3px 10px 0px 0px;}
+.filter-content .three {margin: 0px 0px 8px;}
+.filter-content .three > div {display: inline-block; margin: 0px 5px;}
+.filter-content .three select {width: 79px;}
+.filter-content .two {margin: 0px 0px 8px;}
+.filter-content .two > div {display: inline-block; margin: 0px 5px;}
+.filter-content .two select {width: 125px;}
+.filter-content .two-s {margin: 0px 0px 8px;}
+.filter-content .two-s > div {display: inline-block; margin: 0px 5px;}
+.filter-content .two-s .model {width: 150px;}
+.filter-content .two-s .year {width: 80px;}
+.filter-content .one {margin: 0px 0px 8px;}
+.filter-content .one > div {display: inline-block; margin: 0px 5px;}
+.filter-content .one select {width: 150px;}
+.filter-content .disable {color: #A3A3A3; background: #CFCFCF; cursor: default;}
+.filter-content .disable:hover {color: #A3A3A3; background: #CFCFCF;}
+.filter-content.box-content select {width: 100%;}
+.filter-content.box-content .button {float: none; margin: 10px auto 0px; display: block;}
+.filter-content.box-content .auto {text-align: center;}
+.filter-content.box-content .ajaxload {margin: 10px 0px 0px;}
+.auto .ajaxload {margin-left: 30px; display: none;}
+
+
+.tabs-filter {/*border: 1px solid #BBC1C7; border-radius: 0px 5px 5px 5px;*/ padding: 20px 0;}
+.tabs-filter > a {position: absolute; bottom: 20px; left: 250px;}
+.tabs-filter .button {float: none; /*position: absolute; top: 113px; left: 200px;*/ margin-left: 5px;}
+.tabs-filter .two-s .year {width: 100px;}

@@ -1,0 +1,240 @@
+/* 
+    Document   : admin_style
+    Created on : 20.07.2013, 17:57:37
+    Author     : 
+    Description: Стили для панели администратора
+*/
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #506778;
+    background: -moz-radial-gradient(center, ellipse cover, #d2dcdc 0%, #506778 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #d2dcdc), color-stop(100%, #506778));
+    background: -webkit-radial-gradient(center, ellipse cover, #d2dcdc 0%, #506778 100%);
+    background: -o-radial-gradient(center, ellipse cover, #d2dcdc 0%, #506778 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #d2dcdc 0%, #506778 100%);
+    background: radial-gradient(ellipse at center, #d2dcdc 0%, #506778 100%);
+    font-family: Arial, Tahoma;
+
+}
+
+#content {
+  position: relative;
+  left: 50%;
+  margin-left: -325px;
+  float: left;
+  width: 650px;
+  height: auto;
+  box-shadow: 0 0 10px 2px rgba(29, 36, 44, 0.5);
+  background-color: #F3F4F5;
+}
+
+#content_head{
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  background: #e9edf0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e9edf0), color-stop(1, #ffffff));
+  background: -ms-linear-gradient(bottom, #e9edf0, #ffffff);
+  background: -moz-linear-gradient(center bottom, #e9edf0 0%, #ffffff 100%);
+  background: -o-linear-gradient(#ffffff, #e9edf0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e9edf0', GradientType=0); 
+  -webkit-box-shadow: 0px 3px 24px rgba(29, 36, 44, 0.5);
+  -moz-box-shadow: 0px 3px 24px rgba(29, 36, 44, 0.5);
+  box-shadow: 0px 3px 24px rgba(29, 36, 44, 0.5);
+  border-bottom: 1px solid #ABB1B5;
+}
+#content_head span{
+  line-height: 42px;
+  color: #5F6C96;
+  font-family: Tahoma;
+  font-size: 23px;
+  text-shadow: 0 1px 0px #FFF;
+    
+}
+#content_main{
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+.div_field{
+  float: left;
+  margin: 10px 25px;
+  border-bottom: 1px solid #DBE0E6;
+  padding-bottom: 10px;
+}
+.o_field{
+  width: 49%;
+}
+.o_field h3, .my_h3{
+  color: #1E2735;
+  font-size: 19px;
+  font-weight: normal;
+  margin-bottom: 1px;
+  margin-left: -5px;
+  text-shadow: 0 1px 0px #FFF;
+}
+.my_h3{
+  margin-left: 0;
+}
+.checkbox_div{
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 2px;
+  margin-top: 6px;
+}
+.checkbox_check{
+  float: left;
+  width: 19px;
+  height: 18px;
+  margin-right: 3px;
+  background: url('http://automag-sp.ru/callcons/img/check.png') 0 0 no-repeat;
+}
+.checkbox_div input{
+  opacity: 0;
+  display: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  width: 0;
+}
+.checkbox_div span{
+  font-size: 15px;
+  text-shadow: 0 1px 0px #FFF;
+  color: #254370;
+  font-weight: normal;
+}
+
+#chat_position { 
+  border: 3px solid #666;
+  float: left;
+  height: 220px;
+  position: relative;
+  width: 596px;
+}
+#chat_position span{
+  position: relative;
+  top: 42%;
+  font-size: 18px;
+  color: #4E6383;
+  text-shadow: 0 1px 0px #FFF;
+}
+.position_id { 
+  background: #666;
+  cursor: pointer;
+  position: absolute;
+}
+#ok_left_center{
+  width: 20px;
+  height: 70px;
+  top: 35%;
+  left: 0;
+}
+#ok_right_center{
+  width: 20px;
+  height: 70px;
+  top: 35%;
+  right: 0;
+}
+#ok_top_center{
+  width: 70px;
+  height: 20px;
+  top: 0;
+  right: 43%;
+}
+#ok_bottom_center{
+        width: 70px;
+        height: 20px;
+        bottom: 0;
+        right: 43%;
+}
+#ok_bottom_right{
+        width: 70px;
+        height: 20px;
+        bottom: 0;
+        right: 0;
+}
+#ok_bottom_left{
+        width: 70px;
+        height: 20px;
+        bottom: 0;
+        left: 0;
+}
+#ok_top_left{
+        width: 70px;
+        height: 20px;
+        top: 0;
+        left: 0;
+}
+#ok_top_right{
+        width: 70px;
+        height: 20px;
+        top: 0;
+        right: 0;
+}
+
+.add_operator_line{
+    float: left;
+    width: 100%;
+    height: 40px;
+    background: #89A2B6;
+    margin-bottom: 2px;
+}
+.add_operator_line_left{
+    float: left;
+    width: 45%;
+    height: 20px;
+    background: #89A2B6;
+    padding: 10px;
+    font-size: 17px;
+    color: #FFF;
+}
+.add_operator_line_right{
+    float: left;
+    padding: 5px;
+    margin-left: 10px;
+}
+.add_operator_line_right input{
+    height: 25px;
+    padding-left: 4px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px inset;
+    border-radius: 3px;
+    border: 1px solid #58667A;
+}
+.save_settings{
+    float: left;
+    padding: 10px;
+    background: #333;
+    text-align: center;
+    width: 176px;
+    color: #FFF;
+    margin: 5px 24px 20px;
+    cursor: pointer;
+}
+.save_settings:hover{
+    background: #666;
+}
+#logout{
+    position: absolute;
+    padding: 7px;
+    background: #333;
+    right: 10px;
+    top: 8px;
+    color: #FFF;
+    font-size: 12px;
+}
+#logout:hover{
+    background: #666;
+}
+
+.admin_message{
+    margin-top: 20px;
+    text-align: center;
+}
+.admin_message span{
+    color: #F00;
+    font-size: 17px;
+}

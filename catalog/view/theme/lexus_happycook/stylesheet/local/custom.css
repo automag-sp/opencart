@@ -1,0 +1,318 @@
+#column-left{
+    margin: 20px 0;
+}
+.saleepc .icon li{
+display: inline;
+text-align: center;
+}
+.saleepc .icon img{
+margin: 5px;
+}
+
+.saleepc div.icon {
+display:  inline-block;
+margin: 5px 10px;
+padding: 3px 5px;
+text-align: center;
+background-color: #0D84A7;
+}
+
+.saleepc div.icon a{
+    color: #333;
+}
+
+.saleepc div.icon:hover a{
+    color: #ff0000;
+}
+
+.saleepc div.icon:hover {
+display:  inline-block;
+margin: 5px 10px;
+text-align: center;
+background-color: #ffcc33;
+}
+
+.saleepc div.icon span{
+    display: block;
+
+    background-color: #ffffff;
+}
+
+
+
+.list a {color: #222; text-decoration: underline;}
+.CarDrpDn select {
+    width: 180px;
+    border: 1px solid #7f9db9;
+    clear: both;
+    display: block;
+    float: left;
+    height: 25px;
+}
+.CarDrpDn a{
+  color: #e55e5e;
+  padding-top: 5px;
+}
+
+. select[disabled] {
+    padding: 0 !important;
+    color: #a1a1a1;
+    display: inline;
+    background-color: #F5F5F5;
+    border: 1px solid #E4E4E2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0 10px;
+    cursor: default;
+}
+
+
+ul.box-filter &gt; li ul {
+  display: block;
+}
+
+#filter-tire0{
+    background: url('/catalog/view/image/tires_selection.png') center left no-repeat;
+    padding-left: 150px;
+}
+.tyres-r{
+    background: url('/catalog/view/image/tire_h_index.png') center right no-repeat;
+}
+.disk-r{
+    background: url('/catalog/view/image/markirovka_diskov.jpg') center right no-repeat;
+}
+#filter-disc0{
+    background: url('/catalog/view/image/wheels_selection.png') center left no-repeat;
+    padding-left: 150px;
+}
+
+.leftup01 .dropdown-menu {margin-left: -450px;}
+.leftup02 .dropdown-menu {margin-left: -500px:}
+
+#column-left .box{
+	border: 1px #eee solid;
+	padding: 5px;
+	margin: 10px 0;
+	
+    border-radius: 8px;
+    -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.4);	
+}
+.boxzzz{
+border: 1px #CCC solid;
+padding: 5px 10px;
+margin-bottom: 10px;
+}
+
+.tecdoc.brands li {
+    margin: 7px 0 7px 5px;
+    list-style: none;
+    display: inline;
+}
+.tecdoc.brands h2.letter {
+    margin: 7px 0 0 5px;
+}
+
+
+.car-logo {
+    background: url(/image/data/general/brands/logo.png) no-repeat top left;
+    background-position: -102px -17px;
+
+    height: 16px;
+    width: 16px;
+    margin: 0 17px -3px 0;
+    display: inline;
+    /*float: left;*/
+}
+
+.selflogo{ background-position: -1190px -17px;/* background-size:100%;*/ }
+.nologo{ background-position: -102px -17px;  }
+
+.ac{ background-position: 0 0;  }
+.acura{ background-position: -17px 0;  }
+.aixam{ background-position: -34px 0;  }
+.alfaromeo{ background-position: -51px 0;  }
+.alpina{ background-position: -68px 0;  }
+.alpine{ background-position: -85px 0;  }
+.americanmotorsford{ background-position: -102px 0;  }
+.aro{ background-position: -119px 0;  }
+.artega{ background-position: -136px 0;  }
+.asiamotors{ background-position: -153px 0;  }
+.askamfargodesoto{ background-position: -170px 0;  }
+.astonmartin{ background-position: -187px 0;  }
+.astra{ background-position: -204px 0;  }
+.audi{ background-position: -221px 0;  }
+.austin-healey{ background-position: -238px 0;  }
+.austin{ background-position: -255px 0;  }
+.autounion{ background-position: -272px 0;  }
+.autobianchi{ background-position: -289px 0;  }
+.avia{ background-position: -306px 0;  }
+.ayats{ background-position: -323px 0;  }
+.barcas{ background-position: -340px 0;  }
+.bedford{ background-position: -357px 0;  }
+.bentley{ background-position: -374px 0;  }
+.berkhof{ background-position: -391px 0;  }
+.bertone{ background-position: -408px 0;  }
+.bitter{ background-position: -425px 0;  }
+.bmc{ background-position: -442px 0;  }
+.bmw{ background-position: -459px 0;  }
+.bond{ background-position: -476px 0;  }
+.borgward{ background-position: -493px 0;  }
+.bova{ background-position: -510px 0;  }
+.bristol{ background-position: -527px 0;  }
+.bugatti{ background-position: -544px 0;  }
+.buick{ background-position: -561px 0;  }
+.cadillac{ background-position: -578px 0;  }
+.callaway{ background-position: -595px 0;  }
+.carbodies{ background-position: -612px 0;  }
+.caterham{ background-position: -629px 0;  }
+.checker{ background-position: -646px 0;  }
+.chevrolet{ background-position: -663px 0;  }
+.chrysler{ background-position: -680px 0;  }
+.citroen{ background-position: -697px 0;  }
+.dacia{ background-position: -714px 0;  }
+.daewoo{ background-position: -731px 0;  }
+.daf{ background-position: -748px 0;  }
+.daihatsu{ background-position: -765px 0;  }
+.daimler{ background-position: -782px 0;  }
+.dallas{ background-position: -799px 0;  }
+.delorean{ background-position: -816px 0;  }
+.detomaso{ background-position: -833px 0;  }
+.deutz-fahr{ background-position: -850px 0;  }
+.deutz{ background-position: -867px 0;  }
+.dodge{ background-position: -884px 0;  }
+.drogmoller{ background-position: -901px 0;  }
+.erf{ background-position: -918px 0;  }
+.fendt{ background-position: -935px 0;  }
+.ferrari{ background-position: -952px 0;  }
+.fiat{ background-position: -969px 0;  }
+.fisker{ background-position: -986px 0;  }
+.fodentrucks{ background-position: -1003px 0;  }
+.ford-otosan{ background-position: -1020px 0;  }
+.ford-usa{ background-position: -1037px 0;  }
+.ford{ background-position: -1054px 0;  }
+.fso{ background-position: -1071px 0;  }
+.gaz{ background-position: -1088px 0;  }
+.geely{ background-position: -1105px 0;  }
+.geo{ background-position: -1122px 0;  }
+.ginaf{ background-position: -1139px 0;  }
+.ginetta{ background-position: -1156px 0;  }
+.glas{ background-position: -1173px 0;  }
+.gmc{ background-position: -1190px 0;  }
+.greatwall{ background-position: -1207px 0;  }
+.gruau{ background-position: -1224px 0;  }
+.hindustan{ background-position: -1241px 0;  }
+.hino{ background-position: -1258px 0;  }
+.hobbycar{ background-position: -1275px 0;  }
+.holden{ background-position: -1292px 0;  }
+.honda{ background-position: -1309px 0;  }
+.hyundai{ background-position: -1326px 0;  }
+.indigo{ background-position: -1343px 0;  }
+.infiniti{ background-position: -1360px 0;  }
+.innocenti{ background-position: -1377px 0;  }
+.irisbus{ background-position: -1394px 0;  }
+.irizar{ background-position: -1411px 0;  }
+.isdera{ background-position: -1428px 0;  }
+.isuzu{ background-position: -1445px 0;  }
+.iveco{ background-position: -1462px 0;  }
+.jaguar{ background-position: -1479px 0;  }
+.jeep{ background-position: -1496px 0;  }
+.jensen{ background-position: -1513px 0;  }
+.kamaz{ background-position: -1530px 0;  }
+.kia{ background-position: -1547px 0;  }
+.kramer{ background-position: -1564px 0;  }
+.ktm{ background-position: -1581px 0;  }
+.lada{ background-position: -1598px 0;  }
+.lamborghini{ background-position: -1615px 0;  }
+.lancia{ background-position: -1632px 0;  }
+.landrover{ background-position: -1649px 0;  }
+.landwindjmc{ background-position: -1666px 0;  }
+.ldv{ background-position: -1683px 0;  }
+.lexus{ background-position: -1700px 0;  }
+.ligier{ background-position: -1717px 0;  }
+.lincoln{ background-position: -1734px 0;  }
+.lotus{ background-position: -1751px 0;  }
+.lti{ background-position: -1768px 0;  }
+.mahindra{ background-position: -1785px 0;  }
+.man{ background-position: -1802px 0;  }
+.marcos{ background-position: -1819px 0;  }
+.maserati{ background-position: -1836px 0;  }
+.maybach{ background-position: -1853px 0;  }
+.maz{ background-position: -1870px 0;  }
+.mazda{ background-position: -1887px 0;  }
+.mclaren{ background-position: -1904px 0;  }
+.mega{ background-position: -1921px 0;  }
+.mercedes-benz{ background-position: -1938px 0;  }
+.metrocab{ background-position: -1955px 0;  }
+.mg{ background-position: -1972px 0;  }
+.minelli{ background-position: -1989px 0;  }
+.mini{ background-position: 0 -17px;  }
+.mitsubishi{ background-position: -17px -17px;  }
+.morgan{ background-position: -34px -17px;  }
+.morris{ background-position: -51px -17px;  }
+.moskvich{ background-position: -68px -17px;  }
+.nissan{ background-position: -85px -17px;  }
+.nsu{ background-position: -119px -17px;  }
+.oldsmobile{ background-position: -136px -17px;  }
+.oltcit{ background-position: -153px -17px;  }
+.opel{ background-position: -170px -17px;  }
+.optare{ background-position: -187px -17px;  }
+.osca{ background-position: -204px -17px;  }
+.panoz{ background-position: -221px -17px;  }
+.panther{ background-position: -238px -17px;  }
+.peugeot{ background-position: -255px -17px;  }
+.piaggio{ background-position: -272px -17px;  }
+.pininfarina{ background-position: -289px -17px;  }
+.plaxton{ background-position: -306px -17px;  }
+.plymouth{ background-position: -323px -17px;  }
+.pontiac{ background-position: -340px -17px;  }
+.porsche{ background-position: -357px -17px;  }
+.premier{ background-position: -374px -17px;  }
+.proton{ background-position: -391px -17px;  }
+.puch{ background-position: -408px -17px;  }
+.renault-trucks{ background-position: -425px -17px;  }
+.renault{ background-position: -442px -17px;  }
+.riley{ background-position: -459px -17px;  }
+.rolls-royce{ background-position: -476px -17px;  }
+.rover{ background-position: -493px -17px;  }
+.saab{ background-position: -510px -17px;  }
+.santana{ background-position: -527px -17px;  }
+.scania{ background-position: -544px -17px;  }
+.seat{ background-position: -561px -17px;  }
+.setra{ background-position: -578px -17px;  }
+.shelby{ background-position: -595px -17px;  }
+.sipani{ background-position: -612px -17px;  }
+.skoda{ background-position: -629px -17px;  }
+.smart{ background-position: -646px -17px;  }
+.solaris{ background-position: -663px -17px;  }
+.spyker{ background-position: -680px -17px;  }
+.ssangyong{ background-position: -697px -17px;  }
+.stanguellini{ background-position: -714px -17px;  }
+.steyr{ background-position: -731px -17px;  }
+.subaru{ background-position: -748px -17px;  }
+.suzuki{ background-position: -765px -17px;  }
+.talbot{ background-position: -782px -17px;  }
+.tata-telco{ background-position: -799px -17px;  }
+.tazzari{ background-position: -816px -17px;  }
+.temsa{ background-position: -833px -17px;  }
+.terberg-benschop{ background-position: -850px -17px;  }
+.tesla{ background-position: -867px -17px;  }
+.toyota{ background-position: -884px -17px;  }
+.trabant{ background-position: -901px -17px;  }
+.triumph{ background-position: -918px -17px;  }
+.tvr{ background-position: -935px -17px;  }
+.uaz{ background-position: -952px -17px;  }
+.umm{ background-position: -969px -17px;  }
+.uralaz{ background-position: -986px -17px;  }
+.van-hool{ background-position: -1003px -17px;  }
+.vauxhall{ background-position: -1020px -17px;  }
+.vector{ background-position: -1037px -17px;  }
+.volvo{ background-position: -1054px -17px;  }
+.vw{ background-position: -1071px -17px;  }
+.westfield{ background-position: -1088px -17px;  }
+.wiesmann{ background-position: -1105px -17px;  }
+.wolseley{ background-position: -1122px -17px;  }
+.yulon{ background-position: -1139px -17px;  }
+.zastava{ background-position: -1156px -17px;  }
+.zaz{ background-position: -1173px -17px;  }

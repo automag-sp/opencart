@@ -1,0 +1,799 @@
+<modification>
+	<id>CartSMS module</id>
+	<version>2.0.9</version>
+	<vqmver>2.2.1</vqmver>
+	<author>TOPefekt s.r.o. Lukas Pijak</author>
+	<file name="admin/view/template/common/header.tpl" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[    
+                            <li id="help"><a class="top"><?php echo $text_help; ?></a>
+				]]>
+			</search>
+			<add trim="true"><![CDATA[
+                                  <?php if(isset($sms_status) && $sms_status == 1){ ?>
+                                  <li id="sms"><a class="top"><?php echo v_smsanswers_sms; ?></a>        
+                                    <ul>
+                                      <li><a href="<?php echo $sms_send; ?>"><?php echo v_smsprestashop_send; ?></a></li>
+                                      <li><a href="<?php echo $sms_marketing; ?>"><?php echo v_smsprestashop_marketing ;?></a></li>
+                                      <li><a href="<?php echo $sms_history; ?>"><?php echo v_smsprestashop_history; ?></a></li>
+                                      <li><a href="<?php echo $sms_statistics; ?>"><?php echo v_statistics; ?></a></li>
+                                      <li><a href="<?php echo $sms_answers; ?>"><?php echo v_smsprestashop_answers; ?></a></li>
+                                      <li><a href="<?php echo $sms_credit; ?>"><?php echo v_smsprestashop_credit; ?></a></li>
+                                      <li><a class="parent"><?php echo v_menu_setting; ?></a>
+                                        <ul>
+                                            <li><a href="<?php echo $sms_profile; ?>"><?php echo v_adminsmsprofile_editaccount; ?></a></li>
+                                            <li><a href="<?php echo $sms_admin ?>"><?php echo v_smsprestashop_admin; ?></a></li>
+                                            <li><a href="<?php echo $sms_customer; ?>"><?php echo v_smsprestashop_customer; ?></a></li>
+                                            <li><a href="<?php echo $sms_smscharging; ?>"><?php echo v_smsprestashop_smscharging; ?></a></li>
+                                            <li><a href="<?php echo $sms_settings; ?>"><?php echo v_smsprestashop_settings; ?></a></li>
+                                        </ul>
+                                      </li>
+                                      <li><a href="<?php echo $sms_about; ?>"><?php echo v_smsprestashop_about; ?></a></li>
+                                    </ul>
+                                  </li>
+                                  <?php } ?>
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="admin/controller/common/header.php" error="skip">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+                            $this->data['zone'] = $this->url->link('localisation/zone', 'token=' . $this->session->data['token'], 'SSL');
+				]]>
+			</search>
+			<add trim="true"><![CDATA[
+                            $this->load->model('setting/setting');
+                            $smsSettings = $this->model_setting_setting->getSetting("sms");
+                            if(isset($smsSettings["sms_status"]))
+                            {
+                                $this->data['sms_status'] = $smsSettings["sms_status"];
+                            } 
+                            else 
+                            {
+                                $this->data['sms_status'] = 0;
+                            }
+                            
+                            $this->data['sms_profile'] = $this->url->link('sms/profile', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_send'] = $this->url->link('sms/send', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_marketing'] = $this->url->link('sms/marketing', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_history'] = $this->url->link('sms/history', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_statistics'] = $this->url->link('sms/statistics', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_answers'] = $this->url->link('sms/answers', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_admin'] = $this->url->link('sms/admin', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_customer'] = $this->url->link('sms/customer', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_smscharging'] = $this->url->link('sms/smscharging', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_settings'] = $this->url->link('sms/settings', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_credit'] = $this->url->link('sms/credit', 'token=' . $this->session->data['token'], 'SSL');
+                            $this->data['sms_about'] = $this->url->link('sms/about', 'token=' . $this->session->data['token'], 'SSL');
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                                  	$this->data['zone'] = HTTPS_SERVER . 'index.php?route=localisation/zone';
+				]]>
+			</search>
+			<add trim="true"><![CDATA[
+                            $this->load->model('setting/setting');
+                            $smsSettings = $this->model_setting_setting->getSetting("sms");
+
+                            if(isset($smsSettings["sms_status"]))
+                            {
+                                $this->data['sms_status'] = $smsSettings["sms_status"];
+                            } 
+                            else 
+                            {
+                                $this->data['sms_status'] = 0;
+                            }
+                            
+                            $this->data['sms_profile'] = HTTPS_SERVER .'index.php?route=sms/profile';
+                            $this->data['sms_send'] = HTTPS_SERVER .'index.php?route=sms/send';
+                            $this->data['sms_marketing'] = HTTPS_SERVER .'index.php?route=sms/marketing';
+                            $this->data['sms_history'] = HTTPS_SERVER .'index.php?route=sms/history';
+                            $this->data['sms_statistics'] = HTTPS_SERVER .'index.php?route=sms/statistics';
+                            $this->data['sms_answers'] = HTTPS_SERVER .'index.php?route=sms/answers';
+                            $this->data['sms_admin'] = HTTPS_SERVER .'index.php?route=sms/admin';
+                            $this->data['sms_customer'] = HTTPS_SERVER .'index.php?route=sms/customer';
+                            $this->data['sms_smscharging'] = HTTPS_SERVER .'index.php?route=sms/smscharging';
+                            $this->data['sms_settings'] = HTTPS_SERVER .'index.php?route=sms/settings';
+                            $this->data['sms_credit'] = HTTPS_SERVER .'index.php?route=sms/credit';
+                            $this->data['sms_about'] = HTTPS_SERVER .'index.php?route=sms/about';
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                            protected function index() {
+				]]>
+			</search>
+			<add trim="true"><![CDATA[
+                            if(!defined("SMS_MODULE")){
+                                if(file_exists("model/sms/hooks.php"))
+                                {                            
+                                    require_once("model/sms/hooks.php");
+                                    require_once("model/sms/sms.php");
+                                    $hooks = new ModelSmsHooks( $this->registry );
+                                    require_once($hooks->getLanguageDirectory());
+                                }
+                            }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="catalog/model/account/customer.php" error="skip">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+                                    $address_id = $this->db->getLastId();
+				]]>
+			</search>
+			<add trim="false"><![CDATA[                          
+                                    if(file_exists("admin/model/sms/hooks.php"))
+                                    {                          
+                                        require_once("admin/model/sms/hooks.php");
+                                        require_once("admin/model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once("admin/".$hooks->getLanguageDirectory());
+                                        $hooks->customerAddHook($this->config->get('config_store_id'), $customer_id);
+                                    }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="admin/model/sale/customer.php" error="skip">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+                                    $address_id = $this->db->getLastId();
+				]]>
+			</search>
+			<add trim="false"><![CDATA[                          
+                                    if(file_exists("model/sms/hooks.php"))
+                                    {                          
+                                        require_once("model/sms/hooks.php");
+                                        require_once("model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once($hooks->getLanguageDirectory());
+                                        $hooks->customerAddHook(0, $customer_id);
+                                    }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="admin/model/sale/order.php" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+                                if ($data['notify']) {
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                                    if(file_exists("model/sms/hooks.php"))
+                                    {                          
+                                        require_once("model/sms/hooks.php");
+                                        require_once("model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once($hooks->getLanguageDirectory());
+                            
+                                        if($data['notifySms'] || !isset($data['notifySms']))
+                                        {
+                                            $hooks->changeOrderStatusHook($data["order_status_id"], $data["comment"], $order_id);
+                                        }
+                                    }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="catalog/model/checkout/order.php" error="skip">
+                <operation error="skip">
+			<search position="before"><![CDATA[
+                            foreach ($order_product_query->rows as $order_product) {
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                                    if(file_exists("admin/model/sms/hooks.php"))
+                                    {                          
+                                        require_once("admin/model/sms/hooks.php");
+                                        require_once("admin/model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once("admin/".$hooks->getLanguageDirectory());
+                                        $hooks->changeOrderStatusHook($order_status_id, $comment, $order_id);
+                                    }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="admin/model/sale/order.php" error="skip">
+                <operation error="skip">
+			<search position="before"><![CDATA[
+                                foreach($product_query->rows as $product) {   
+                            ]]>
+			</search>
+			<add trim="false"><![CDATA[  
+                                    if(isset($data) && $order_query->row["order_status_id"] != $data['order_status_id'])  
+                                    {          
+                                        if(file_exists("model/sms/hooks.php"))
+                                        {                          
+                                            require_once("model/sms/hooks.php");
+                                            require_once("model/sms/sms.php");
+                                            $hooks = new ModelSmsHooks( $this->registry );
+                                            require_once($hooks->getLanguageDirectory());
+                                            $hooks->changeOrderStatusHook($data['order_status_id'], $data['comment'], $order_id);
+                                        }
+                                    }
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                                $this->data['telephone'] = $order_info['telephone'];
+                            ]]>
+                        </search>
+			<add trim="false">
+                            <![CDATA[
+                                if(is_object($this->url) && method_exists($this->url, "link"))
+                                {
+                                    $this->data['telephoneSms'] = $this->url->link("sms/send", 'token=' . $this->session->data['token'] . "&recipient=".$order_info['telephone'] . "&country=" . $order_info['shipping_country_id'] , 'SSL');                        
+                                }
+                                else
+                                {
+                                    $this->data['telephoneSms'] = "index.php?route=sms/send&recipient=".$order_info['telephone'] . "&country=" . $order_info['shipping_country_id'];
+                                }
+                            ]]>
+                        </add>
+		</operation>
+        </file>  
+        <file name="admin/view/template/sale/order_info.tpl" error="skip">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+                                <td><input type="checkbox" name="notify" value="1" /></td>
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                            <tr>
+                                <td><?php echo v_sendsms_sendsms; ?></td>
+                                <td><input type="checkbox" name="notifySms" value="1" checked="checked" /></td>
+                            ]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="replace"><![CDATA[+ encodeURIComponent($('input[name=\'notify\']').attr('checked') ? 1 : 0)]]></search>
+			<add trim="true"><![CDATA[+ encodeURIComponent($('input[name=\'notify\']').attr('checked') ? 1 : 0) + '&notifySms=' + encodeURIComponent($('input[name=\'notifySms\']').attr('checked') ? 1 : 0)]]></add>
+		</operation>
+                <operation error="skip">
+			<search position="replace"><![CDATA[<td><?php echo $telephone; ?></td>]]></search>
+			<add trim="true"><![CDATA[<td><a href="<?php echo $telephoneSms; ?>"><?php echo $telephone; ?></a></td>]]></add>
+		</operation>
+	</file>
+        <file name="admin/model/sale/return.php" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+                                if ($data['notify']) {
+				]]>
+			</search>
+			<add trim="false"><![CDATA[                          
+                                    if(file_exists("model/sms/hooks.php"))
+                                    {                 
+                                        require_once("model/sms/hooks.php");
+                                        require_once("model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once($hooks->getLanguageDirectory());
+                            
+                                        if($data['notifySms'] || !isset($data['notifySms']))
+                                        {
+                                            $hooks->returnGoodsStatus($data["return_status_id"], $data["comment"], $return_id);
+                                        }
+                                    }
+				]]>
+			</add>
+		</operation>                
+                <operation error="skip">
+			<search position="after"><![CDATA[public function addReturn($data) {]]></search>
+			<add trim="false"><![CDATA[if(true) {]]>
+			</add>
+		</operation>  
+                <operation error="skip">
+			<search position="before"><![CDATA[public function editReturn($return_id, $data) {]]></search>
+			<add trim="false"><![CDATA[                     
+                                    if(file_exists("model/sms/hooks.php"))
+                                    {
+                                        $return_id = $this->db->getLastId();
+                                        require_once("model/sms/hooks.php");
+                                        require_once("model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once($hooks->getLanguageDirectory());
+                                        $hooks->returnGoods($return_id);
+                                    }
+                                }
+				]]>
+			</add>
+		</operation>        
+	</file>
+        <file name="catalog/model/account/return.php" error="skip">             
+                <operation error="skip">
+			<search position="after"><![CDATA[public function addReturn($data) {]]></search>
+			<add trim="false"><![CDATA[if(true) {]]>
+			</add>
+		</operation>  
+                <operation error="skip">
+			<search position="before"><![CDATA[public function getReturn($return_id) {]]></search>
+			<add trim="false"><![CDATA[      
+                                    
+                                    if(file_exists("admin/model/sms/hooks.php"))
+                                    {
+                                        $return_id = $this->db->getLastId();                                             
+                                        require_once("admin/model/sms/hooks.php");
+                                        require_once("admin/model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once("admin/".$hooks->getLanguageDirectory());
+                                        $hooks->returnGoods($return_id);
+                                    }
+                                }
+				]]>
+			</add>
+		</operation>        
+	</file>
+        <file name="admin/view/template/sale/return_info.tpl" error="skip">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+                                <td><input type="checkbox" name="notify" value="1" /></td>
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                            <tr>
+                                <td><?php echo v_sendsms_sendsms; ?></td>
+                                <td><input type="checkbox" name="notifySms" value="1" checked="checked" /></td>
+                            ]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="replace"><![CDATA[+ encodeURIComponent($('input[name=\'notify\']').attr('checked') ? 1 : 0)]]></search>
+			<add trim="true"><![CDATA[+ encodeURIComponent($('input[name=\'notify\']').attr('checked') ? 1 : 0) + '&notifySms=' + encodeURIComponent($('input[name=\'notifySms\']').attr('checked') ? 1 : 0)]]></add>
+		</operation>
+	</file>
+        <file name="admin/controller/sale/order.php" error="skip">
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                                $this->model_sale_order->editOrder($this->request->get['order_id'], $this->request->post);
+				]]>
+			</search>
+			<add trim="false"><![CDATA[                          
+                                    if(file_exists("model/sms/hooks.php"))
+                                    {                          
+                                        require_once("model/sms/hooks.php");
+                                        require_once("model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once($hooks->getLanguageDirectory());
+                                        $hooks->changeOrderStatusHook($this->request->post["order_status_id"], $this->request->post["comment"], $this->request->get["order_id"]);
+                                    }
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                                $this->data['telephone'] = $order_info['telephone'];
+                            ]]>
+                        </search>
+			<add trim="false">
+                            <![CDATA[
+                                if(is_object($this->url) && method_exists($this->url, "link"))
+                                {
+                                    $this->data['telephoneSms'] = $this->url->link("sms/send", 'token=' . $this->session->data['token'] . "&recipient=".$order_info['telephone'] . "&country=" . $order_info['shipping_country_id'] , 'SSL');                        
+                                }
+                                else
+                                {
+                                    $this->data['telephoneSms'] = "index.php?route=sms/send&recipient=".$order_info['telephone'] . "&country=" . $order_info['shipping_country_id'];
+                                }
+                            ]]>
+                        </add>
+		</operation>
+        </file>   
+        <file name="catalog/controller/checkout/success.php" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+                                $this->cart->clear();
+				]]>
+			</search>
+			<add trim="false"><![CDATA[                               
+                                                
+                                    if(file_exists("admin/model/sms/hooks.php"))
+                                    {                         
+                                        require_once("admin/model/sms/hooks.php");
+                                        require_once("admin/model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once("admin/".$hooks->getLanguageDirectory());
+                                        if(isset($this->session->data['customer_id']))
+                                        {
+                                            $sms_customer_id = $this->session->data['customer_id'];
+                                        } else {
+                                            $sms_customer_id = -1;
+                                        }
+                            
+                                        if(!isset($comment))
+                                        {
+                                            $comment = "";
+                                        }
+                                        
+                                        $optOut = ((isset($_SESSION["SMS_IN_CART"]))?(intval($_SESSION["SMS_IN_CART"])):(true));      
+                                        
+                                        $hooks->orderAddHook($sms_customer_id, $this->session->data['order_id'], $comment, $optOut);
+                                                              
+                                        $hooks->outOfStock($this->config->get('config_store_id'));
+                                        unset($_SESSION["SMS_IN_CART"]);
+                                    }
+				]]>
+			</add>
+                </operation>
+	</file>
+        <file name="admin/model/sale/order.php" error="skip">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+                                $this->db->query("UPDATE `" . DB_PREFIX . "order` SET total = '" . (float)$total . "', affiliate_id = '" . (int)$affiliate_id . "', commission = '" . (float)$commission . "' WHERE order_id = '" . (int)$order_id . "'");
+				]]>
+			</search>
+			<add trim="false"><![CDATA[                          
+                                    if(file_exists("model/sms/hooks.php"))
+                                    {                         
+                                        require_once("model/sms/hooks.php");
+                                        require_once("model/sms/sms.php");
+                                        $hooks = new ModelSmsHooks( $this->registry );
+                                        require_once($hooks->getLanguageDirectory());
+                                        if(isset($data['customer_id']))
+                                        {
+                                            $sms_customer_id = $data['customer_id'];
+                                        } else {
+                                            $sms_customer_id = -1;
+                                        }
+                                        if(isset($data['comment'])) 
+                                        {
+                                            $sms_message = $data['comment'];
+                                        } else {
+                                            $sms_message = "";
+                                        }
+                            
+                                        $optOut = ((isset($_SESSION["SMS_IN_CART"]))?(intval($_SESSION["SMS_IN_CART"])):(true)); 
+                            
+                                        $hooks->orderAddHook($sms_customer_id, $order_id, $sms_message, $optOut);
+                                    }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="system/library/cart.php" error="skip">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+                                $this->weight = $registry->get('weight');
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                                $this->getSmsProduct();
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="before"><![CDATA[
+                                public function clear() {
+				]]>
+			</search>
+			<add trim="true"><![CDATA[     
+                                private $product_id;
+                    
+                                private function isOptOutEnable()
+                                {
+                                    if(!$this->isSmsModuleInstalled())
+                                        return false;
+                            
+                                    $auto = $this->isAutoOptOut();
+                                                        
+                                    $optOut = false;    
+                            
+                                    $store_id = $this->config->get('config_store_id');
+                                    if(!isset($store_id))
+                                        $store_id = 0;
+                            
+                                    $result = $this->db->query("SELECT active FROM ".DB_PREFIX."sp_optout_prices WHERE shop_id = $store_id limit 1");
+                                    
+                                    if ($result->num_rows)
+                                    {
+                                        foreach ($result->rows as $row)
+                                        {
+                                            $optOut = $row["active"];
+                                        }
+                                    }
+                            
+                                    if($auto == false && $optOut)
+                                    {
+                                        $_SESSION["SMS_IN_CART"] = false;
+                                    }  
+
+                                    return $optOut;
+                                }
+                                
+                                private function isInCart($product_id)
+                                {
+                                    if(isset($this->session->data['cart'][$product_id]) || isset($this->session->data['cart'][$product_id."::"]))
+                                    {
+                                        return true;
+                                    }
+                                    return false;
+                                }
+
+                                private function getSmsProduct()
+                                { 
+                                    if(!$this->isSmsModuleInstalled())
+                                    {
+                                        return false;
+                                    }
+                            
+                                    if(isset($this->product_id))
+                                    {
+                                        return $this->product_id;
+                                    } 
+                                    else 
+                                    {
+                                        $store_id = $this->config->get('config_store_id');
+                                        if(!isset($store_id))
+                                        {
+                                            $store_id = 0;
+                                        }
+                            
+                                        $result = $this->db->query("SELECT * FROM ".DB_PREFIX."product INNER JOIN  ".DB_PREFIX."product_to_store ON  ".DB_PREFIX."product.product_id =  ".DB_PREFIX."product_to_store.product_id WHERE model like 'InfoSMS' AND store_id = ".$store_id.";");
+
+                                        if ($result->num_rows)
+                                        {
+                                            foreach ($result->rows as $row)
+                                            {
+                                                $this->product_id = $row["product_id"];
+                                                return $this->product_id;
+                                            }
+                                        }
+                                    }
+                                    return false;
+                                }
+
+                                private function isSmsModuleInstalled()
+                                {
+                                    $result = $this->db->query("SELECT value FROM ".DB_PREFIX."setting WHERE `key` like 'sms_status'");
+
+                                    if ($result->num_rows)
+                                    {
+                                        foreach ($result->rows as $row)
+                                        {
+                                            return $row["value"];
+                                        }
+                                    }
+
+                                    return false;
+                                }
+                            
+                                private function isAutoOptOut()
+                                {
+                                    $id_shop = $this->config->get('config_store_id');
+                            
+                                    $result = $this->db->query("SELECT * FROM `" . DB_PREFIX . "sp_config` WHERE `shop_id` = '".$id_shop."' AND `config_name` = 'optout_auto'");
+                                    
+                                    if ($result->num_rows)
+                                    {
+                                        foreach ($result->rows as $row)
+                                        {
+                                            return $row["config_value"];
+                                        }
+                                    }
+                                    return true;
+                                }
+
+                                private function optOutAdd($product_id)
+                                {                 
+                                    $auto = $this->isAutoOptOut();
+
+                                    if(($this->getSmsProduct() == $product_id))
+                                    {
+                                        if($auto)
+                                        {
+                                            return false;
+                                        }
+                                        else
+                                        {
+                                            $_SESSION["SMS_IN_CART"] = true;
+                                            return true;
+                                        }
+                                    }
+
+                                                                       
+                                    if($this->getSmsProduct())
+                                    {
+                                        if($this->hasProducts() && !$this->isInCart($this->getSmsProduct()) && (!isset($_SESSION["SMS_IN_CART"]) || $_SESSION["SMS_IN_CART"] !== false))
+                                        {
+                                            if($auto)
+                                            {
+                                                $this->add($this->getSmsProduct(), 1, "", "");
+                                                $_SESSION["SMS_IN_CART"] = true;
+                                            }
+                                        }
+                                        
+                                        if($this->hasProducts()==1 && $this->isInCart($this->getSmsProduct()))
+                                        {
+                                            if($auto)
+                                            {
+                                                $_SESSION["cart"]->remove($this->id_product); 
+                                                unset($_SESSION["SMS_IN_CART"]);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                private function optOutRemove()
+                                {
+                                    if($this->getSmsProduct()){
+                                        if($this->hasProducts()==1 && $this->isInCart($this->getSmsProduct())){
+                                           $this->clear(); 
+                                           unset($_SESSION["SMS_IN_CART"]);
+                                        }
+
+                                        if(isset($_SESSION["SMS_IN_CART"]) && $_SESSION["SMS_IN_CART"] === true && !$this->isInCart($this->getSmsProduct())){
+                                            $_SESSION["SMS_IN_CART"] = false;
+                                        }
+
+                                        if($this->hasProducts() < 1){
+                                           unset($_SESSION["SMS_IN_CART"]); 
+                                        }
+                                    }
+                                }
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                            $this->session->data['cart'][$key] += (int)$qty;
+				]]>
+			</search>
+			<add trim="true"><![CDATA[
+                                            }
+                                if($this->isOptOutEnable()){
+                                    $this->optOutAdd($product_id);
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                            $this->session->data['cart'][$key] += (int) $qty;
+				]]>
+			</search>
+			<add trim="true"><![CDATA[
+                                            }
+                                if($this->isOptOutEnable()){
+                                    $this->optOutAdd($product_id);
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                                unset($this->session->data['cart'][$key]);
+				]]>
+			</search>
+			<add trim="true"><![CDATA[ 
+
+                                }                                               
+                                if($this->isOptOutEnable()){
+                                    $this->optOutRemove();
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+			<search position="after"><![CDATA[
+                                public function update($key, $qty) {
+				]]>
+			</search>
+			<add trim="true"><![CDATA[ 
+                                if($key == $this->getSmsProduct() || $key == $this->getSmsProduct()."::"){
+                                    return;
+                                }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="catalog/controller/information/contact.php" error="skip">
+		<operation error="skip">
+			<search position="after"><![CDATA[
+                                $mail->send();
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                        if(file_exists("admin/model/sms/hooks.php"))
+                        {                          
+                            require_once("admin/model/sms/hooks.php");
+                            require_once("admin/model/sms/sms.php");
+                            $hooks = new ModelSmsHooks( $this->registry );
+                            require_once("admin/".$hooks->getLanguageDirectory());
+                            $hooks->contactFormHook($this->config->get('config_store_id'), $this->request->post['enquiry'], $this->request->post['email'], $this->request->post['name']);
+                        }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="admin/controller/catalog/product.php" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+                                $this->model_catalog_product->deleteProduct($product_id);
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                        if(file_exists("model/sms/hooks.php"))
+                        {                          
+                            require_once("model/sms/hooks.php");
+                            require_once("model/sms/sms.php");
+                            $hooks = new ModelSmsHooks( $this->registry );
+                            require_once($hooks->getLanguageDirectory());
+                            $hooks->productDeleteHook($product_id);
+                        }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="admin/model/setting/setting.php" error="skip">
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+                                $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE AND `group` = '" . $this->db->escape($group) . "'");
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                                $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE `group` = '" . $this->db->escape($group) . "'");
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="admin/controller/extension/module.php" error="skip">
+		<operation error="skip">
+                        <ignoreif><![CDATA[
+                        $class->install();
+                        ]]></ignoreif>
+			<search position="after"><![CDATA[
+                                $this->model_user_user_group->addPermission($this->user->getId(), 'modify', 'module/' . $this->request->get['extension']);
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                                require_once(DIR_APPLICATION . 'controller/module/' . $this->request->get['extension'] . '.php');
+
+                                $class = 'ControllerModule' . str_replace('_', '', $this->request->get['extension']);
+                                $class = new $class($this->registry);
+
+                                if (method_exists($class, 'install')) {
+                                        $class->install();
+                                }
+				]]>
+			</add>
+		</operation>
+                <operation error="skip">
+                        <ignoreif><![CDATA[
+                        $class->uninstall();
+                        ]]></ignoreif>
+			<search position="after"><![CDATA[
+                                $this->model_setting_setting->deleteSetting($this->request->get['extension']);
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                                require_once(DIR_APPLICATION . 'controller/module/' . $this->request->get['extension'] . '.php');
+
+                                $class = 'ControllerModule' . str_replace('_', '', $this->request->get['extension']);
+                                $class = new $class($this->registry);
+
+                                if (method_exists($class, 'uninstall')) {
+                                        $class->uninstall();
+                                }
+				]]>
+			</add>
+		</operation>
+	</file>
+        <file name="catalog/controller/module/bestseller.php" error="skip">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+                                if ($result['image']) {
+				]]>
+			</search>
+			<add trim="true"><![CDATA[                          
+                                if($result["model"] == "InfoSMS") 
+                                    continue;
+				]]>
+			</add>
+		</operation>
+	</file>
+</modification>
+        

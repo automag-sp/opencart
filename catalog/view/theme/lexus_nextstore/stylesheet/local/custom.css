@@ -1,0 +1,7 @@
+.saleepc .icon li{
+display: initial;
+}
+.saleepc .icon img{
+margin: 5px;
+}
+.list a {color: #222; text-decoration: underline;}

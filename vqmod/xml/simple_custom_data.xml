@@ -1,0 +1,120 @@
+<modification>
+    <id>Simple Custom Data</id>
+    <version>1.0.0</version>
+    <vqmver>2.1</vqmver>
+    <author>deeman</author>
+    
+    <file name="admin/view/template/sale/customer_form.tpl">
+        <operation>
+            <search position="after"><![CDATA[
+            <div id="tab-customer" class="vtabs-content">
+            ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript">
+                $(function(){
+                    $('#tab-customer table').after('<div id="simple_custom_customer" class="simple-container"></div>');
+                    $('#simple_custom_customer').load('index.php?route=module/simple/custom&token=<?php echo $token; ?>&set=customer&type=customer&id=<?php echo $customer_id; ?>');
+                });
+            </script>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[
+            <input type="hidden" name="address[<?php echo $address_row; ?>][address_id]" value="<?php echo $address['address_id']; ?>" />
+            ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript">
+                $(function(){
+                    $('#tab-address-<?php echo $address_row; ?> table').after('<div id="simple_custom_address_<?php echo $address_row; ?>" class="simple-container"></div>');
+                    $('#simple_custom_address_<?php echo $address_row; ?>').load('index.php?route=module/simple/custom&set=address&token=<?php echo $token; ?>&type=address&id=<?php echo $address['address_id']; ?>');
+                });
+            </script>
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="admin/view/template/sale/order_info.tpl">
+        <operation>
+            <search position="after"><![CDATA[
+            <div id="tab-order" class="vtabs-content">
+            ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript">
+                $(function(){
+                    $('#tab-order table').after('<div id="simple_custom_order" class="simple-container"></div>');
+                    $('#simple_custom_order').load('index.php?route=module/simple/custom&set=order&token=<?php echo $token; ?>&type=order&id=<?php echo $order_id; ?>');
+                });
+            </script>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[
+            <div id="tab-payment" class="vtabs-content">
+            ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript">
+                $(function(){
+                    $('#tab-payment table').after('<div id="simple_custom_payment_address" class="simple-container"></div>');
+                    $('#simple_custom_payment_address').load('index.php?route=module/simple/custom&set=payment_address&token=<?php echo $token; ?>&type=order&id=<?php echo $order_id; ?>');
+                });
+            </script>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[
+            <div id="tab-shipping" class="vtabs-content">
+            ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript">
+                $(function(){
+                    $('#tab-shipping table').after('<div id="simple_custom_shipping_address" class="simple-container"></div>');
+                    $('#simple_custom_shipping_address').load('index.php?route=module/simple/custom&set=shipping_address&token=<?php echo $token; ?>&type=order&id=<?php echo $order_id; ?>');
+                });
+            </script>
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="admin/view/template/sale/order_form.tpl">
+        <operation>
+            <search position="after"><![CDATA[
+            <div id="tab-customer" class="vtabs-content">
+            ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript">
+                $(function(){
+                    $('#tab-customer table').after('<div id="simple_custom_order" class="simple-container"></div>');
+                    $('#simple_custom_order').load('index.php?route=module/simple/custom&set=order&token=<?php echo $token; ?>&type=order&id=<?php echo $order_id; ?>');
+                });
+            </script>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[
+            <div id="tab-payment" class="vtabs-content">
+            ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript">
+                $(function(){
+                    $('#tab-payment table').after('<div id="simple_custom_payment_address" class="simple-container"></div>');
+                    $('#simple_custom_payment_address').load('index.php?route=module/simple/custom&set=payment_address&token=<?php echo $token; ?>&type=order&id=<?php echo $order_id; ?>');
+                });
+            </script>
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[
+            <div id="tab-shipping" class="vtabs-content">
+            ]]></search>
+            <add><![CDATA[
+            <script type="text/javascript">
+                $(function(){
+                    $('#tab-shipping table').after('<div id="simple_custom_shipping_address" class="simple-container"></div>');
+                    $('#simple_custom_shipping_address').load('index.php?route=module/simple/custom&set=shipping_address&token=<?php echo $token; ?>&type=order&id=<?php echo $order_id; ?>');
+                });
+            </script>
+            ]]></add>
+        </operation>
+    </file>
+    
+</modification>

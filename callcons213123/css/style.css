@@ -1,0 +1,174 @@
+#callcons_b{
+	position: fixed;
+	z-index: 9999;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	color: #FFF;
+	font-size: 13px;
+	text-align: center;
+	line-height: 24px;
+	font-family: Tahoma, Arial;
+	text-shadow: 0px 1px 0px #000;
+	/*border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;*/
+}
+#callcons_b:hover{
+	opacity: 0.9;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+}
+#callcons_f{
+	display: none;
+	border: 2px solid rgb(171, 21, 255);
+	box-shadow: 0 0 65px #222;
+	position: fixed;
+	font-family: Tahoma;
+	border-radius: 0px;
+	left: 0px;
+	top: 0px;
+	width: 310px;
+	z-index: 100000;
+	color: #222;
+	background: rgb(247, 247, 247);
+	border-radius: 0px;
+}
+#callcons_black{
+	display: none;
+	z-index: 10000;
+	opacity: 0.5;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	position: fixed;
+	background: #000;
+}
+#callcons{
+
+}
+
+.call_h{
+	position: relative;
+	color: #fff;
+	background: rgb(171, 21, 255);
+	font-size: 13px;
+	line-height: 14px;
+	padding: 5px 0 8px 0px;
+	margin: 0 0 6px 0;
+	font-weight: normal;
+	text-align: center;
+	cursor: auto;
+}
+#call_close{
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	height: 16px;
+	width: 16px;
+	background: url('http://automag-sp.ru/callcons/img/close_window.png') no-repeat;
+	cursor: pointer;
+}
+#call_close:hover{
+	background: url('http://automag-sp.ru/callcons/img/close_window_h.png') no-repeat;
+}
+.call_form_name, .call_form_div{
+	display: block;
+	padding: 1px 4px 1px 0px;
+	font-size: 11px;
+	font-family: Tahoma, Arial;
+	font-weight: normal;
+	width: 280px;
+	margin: 0 auto;
+	text-shadow: 0px 1px 0px #fff;
+
+}
+.call_form{
+	width: 273px !important;
+	border: 1px solid rgb(187, 196, 206) !important;
+	border-radius: 0px !important;
+	/*box-shadow: inset 1px 1px 5px #EBEBEB;*/
+	color: #222 !important;
+	font-size: 12px !important;
+	padding: 5px !important;
+	outline: none;
+	font-style: normal;
+}
+
+#call_text{
+	resize: none;
+	overflow: auto;
+	height: 40px !important;
+}
+#call_order{
+	float: right;
+	color: #FFF;
+	background: rgb(171, 21, 255);
+	border: 2px solid rgb(171, 21, 255);
+	text-align: center;
+	font-size: 13px;
+	font-family: arial;
+	padding: 4px 10px;
+	cursor: pointer;
+	margin: 4px 11px 8px 2px;
+	border-radius: 3px;
+}
+#call_order:hover{
+	color: rgb(171, 21, 255);
+	background: #FFF;
+}
+#callcons_mess{
+	display: none;
+	float: left;
+	font-size: 12px;
+	font-family: Tahoma;
+	color: rgb(160, 0, 0);
+	margin: 10px 0px 14px 16px;
+	text-shadow: 0px 1px 0px #FFF;
+}
+#callcons_send{
+	display: none;
+	float: left;
+	font-size: 12px;
+	font-family: Tahoma;
+	color: #375370;
+	margin: 10px 0px 14px 17px;
+	background: url('http://automag-sp.ru/callcons/img/loading.gif') 3px 5px no-repeat;
+	padding-left: 25px;
+	text-shadow: 0px 1px 0px #FFF;
+}
+
+.not_filled {
+	box-shadow: 0px 0px 3px #DA1E1E !important;
+	border: 1px solid #AA0606 !important;
+	background-color: #FFF5F5 !important;
+}
+
+#callcons_cop{
+	display: block;
+	float: left;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top: -6px;
+}
+#callcons_cop span{
+	font-size: 11px;
+	color: #555;
+	font-family: Tahoma;
+}
+.form_div_class{
+	margin-bottom: 1px;
+}
+.call_b_char{
+	height: 8px;
+	font-size: 13px;
+	font-family: Tahoma;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	text-shadow: 0px 1px 0px #000;
+}

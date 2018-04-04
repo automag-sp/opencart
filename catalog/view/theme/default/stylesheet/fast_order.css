@@ -1,0 +1,49 @@
+#fast_order_form .fast_order_left {
+  display: inline-block;
+  width: 29%;
+  text-align: right;
+}
+
+#fast_order_form .fast_order_right {
+  float: right;
+  display: inline-block;
+  width: 68%;
+  text-align: left;
+}
+#fast_order_form .fast_order_right p {
+  margin-bottom: 15px;
+  padding: 0px;
+}
+#fast_order_form .fast_order_center {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+#fast_order_form #fast_order_result {
+  color: #aaa;
+  margin-bottom: 14px;
+}
+#fast_order_form #fast_order_result .fast_order_error {
+  color: #f00;
+}
+#fast_order_form #fast_order_result .fast_order_success {
+  color: #00d12a;
+}
+#fast_order_form p {
+  margin-bottom: 22px;
+  padding: 0px;
+}
+
+#fast_order_form input {
+  margin: 0px;
+  padding: 0px;
+  height: 20px;
+  width: 220px;
+}
+
+#fast_order_form .fast_order_button {
+  font-size: 17px;
+  cursor: pointer;
+  height: 40px;
+	width: 220px;
+}

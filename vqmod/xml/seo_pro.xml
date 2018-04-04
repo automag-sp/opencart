@@ -1,0 +1,171 @@
+<modification>
+	<id>SEO PRO for OpenCart 1.5.5.1</id>
+        <version>1.0.0</version>
+	<comment><![CDATA[
+1. execute script
+	ALTER TABLE `product_to_category` ADD `main_category` tinyint(1) NOT NULL DEFAULT '0';
+2. copy file seo_pro.php in folder catalog/controller/common
+3. replace in file index.php this line
+      $controller->addPreAction(new Action('common/seo_url'));
+with following
+if (!$seo_type = $config->get('config_seo_url_type')) {
+	$seo_type = 'seo_url';
+}
+$controller->addPreAction(new Action('common/' . $seo_type));
+	
+	]]></comment>
+        <vqmver>2.1</vqmver>
+        <author>ruslan.shv@gmail.com (freelancer)</author>
+        <file name="admin/controller/catalog/product.php">
+                <operation>
+                        <search position="after"><![CDATA[$this->data['entry_layout'] = $this->language->get('entry_layout');]]></search>
+                        <add><![CDATA[		$this->data['entry_main_category'] = $this->language->get('entry_main_category');]]></add>
+                </operation>
+                <operation>
+                        <search position="after"><![CDATA[$this->data['product_categories'] = array();]]></search>
+                        <add><![CDATA[		if (isset($this->request->post['main_category_id'])) {
+			$this->data['main_category_id'] = $this->request->post['main_category_id'];
+		} elseif (isset($product_info)) {
+			$this->data['main_category_id'] = $this->model_catalog_product->getProductMainCategoryId($this->request->get['product_id']);
+		} else {
+			$this->data['main_category_id'] = 0;
+		}]]></add>
+                </operation>
+        </file>
+        <file name="admin/controller/setting/setting.php">
+                <operation>
+                        <search position="after"><![CDATA[$this->data['entry_encryption'] = $this->language->get('entry_encryption');]]></search>
+                        <add><![CDATA[		$this->data['entry_seo_url'] = $this->language->get('entry_seo_url');
+		$this->data['entry_seo_url_type'] = $this->language->get('entry_seo_url_type');
+		$this->data['entry_seo_url_include_path'] = $this->language->get('entry_seo_url_include_path');
+		$this->data['entry_seo_url_postfix'] = $this->language->get('entry_seo_url_postfix');]]></add>
+                </operation>
+                <operation>
+                        <search position="after" offset="2"><![CDATA[$this->data['config_seo_url'] = $this->config->get('config_seo_url');]]></search>
+                        <add><![CDATA[		if (isset($this->request->post['config_seo_url_type'])) {
+			$this->data['config_seo_url_type'] = $this->request->post['config_seo_url_type'];
+		} elseif ($this->config->get('config_seo_url_type')) {
+			$this->data['config_seo_url_type'] = $this->config->get('config_seo_url_type');
+		} else {
+			$this->data['config_seo_url_type'] = 'seo_url';
+		}
+
+		$this->data['seo_types'] = array();
+		$this->data['seo_types'][] = array('type' => 'seo_url', 'name' => $this->language->get('text_seo_url'));
+		$this->data['seo_types'][] = array('type' => 'seo_pro', 'name' => $this->language->get('text_seo_pro'));
+
+		if (isset($this->request->post['config_seo_url_include_path'])) {
+			$this->data['config_seo_url_include_path'] = $this->request->post['config_seo_url_include_path'];
+		} else {
+			$this->data['config_seo_url_include_path'] = $this->config->get('config_seo_url_include_path');
+		}
+
+		if (isset($this->request->post['config_seo_url_postfix'])) {
+			$this->data['config_seo_url_postfix'] = $this->request->post['config_seo_url_postfix'];
+		} else {
+			$this->data['config_seo_url_postfix'] = $this->config->get('config_seo_url_postfix');
+		}]]></add>
+                </operation>
+        </file>
+	
+
+        <file name="admin/language/*/setting/setting.php">
+                <operation>
+                        <search position="after"><![CDATA[// Text]]></search>
+                        <add><![CDATA[$_['text_seo_url']					= 'Default';
+$_['text_seo_pro']					= 'SeoPro';
+$_['entry_seo_url_type']			= 'Тип ЧПУ:';
+$_['entry_seo_url_include_path']	= 'ЧПУ товаров с категориями:<span class="help">/category/subcategory/product<br />(только для SeoPro)</span>';
+$_['entry_seo_url_postfix']			= 'Окончание ЧПУ:<span class="help">Например .html<br />(только для SeoPro)</span>';
+]]></add>
+                </operation>
+        </file>
+
+        <file name="admin/language/*/catalog/product.php">
+                <operation>
+                        <search position="after"><![CDATA[// Text]]></search>
+                        <add><![CDATA[$_['entry_main_category']     = "Категория:";]]></add>
+                </operation>
+        </file>
+
+
+        <file name="admin/model/catalog/product.php">
+                <operation>
+                        <search position="before"><![CDATA[if (isset($data['product_related'])) {]]></search>
+                        <add><![CDATA[
+			if (isset($data['main_category_id']) && $data['main_category_id'] > 0) {
+			
+			$this->db->query("DELETE FROM " . DB_PREFIX . "product_to_category WHERE product_id = '" . (int)$product_id . "' AND category_id = '" . (int)$data['main_category_id'] . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "product_to_category SET product_id = '" . (int)$product_id . "', category_id = '" . (int)$data['main_category_id'] . "', main_category = 1");
+		} elseif (isset($data['product_category'][0])) {
+			$this->db->query("UPDATE " . DB_PREFIX . "product_to_category SET main_category = 1 WHERE product_id = '" . (int)$product_id . "' AND category_id = '" . (int)$data['product_category'][0] . "'");
+		}]]></add>
+                </operation>
+                <operation>
+                        <search position="before"><![CDATA[public function getProductRelated($product_id) {]]></search>
+                        <add><![CDATA[	public function getProductMainCategoryId($product_id) {
+		$query = $this->db->query("SELECT category_id FROM " . DB_PREFIX . "product_to_category WHERE product_id = '" . (int)$product_id . "' AND main_category = '1' LIMIT 1");
+
+		return ($query->num_rows ? (int)$query->row['category_id'] : 0);
+	}]]></add>
+                </operation>
+        </file>
+        <file name="admin/view/template/catalog/product_form.tpl">
+                <operation>
+                        <search position="before" offset="1"><![CDATA[<td><?php echo $entry_category; ?></td>]]></search>
+                        <add><![CDATA[            <tr>
+	      <td><?php echo $entry_main_category; ?></td>
+              <td><select name="main_category_id">
+                <option value="0" selected="selected"><?php echo $text_none; ?></option>
+                <?php foreach ($product_categories as $category) { ?>
+                <?php if ($category['category_id'] == $main_category_id) { ?>
+                <option value="<?php echo $category['category_id']; ?>" selected="selected"><?php echo $category['name']; ?></option>
+                <?php } else { ?>
+                <option value="<?php echo $category['category_id']; ?>"><?php echo $category['name']; ?></option>
+                <?php } ?>
+                <?php } ?>
+              </select></td>
+            </tr>]]></add>
+                </operation>
+        </file>
+        <file name="admin/view/template/setting/setting.tpl">
+                <operation>
+                        <search position="before" offset="1"><![CDATA[<td><?php echo $entry_maintenance; ?></td>]]></search>
+                        <add><![CDATA[            <tr>
+              <td><?php echo $entry_seo_url_type; ?></td>
+              <td><select name="config_seo_url_type">
+                <?php foreach ($seo_types as $seo_type) { ?>
+                <?php if ($seo_type['type'] == $config_seo_url_type) { ?>
+                <option value="<?php echo $seo_type['type']; ?>" selected="selected"><?php echo $seo_type['name']; ?></option>
+                <?php } else { ?>
+                <option value="<?php echo $seo_type['type']; ?>"><?php echo $seo_type['name']; ?></option>
+                <?php } ?>
+                <?php } ?>
+              </select></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_seo_url_include_path; ?></td>
+              <td><?php if ($config_seo_url_include_path) { ?>
+                <input type="radio" name="config_seo_url_include_path" value="1" checked="checked" />
+                <?php echo $text_yes; ?>
+                <input type="radio" name="config_seo_url_include_path" value="0" />
+                <?php echo $text_no; ?>
+                <?php } else { ?>
+                <input type="radio" name="config_seo_url_include_path" value="1" />
+                <?php echo $text_yes; ?>
+                <input type="radio" name="config_seo_url_include_path" value="0" checked="checked" />
+                <?php echo $text_no; ?>
+                <?php } ?></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_seo_url_postfix; ?></td>
+              <td><input type="text" name="config_seo_url_postfix" value="<?php echo $config_seo_url_postfix; ?>" size="3" /></td>
+            </tr>]]></add>
+                </operation>
+        </file>
+</modification>
+
+		
+		
+
+

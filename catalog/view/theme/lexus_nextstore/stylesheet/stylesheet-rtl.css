@@ -1,0 +1,222 @@
+#search .button-search {
+  border-width: 1px 0px 1px 1px;
+}
+#header-main .logo {
+  margin-left: 10%;
+  margin-right: 0;
+}
+#header-main .inner {
+  text-align: right;
+}
+#header-main .support .media .pull-left {
+  margin-left: 10px;
+  margin-right: 0;
+}
+#topbar .links {
+  float: right;
+}
+#topbar .fa {
+  margin-left: 5px;
+  margin-right: 0;
+}
+#header #cart .media .pull-left {
+  margin-left: 10px;
+  margin-right: 0;
+}
+#header #cart .heading a span {
+  margin-right: 0;
+  margin-left: 5px;
+}
+#header #cart .content {
+  right: auto;
+  left: 17px;
+}
+#pav-mainnav .navbar-default .navbar-nav > .dropdown > a .caret:before {
+  right: auto;
+  left: -15px;
+}
+#pav-mainnav .caret {
+  margin-left: 0;
+  margin-right: 5px;
+}
+#pav-mainnav .dropdown-menu ul li.parent:hover > .dropdown-menu {
+  left: auto;
+  right: 100%;
+}
+#pav-verticalmenu .navbar-nav > li > a {
+  padding: 18px 23px 18px 18px;
+}
+#pav-verticalmenu .navbar-nav > li:hover > .dropdown-menu {
+  left: auto;
+  right: 100%;
+}
+.btn-group .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+.shapes.right {
+  left: auto;
+  right: 0;
+  border-left: 0px solid #EEEEEE;
+  border-right: 5px solid #EEEEEE;
+}
+.line {
+  left: auto;
+  right: 0;
+}
+.product-block {
+  text-align: right;
+}
+.product-block .pav-colorbox span {
+  margin-left: 0;
+  margin-right: 6px;
+}
+.product-block .action > * {
+  float: right;
+}
+.product-block .action .wishlist a {
+  border: 1px solid #E5E5E5;
+}
+.product-cols {
+  border-left: 1px solid #E5E5E5;
+  border-right: 0;
+}
+.product-block .action .button-group .compare {
+  margin: 0 5px;
+}
+.pav-categoryproducts .box-content .carousel-controls {
+  right: auto;
+  left: 0;
+}
+.pav-categoryproducts .box-content .carousel-controls .left {
+  left: auto;
+  right: -38px;
+}
+.pav-categoryproducts .box-content .carousel-controls .right {
+  left: auto;
+  right: -60px;
+}
+#footer .box .box-heading .fa,
+#footer ul li a .fa,
+#footer ol li a .fa {
+  margin-right: 0;
+  margin-left: 6px;
+}
+.newsletter_block {
+  right: auto;
+  left: 60px;
+}
+#search {
+  right: auto;
+  left: 42px;
+}
+.navbar-header {
+  float: right;
+}
+#pav-mainnav .dropdown:hover > .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+.navbar-nav > li {
+  float: right;
+}
+#pav-verticalmenu .navbar-nav > li > a .caret {
+  right: auto;
+  left: 0;
+  height: 0px;
+  width: 0px;
+  border-right: 0;
+  border-top: 5px solid transparent;
+  border-left: 5px solid #999999;
+  border-bottom: 5px solid transparent;
+}
+.productcarousel .carousel-controls {
+  left: 20px;
+  right: auto;
+}
+.product-label.product-label-special {
+  right: auto;
+  left: 1px;
+  border-left: 0;
+  border-right: 46px solid rgba(0,0,0,0);
+}
+.product-label.product-label-special span {
+  right: auto;
+  left: 8px;
+}
+.product-list .action .wishlist a,
+.product-list .action .compare a {
+  padding: 8px 10px;
+}
+.zoomWindow {
+  left: auto;
+  right: 460px !important;
+}
+.product-info .product-extra .add-action {
+  border-right: 0;
+  border-left: 1px solid #E5E5E5;
+}
+#customize-body input[type="text"],
+#customize-body select {
+  margin: 0 0px 0 5px !important;
+}
+.product-info #image-additional-carousel a {
+  float: right;
+}
+.btn.btn-shopping-cart > * {
+  float: right;
+}
+#pav-paneltool .paneltool form > * {
+  float: right;
+}
+#search .input-search {
+  border-width: 1px;
+}
+.media > .pull-left {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.blog-meta > span i {
+  margin: 0 0 0 5px !important;
+}
+.sidebar ul > li a,
+.sidebar ol > li a {
+  padding: 12px 20px 12px 0px;
+}
+.socials-theme.right ul li {
+  right: auto;
+  left: -296px;
+}
+.socials-theme.right .box-content {
+  margin-right: 35px;
+  margin-left: 0;
+}
+.socials-theme.right ul li:hover {
+  left: 0;
+  right: auto;
+}
+.socials-theme .list-socials li span {
+  text-align: right;
+  padding: 0;
+}
+.paneltool {
+  left: auto !important;
+  right: -322px;
+}
+.panelbutton {
+  right: auto !important;
+  left: -37px;
+}
+.editortool .label-customize {
+  right: auto !important;
+  top: 220px !important;
+  left: -165px;
+  -webkit-transform: rotate(222deg);
+  -moz-transform: rotate(222deg);
+  -ms-transform: rotate(222deg);
+  -o-transform: rotate(222deg);
+  transform: rotate(222deg);
+}
+.paneltool.active {
+  right: 0;
+}

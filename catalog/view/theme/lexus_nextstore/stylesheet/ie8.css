@@ -1,0 +1,26 @@
+.panelbutton{
+	border: 1px solid #ddd;
+}
+
+.product-block .pav-colorbox{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";  
+	filter: alpha(opacity=0);  
+	-moz-opacity: 0;  
+	-khtml-opacity: 0;  
+	-o-opacity: 0;  
+	-webkit-opacity: 0;  
+	opacity: 0;		
+	background-color: #444444;		
+	display: block;	
+	padding-top: 10px;
+	padding-bottom: 0;
+	height: 15px;
+}
+
+.product-block:hover .pav-colorbox{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";  
+	filter: alpha(opacity=100);  
+	-moz-opacity: 1;  
+	-khtml-opacity: 1;  
+	opacity: 1;	
+}

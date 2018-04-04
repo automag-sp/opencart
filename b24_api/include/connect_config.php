@@ -1,0 +1,1 @@
+{"CLIENT_ID":"local.58cf8e1fc08351.91750351","CLIENT_SECRET":"8Si8LIUgkJKsQvUerDVUB7Mqf7jWCDwUxuyS3FAS4fIJnUvfPG","DOMAIN":"automag-sp.ru","SCOPE":["crm","im"],"B24_DOMAIN":"automag.bitrix24.ru","PATH":"\/admin\/index.php?route=module\/b24_apipro"}

@@ -1,0 +1,7 @@
+.g_garageCommentName{ font-weight: bold; }
+.g_garageComment{ padding:0 0 10px 0}
+.g_ToolbarButton {padding: 9px 10px;}
+.g_ToolbarButton:hover {background: #006FA4}
+.g_ToolbarButton:hover a {color: white}
+.gdUnit {width: 100%;}
+.g_additional_toggler {float:left; padding-right: 5px}
