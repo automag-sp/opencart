@@ -1,8 +1,0 @@
-.listscroll {border: 1px solid #CCC; height: 99px; background: white; overflow-y: scroll; font-size: 11px;}
-.listscroll div {height: 16px;}
-.listscroll input {vertical-align: text-bottom;}
-.listscroll .odd {background: #E4EEF7;}
-.listscroll .even {background: white;}
-.forms {padding: 3px 0px 3px 3px !important;}
-.forms input {margin: 3px 3px 0px;}
-.support {font-size: 14px;}

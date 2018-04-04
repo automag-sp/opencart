@@ -1,1 +1,0 @@
-<?php define("ADMIN_LOGIN", "ring"); define("ADMIN_PASSWORD", "amag-sp"); define("OFFLINE_EMAIL", "alisovskii@mail.ru");

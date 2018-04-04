@@ -1,1 +1,0 @@
-<table class="simplecheckout-table-form">

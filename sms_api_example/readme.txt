@@ -1,1 +1,0 @@
-This folder is protected by htaccess and api will not work in this folder!
