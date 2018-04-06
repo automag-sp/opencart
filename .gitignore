@@ -1,3 +1,6 @@
 system/logs/
-vqmod/vqcache/
 system/cache/
+vqmod/logs/
+vqmod/vqcache/
+image/cache/
+
