@@ -5,6 +5,12 @@
     <author>boris_tim</author>
     <file name="catalog/model/module/b24_order.php">
         <operation>
+            <search position="replace"><![CDATA[$orderName = $order['store_name'] . '. Заказ № ' . $order['order_id'];]]></search>
+            <add><![CDATA[
+            $orderName = $order['payment_method'] . ' ' . $order['store_name'] . '. Заказ № ' . $order['order_id'] . ' от ' . date('Y/m/d H:i:s');
+]]></add>
+        </operation>
+        <operation>
             <search position="after"><![CDATA['ADDRESS_POSTAL_CODE' => $order['payment_postcode'],]]></search>
             <add><![CDATA[
             'UF_CRM_1522838105'   => $order['payment_method'],

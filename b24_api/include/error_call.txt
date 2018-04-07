@@ -271,3 +271,101 @@ Array
         )
 
 )
+Array
+(
+    [result] => Array
+        (
+            [result] => Array
+                (
+                )
+
+            [result_error] => Array
+                (
+                    [contact_update] => Array
+                        (
+                            [error] => 
+                            [error_description] => ID is not defined or invalid.
+                        )
+
+                    [contact_get] => Array
+                        (
+                            [error] => 
+                            [error_description] => ID is not defined or invalid.
+                        )
+
+                )
+
+            [result_total] => Array
+                (
+                )
+
+            [result_next] => Array
+                (
+                )
+
+            [result_time] => Array
+                (
+                )
+
+        )
+
+    [time] => Array
+        (
+            [start] => 1523017532.3816
+            [finish] => 1523017533.209
+            [duration] => 0.82734489440918
+            [processing] => 0.0015761852264404
+            [date_start] => 2018-04-06T15:25:32+03:00
+            [date_finish] => 2018-04-06T15:25:33+03:00
+        )
+
+)
+Array
+(
+    [result] => Array
+        (
+            [result] => Array
+                (
+                )
+
+            [result_error] => Array
+                (
+                    [contact_update] => Array
+                        (
+                            [error] => 
+                            [error_description] => ID is not defined or invalid.
+                        )
+
+                    [contact_get] => Array
+                        (
+                            [error] => 
+                            [error_description] => ID is not defined or invalid.
+                        )
+
+                )
+
+            [result_total] => Array
+                (
+                )
+
+            [result_next] => Array
+                (
+                )
+
+            [result_time] => Array
+                (
+                )
+
+        )
+
+    [time] => Array
+        (
+            [start] => 1523017796.2968
+            [finish] => 1523017796.3306
+            [duration] => 0.033812046051025
+            [processing] => 0.0017750263214111
+            [date_start] => 2018-04-06T15:29:56+03:00
+            [date_finish] => 2018-04-06T15:29:56+03:00
+        )
+
+)

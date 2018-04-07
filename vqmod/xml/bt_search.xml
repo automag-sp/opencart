@@ -19,35 +19,5 @@ continue;
 }
 ]]></add>
         </operation>
-        <!--        <operation>
-                    <search position="replace"><![CDATA[$sql .= " " . implode(" AND ", $implode) . "";]]></search>
-                    <add><![CDATA[$sql .= " " . implode(" OR ", $implode) . "";]]></add>
-                </operation>
-                <operation>
-                    <search position="after"><![CDATA[$words = explode(' ', trim(preg_replace('/\s\s+/', ' ', $data['filter_name'])));]]></search>
-                    <add><![CDATA[
-                            $_implode = [];
-                            foreach (['/','.','-',' '] as $delimiter) {
-                                $_words = explode($delimiter, $data['filter_name']);
-                                foreach ($_words as $word) {
-                                    if(mb_strlen($word)){
-                                        $_implode[] = " REPLACE(REPLACE(REPLACE(pd.name,'/',''),'.',''),'-','') LIKE '%" . $word . "%' ";
-                                        $_implode[] = " '" . $word . "' like concat('%',REPLACE(REPLACE(REPLACE(pd.name,'/',''),'.',''),'-',''),'%') ";
-                                    }
-                                }
-                            }
-                            if($_implode){
-                                $sql .= implode(' or ',$_implode).' ) and (length(pd.name) > 3) or ( ';
-                            }
-        ]]></add>
-                </operation>
-
-                <operation>
-                    <search position="replace"><![CDATA[$sql .= " OR ";]]></search>
-                    <add><![CDATA[
-        $sql .= " AND ";
-        ]]></add>
-                </operation>
-                -->
     </file>
 </modification>
