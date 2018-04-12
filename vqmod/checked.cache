@@ -245,3 +245,5 @@ catalog/view/theme/default/template/checkout/simplecheckout_cart_empty.tpl
 catalog/controller/information/liber.php
 catalog/view/theme/lexus_happycook/template/saleepc/skoda/subgroups.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/skoda/groups.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/audi/index.tpl
+catalog/controller/account/transaction.php
