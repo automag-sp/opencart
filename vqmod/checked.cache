@@ -247,3 +247,10 @@ catalog/view/theme/lexus_happycook/template/saleepc/skoda/subgroups.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/skoda/groups.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/audi/index.tpl
 catalog/controller/account/transaction.php
+catalog/controller/pavblog/blogs.php
+catalog/view/theme/lexus_happycook/template/pavblog/blogs.tpl
+catalog/controller/saleepc/kia.php
+catalog/language/russian/saleepc/kia.php
+catalog/model/saleepc/kia.php
+catalog/view/theme/lexus_happycook/template/saleepc/kia/parts.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/hyundai/subgroups.tpl
