@@ -254,3 +254,9 @@ catalog/language/russian/saleepc/kia.php
 catalog/model/saleepc/kia.php
 catalog/view/theme/lexus_happycook/template/saleepc/kia/parts.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/hyundai/subgroups.tpl
+catalog/controller/saleepc/seat.php
+catalog/language/russian/saleepc/seat.php
+catalog/model/saleepc/seat.php
+catalog/view/theme/lexus_happycook/template/saleepc/seat/subgroups.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/kia/subgroups.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/kia/modifications.tpl
