@@ -291,3 +291,14 @@ catalog/view/theme/default/template/checkout/simplecheckout_cart.tpl
 catalog/view/theme/default/template/checkout/simplecheckout_customer.tpl
 catalog/view/theme/default/template/checkout/simplecheckout.tpl
 catalog/model/checkout/coupon.php
+catalog/controller/payment/cod.php
+catalog/view/theme/lexus_happycook/template/payment/cod.tpl
+catalog/model/account/order.php
+catalog/model/checkout/voucher.php
+catalog/language/russian/mail/order.php
+catalog/model/tool/simplecustom.php
+catalog/view/theme/lexus_happycook/template/mail/order.tpl
+catalog/model/payment/amazon_checkout.php
+catalog/language/russian/checkout/success.php
+catalog/language/russian/account/order.php
+catalog/view/theme/lexus_happycook/template/account/order_list.tpl
