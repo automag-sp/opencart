@@ -302,3 +302,5 @@ catalog/model/payment/amazon_checkout.php
 catalog/language/russian/checkout/success.php
 catalog/language/russian/account/order.php
 catalog/view/theme/lexus_happycook/template/account/order_list.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/seat/years.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/seat/groups.tpl
