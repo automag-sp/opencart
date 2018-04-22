@@ -304,3 +304,10 @@ catalog/language/russian/account/order.php
 catalog/view/theme/lexus_happycook/template/account/order_list.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/seat/years.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/seat/groups.tpl
+catalog/controller/account/voucher.php
+catalog/language/russian/account/voucher.php
+catalog/model/checkout/voucher_theme.php
+catalog/view/theme/lexus_happycook/template/account/voucher.tpl
+catalog/controller/affiliate/register.php
+catalog/language/russian/affiliate/register.php
+catalog/view/theme/lexus_happycook/template/affiliate/register.tpl
