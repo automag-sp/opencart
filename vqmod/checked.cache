@@ -311,3 +311,5 @@ catalog/view/theme/lexus_happycook/template/account/voucher.tpl
 catalog/controller/affiliate/register.php
 catalog/language/russian/affiliate/register.php
 catalog/view/theme/lexus_happycook/template/affiliate/register.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/hyundai/groups.tpl
+catalog/controller/affiliate/account.php
