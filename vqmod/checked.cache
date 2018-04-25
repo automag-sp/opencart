@@ -313,3 +313,6 @@ catalog/language/russian/affiliate/register.php
 catalog/view/theme/lexus_happycook/template/affiliate/register.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/hyundai/groups.tpl
 catalog/controller/affiliate/account.php
+catalog/controller/affiliate/forgotten.php
+catalog/language/russian/affiliate/forgotten.php
+catalog/view/theme/lexus_happycook/template/affiliate/forgotten.tpl
