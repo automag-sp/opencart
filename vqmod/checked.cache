@@ -321,3 +321,5 @@ catalog/controller/account/newsletter.php
 catalog/controller/account/return.php
 catalog/view/theme/lexus_happycook/template/saleepc/kia/index.tpl
 catalog/controller/affiliate/tracking.php
+catalog/view/theme/lexus_happycook/template/saleepc/skoda/index.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/hyundai/index.tpl
