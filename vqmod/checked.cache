@@ -323,3 +323,6 @@ catalog/view/theme/lexus_happycook/template/saleepc/kia/index.tpl
 catalog/controller/affiliate/tracking.php
 catalog/view/theme/lexus_happycook/template/saleepc/skoda/index.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/hyundai/index.tpl
+catalog/language/russian/account/return.php
+catalog/model/localisation/return_reason.php
+catalog/view/theme/lexus_happycook/template/account/return_form.tpl
