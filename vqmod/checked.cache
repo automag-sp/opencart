@@ -326,3 +326,6 @@ catalog/view/theme/lexus_happycook/template/saleepc/hyundai/index.tpl
 catalog/language/russian/account/return.php
 catalog/model/localisation/return_reason.php
 catalog/view/theme/lexus_happycook/template/account/return_form.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/seat/index.tpl
+catalog/controller/affiliate/success.php
+catalog/language/russian/affiliate/success.php
