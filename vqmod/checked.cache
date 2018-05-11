@@ -330,3 +330,4 @@ catalog/view/theme/lexus_happycook/template/saleepc/seat/index.tpl
 catalog/controller/affiliate/success.php
 catalog/language/russian/affiliate/success.php
 catalog/controller/themecontrol/product.php
+catalog/controller/affiliate/transaction.php
