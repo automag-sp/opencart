@@ -332,3 +332,4 @@ catalog/language/russian/affiliate/success.php
 catalog/controller/themecontrol/product.php
 catalog/controller/affiliate/transaction.php
 catalog/controller/account/wishlist.php
+catalog/controller/account/recurring.php
