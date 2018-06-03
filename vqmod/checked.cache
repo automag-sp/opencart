@@ -334,3 +334,4 @@ catalog/controller/affiliate/transaction.php
 catalog/controller/account/wishlist.php
 catalog/controller/account/recurring.php
 catalog/controller/affiliate/payment.php
+catalog/controller/account/download.php
