@@ -335,3 +335,5 @@ catalog/controller/account/wishlist.php
 catalog/controller/account/recurring.php
 catalog/controller/affiliate/payment.php
 catalog/controller/account/download.php
+catalog/controller/account/logout.php
+catalog/language/russian/account/logout.php
