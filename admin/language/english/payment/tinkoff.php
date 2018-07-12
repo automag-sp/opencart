@@ -14,6 +14,25 @@ $_['terminal_key']       = 'Shop ID (issued by the bank):';
 $_['secret_key']         = 'Secret key (issued by the bank):';
 $_['currency']           = 'Currency (RUB by default - 643, US - 840)';
 $_['payment_url']        = 'Payment Gateway (issued by the bank):';
+
+//Taxes
+$_['check_tax']          = 'Send data to a cheque:';
+$_['taxation_desc']      = '"Send data to a cheque", otherwise - do not specify';
+$_['taxation']           = 'Taxation:';
+
+$_['osn']                = 'General system of taxation';
+$_['usn_income']         = 'Simplified taxation system(usn_income)';
+$_['usn_income_outcome'] = 'Simplified taxation system(usn_income_outcome)';
+$_['envd']               = 'Unified tax of imputed income';
+$_['esn']                = 'Unified agricultural tax';
+$_['patent']             = 'Patent system of taxation';
+
+$_['shipping_tax']       = 'Shipping tax rate';
+$_['tax_none']           = 'None';
+$_['tax_standard']       = 'Standard rate';
+$_['tax_reduced']        = 'Reduced rate';
+$_['tax_zero']           = 'Zero rate';
+
 $_['description']        = 'Payment description:';
 $_['status']             = 'Status:';
 $_['status_success']     = 'Order status after successfull payment:';

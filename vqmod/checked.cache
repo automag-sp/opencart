@@ -458,3 +458,6 @@ admin/view/template/localisation/tax_rate_list.tpl
 admin/model/localisation/geo_zone.php
 admin/view/template/localisation/tax_rate_form.tpl
 admin/view/template/localisation/tax_class_form.tpl
+catalog/controller/payment/tinkoff.php
+catalog/view/theme/default/template/payment/tinkoff_failure.tpl
+catalog/view/theme/default/template/payment/tinkoff_checkout.tpl

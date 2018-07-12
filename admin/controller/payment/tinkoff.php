@@ -45,7 +45,27 @@ class ControllerPaymentTinkoff extends Controller {
         $this->data['secret_key_label'] = $this->language->get('secret_key');
         $this->data['currency_label'] = $this->language->get('currency');
         $this->data['payment_url_label'] = $this->language->get('payment_url');
+
+        //taxes
+        $this->data['check_tax'] = $this->language->get('check_tax');
+        $this->data['taxation_desc'] = $this->language->get('taxation_desc');
+        $this->data['taxation'] = $this->language->get('taxation');
+        $this->data['osn'] = $this->language->get('osn');
+        $this->data['usn_income'] = $this->language->get('usn_income');
+        $this->data['usn_income_outcome'] = $this->language->get('usn_income_outcome');
+        $this->data['envd'] = $this->language->get('envd');
+        $this->data['esn'] = $this->language->get('esn');
+        $this->data['patent'] = $this->language->get('patent');
+        $this->data['shipping_tax'] = $this->language->get('shipping_tax');
+        $this->data['tax_none'] = $this->language->get('tax_none');
+        $this->data['tax_standard'] = $this->language->get('tax_standard');
+        $this->data['tax_reduced'] = $this->language->get('tax_reduced');
+        $this->data['tax_zero'] = $this->language->get('tax_zero');
+        $this->data['temp_taxation_select'] = $this->config->get('tinkoff_taxation') ? $this->config->get('tinkoff_taxation') : $data['osn'];
+        $this->data['temp_cheque'] = $this->config->get('tinkoff_check_tax');
+
         $this->data['description_label'] = $this->language->get('description');
+
         $this->data['status_label'] = $this->language->get('status');
         $this->data['status_success_label'] = $this->language->get('status_success');
         $this->data['status_failed_label'] = $this->language->get('status_failed');

@@ -103,6 +103,80 @@
                             <td>Порядок сортировки</td>
                             <td><input type="text" name="tinkoff_sort_order" value="<?php echo $tinkoff_sort_order; ?>" size="1"/></td>
                         </tr>
+                        <tr>
+                            <td><?php echo $check_tax; ?></td>
+                            <td>
+                                <?php if ($temp_cheque) { ?>
+                                    <input type="checkbox" name="tinkoff_check_tax" value="check" checked="checked" class="form-control"/>
+                                <?php } else { ?>
+                                    <input type="checkbox" name="tinkoff_check_tax" value="check" class="form-control"/>
+                                <?php } ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $taxation; ?></td>
+                            <td>
+                                <select name="tinkoff_taxation" id="tinkoff_taxation" class="form-control">
+                                    <?php if ($temp_taxation_select == 'osn') { ?>
+                                            <option value="error"></option>
+                                            <option value="osn" selected="selected"><?php echo $osn; ?></option>
+                                            <option value="usn_income"><?php echo $usn_income; ?></option>
+                                            <option value="usn_income_outcome"><?php echo $usn_income_outcome; ?></option>
+                                            <option value="envd"><?php echo $envd; ?></option>
+                                            <option value="esn"><?php echo $esn; ?></option>
+                                            <option value="patent"><?php echo $patent; ?></option>
+                                        <?php } elseif ($temp_taxation_select == 'usn_income') { ?>
+                                            <option value="error"></option>
+                                            <option value="osn"><?php echo $osn; ?></option>
+                                            <option value="usn_income" selected="selected"><?php echo $usn_income; ?></option>
+                                            <option value="usn_income_outcome"><?php echo $usn_income_outcome; ?></option>
+                                            <option value="envd"><?php echo $envd; ?></option>
+                                            <option value="esn"><?php echo $esn; ?></option>
+                                            <option value="patent"><?php echo $patent; ?></option>
+                                        <?php } elseif ($temp_taxation_select == 'usn_income_outcome') { ?>
+                                            <option value="error"></option>
+                                            <option value="osn"><?php echo $osn; ?></option>
+                                            <option value="usn_income"><?php echo $usn_income; ?></option>
+                                            <option value="usn_income_outcome" selected="selected"><?php echo $usn_income_outcome; ?></option>
+                                            <option value="envd"><?php echo $envd; ?></option>
+                                            <option value="esn"><?php echo $esn; ?></option>
+                                            <option value="patent"><?php echo $patent; ?></option>
+                                        <?php } elseif ($temp_taxation_select == 'envd') { ?>
+                                            <option value="error"></option>
+                                            <option value="osn"><?php echo $osn; ?></option>
+                                            <option value="usn_income"><?php echo $usn_income; ?></option>
+                                            <option value="usn_income_outcome"><?php echo $usn_income_outcome; ?></option>
+                                            <option value="envd" selected="selected"><?php echo $envd; ?></option>
+                                            <option value="esn"><?php echo $esn; ?></option>
+                                            <option value="patent"><?php echo $patent; ?></option>
+                                        <?php } elseif ($temp_taxation_select == 'esn') { ?>
+                                            <option value="error"></option>
+                                            <option value="osn"><?php echo $osn; ?></option>
+                                            <option value="usn_income"><?php echo $usn_income; ?></option>
+                                            <option value="usn_income_outcome"><?php echo $usn_income_outcome; ?></option>
+                                            <option value="envd"><?php echo $envd; ?></option>
+                                            <option value="esn" selected="selected"><?php echo $esn; ?></option>
+                                            <option value="patent"><?php echo $patent; ?></option>
+                                        <?php } elseif ($temp_taxation_select == 'patent') { ?>
+                                            <option value="error"></option>
+                                            <option value="osn"><?php echo $osn; ?></option>
+                                            <option value="usn_income"><?php echo $usn_income; ?></option>
+                                            <option value="usn_income_outcome"><?php echo $usn_income_outcome; ?></option>
+                                            <option value="envd"><?php echo $envd; ?></option>
+                                            <option value="esn"><?php echo $esn; ?></option>
+                                            <option value="patent" selected="selected"><?php echo $patent; ?></option>
+                                        <?php } else { ?>
+                                            <option value="error" selected="selected"></option>
+                                            <option value="osn"><?php echo $osn; ?></option>
+                                            <option value="usn_income"><?php echo $usn_income; ?></option>
+                                            <option value="usn_income_outcome"><?php echo $usn_income_outcome; ?></option>
+                                            <option value="envd"><?php echo $envd; ?></option>
+                                            <option value="esn"><?php echo $esn; ?></option>
+                                            <option value="patent"><?php echo $patent; ?></option>
+                                        <?php } ?>
+                                </select>
+                            </td>
+                        </tr>  
                     </table>
                 </div>
             </form>

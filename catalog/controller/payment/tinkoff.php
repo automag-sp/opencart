@@ -5,10 +5,13 @@ class Controllerpaymenttinkoff extends Controller {
         $this->language->load('payment/tinkoff');
         $order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
         $temp_sum = $this->currency->format($order_info['total'],$order_info['currency_code'],$order_info['currency_value'],false);
-        $sum = $this->currency->convert($temp_sum,$order_info['currency_code'],'RUB')*100;
+        //$sum = $this->currency->convert($temp_sum,$order_info['currency_code'],'RUB')*100;
+        $sum = round($temp_sum, 2) * 100;
         $this->data['payment'] = $this->model_payment_tinkoff->initPayment(array(
-            'amount' => (int) $sum,
+            'amount' => $sum,
             'orderId' => $this->session->data['order_id'],
+            'email' => $order_info['email'],
+            'phone' => $order_info['telephone'],
         ));
 
         $this->data['payButton'] = $this->language->get('pay_button');
@@ -20,20 +23,16 @@ class Controllerpaymenttinkoff extends Controller {
 
     public function notification() {
         $this->load->model('payment/tinkoff');
-//        if(strpos($_SERVER['REQUEST_URI'],'tinkoff')) {
-            $this->log->write('---------------SERVER:'.var_export($_SERVER, 1));
-            $this->log->write('---------------POST:'.var_export($_POST, 1));
-//            $this->log->write('---------------OUT:'.var_export($this->response->getOutput(), 1));
-//        }
+        $request = (array) json_decode(file_get_contents('php://input')); 
 
-        $this->model_payment_tinkoff->checkNotification($this->request->post);
-        $this->log->write(__FILE__.'::'.__LINE__);
+        $this->model_payment_tinkoff->checkNotification($request);
+
         try {
 
         } catch (Exception $e) {
             die('Something went wrong');
         }
-        $this->log->write(__FILE__.'::'.__LINE__);
+
         die('OK');
     }
 
