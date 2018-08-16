@@ -1,11 +1,16 @@
 <?php
-class Modelpaymenttinkoff extends Model {
-    public function getMethod($address, $total) {
+
+include('TinkoffMerchantAPI.php');
+
+class Modelpaymenttinkoff extends Model
+{
+    public function getMethod($address, $total)
+    {
         $this->language->load('payment/tinkoff');
 
         return array(
-            'code'       => 'tinkoff',
-            'title'      => $this->language->get('text_title'),
+            'code' => 'tinkoff',
+            'title' => $this->language->get('text_title'),
             'sort_order' => $this->config->get('sagepay_us_sort_order')
         );
     }
@@ -121,17 +126,17 @@ class Modelpaymenttinkoff extends Model {
     private $paymentId;
 
     /**
-     * Валята заказа (643 - рубли)
+     * Валюта заказа (643 - рубли)
      * @var int
      */
     private $currency = 643;
 
-    public function __construct($registry){
+    public function __construct($registry)
+    {
         parent::__construct($registry);
 
         $this->terminalId = $this->config->get('terminal_key');
         $this->secret = $this->config->get('secret_key');
-        $this->paymentUrl = $this->config->get('payment_url');
         $this->currency = $this->config->get('currency');
     }
 
@@ -142,37 +147,146 @@ class Modelpaymenttinkoff extends Model {
      * @return array
      * @throws TinkoffException
      */
-    public function initPayment(array $params) {
-        $requestParams = array(
-            'TerminalKey' => $this->terminalId,
-            'Amount' => $params['amount'],
-            'OrderId' => $params['orderId'],
-            'Currency' => $this->currency
+    public function initPayment(array $params)
+    {
+        $productItems = array();
+
+        $check_tax = $this->config->get('tinkoff_check_tax') === 'check' ? 'checked' : 'error';
+
+        $errorTaxMessage = 'Не удалось получить данные о налоге на товар. Проверьте настройки.';
+        $shippingMethod = isset($this->session->data['shipping_method']) ? $this->session->data['shipping_method'] : 'none';
+        $prices = $this->getNormalizePrices($params['amount'], $this->cart->getProducts(), $shippingMethod != 'none' ? $shippingMethod : null);
+
+        if ($shippingMethod != 'none') {
+            $taxClassRatesShipping = $this->tax->getRates($shippingMethod['cost'], $shippingMethod['tax_class_id']);
+            $shippingRate = array_shift($taxClassRatesShipping);
+            $shippingRate = (int)$shippingRate['rate'];
+            $shippingPrice = $prices['shipping'];
+            switch ($shippingRate) {
+                case 0:
+                    $taxS = 'vat0';
+                    break;
+                case 10:
+                    $taxS = 'vat10';
+                    break;
+                case 18:
+                    $taxS = 'vat18';
+                    break;
+                default:
+                    if ($check_tax == 'checked') {
+                        die($errorTaxMessage);
+                    }
+                    break;
+            }
+        }
+
+        $this->load->model('checkout/order');
+        $errorTaxationMessage = 'Не удалось получить данные о системе налогобложения. Проверьте настройки.';
+
+        foreach ($this->cart->getProducts() as $product) {
+            if (!$product['tax_class_id']) {
+                $tax = 'none';
+            } else {
+                $taxClassRates = $this->tax->getRates($product['price'], $product['tax_class_id']);
+
+                if (count($taxClassRates) > 1 && $check_tax == 'checked') {
+                    die($errorTaxMessage);
+                }
+
+                $rate = array_shift($taxClassRates);
+
+                $tax = '';
+                if ($rate['type'] == 'P') {
+                    switch ((int)$rate['rate']) {
+                        case 0:
+                            $tax = 'vat0';
+                            break;
+                        case 10:
+                            $tax = 'vat10';
+                            break;
+                        case 18:
+                            $tax = 'vat18';
+                            break;
+                        default:
+                            if ($check_tax == 'checked') {
+                                die($errorTaxMessage);
+                            }
+                            break;
+                    }
+                } else {
+                    if ($check_tax == 'checked') {
+                        die($errorTaxMessage);
+                    }
+                }
+            }
+
+            $productPrices = $prices['products'];
+            $id = $product['product_id'];
+
+            $productItem = array(
+                'Name' => mb_substr($product['name'],0,64),
+                'Price' => $productPrices[$id],
+                'Quantity' => $product['quantity'],
+                'Amount' => $productPrices[$id] * $product['quantity'],
+                'Tax' => $tax,
+            );
+            array_push($productItems, $productItem);
+        }
+
+        if ($shippingMethod != 'none') {
+            $shippingItem = array(
+                'Name' => mb_substr($shippingMethod['title'],0,64),
+                'Price' => $shippingPrice,
+                'Quantity' => 1,
+                'Amount' => $shippingPrice,
+                'Tax' => $taxS,
+            );
+            if ($shippingPrice > 0) {
+                array_push($productItems, $shippingItem);
+            }
+        }
+
+        if ($check_tax == 'checked' && $this->config->get('tinkoff_taxation') == 'error') {
+            die($errorTaxationMessage);
+        }
+
+        $receipt = array(
+            'Email' => $params['email'],
+            'Phone' => $params['phone'],
+            'Taxation' => $this->config->get('tinkoff_taxation'),
+            'Items' => $productItems,
         );
 
-        $requestParams['Token'] = $this->generateToken($requestParams);
-        if ($this->paymentUrl[strlen($this->paymentUrl) - 1] !== '/') {
-            $this->paymentUrl .= '/';
+        if ($check_tax == 'checked') {
+            $requestParams = array(
+                'TerminalKey' => $this->terminalId,
+                'Amount' => $params['amount'],
+                'OrderId' => $params['orderId'],
+                'DATA' => array('Email' => $params['email'], 'Connection_type' => 'opencart 1.5',),
+                'Receipt' => $receipt,
+            );
+        } else {
+            $requestParams = array(
+                'TerminalKey' => $this->terminalId,
+                'Amount' => $params['amount'],
+                'OrderId' => $params['orderId'],
+                'DATA' => array('Email' => $params['email'], 'Connection_type' => 'opencart 1.5',),
+            );
         }
-        $url = sprintf('%sInit?%s', $this->paymentUrl, http_build_query($requestParams));
-        $resultString = file_get_contents($url);
 
-        if(!$this->isJson($resultString)){
-            throw new TinkoffException('не удалось соединиться с платёжным сервисом');
-        }
+        $tinkoffModel = new TinkoffMerchantAPI($this->terminalId, $this->secret);
+        $request = $tinkoffModel->buildQuery('Init', $requestParams);
+        $this->logs($requestParams, $request);
+        $result = (array)json_decode($request);
 
-        $result = json_decode($resultString, true);
-
-        $this->isRequestSuccess($result['Success']);
-
-        if($result['Amount'] != $params['amount']){
-            throw new TinkoffException(sprintf('Сумма заказа не сходится. Ответ сервиса: %s', $resultString));
+        if ($result['ErrorCode'] == 8) {
+            die($result['Details']);
         }
 
         $url = parse_url($result['PaymentURL']);
 
         $urlParams = array();
-        if(isset($url['query'])){
+        if (isset($url['query'])) {
             parse_str($url['query'], $urlParams);
         }
 
@@ -187,6 +301,94 @@ class Modelpaymenttinkoff extends Model {
         );
     }
 
+    function logs($requestParams, $request)
+    {
+        // log send
+        $log = '[' . date('D M d H:i:s Y', time()) . '] ';
+        $log .= json_encode($requestParams, JSON_UNESCAPED_UNICODE);
+        $log .= "\n";
+        file_put_contents(dirname(__FILE__) . "/tinkoff.log", $log, FILE_APPEND);
+
+        $log = '[' . date('D M d H:i:s Y', time()) . '] ';
+        $log .= $request;
+        $log .= "\n";
+        file_put_contents(dirname(__FILE__) . "/tinkoff.log", $log, FILE_APPEND);
+    }
+
+    function getNormalizePrices($amount, $products, $shipping)
+    {
+        $prices = array();
+        $realAmount = round($this->getRealAmount() * 100);
+        $k = ($realAmount != $amount) ? $amount / $realAmount : 1;
+
+        $newRealAmount = 0;
+
+        foreach ($products as $product) {
+            $id = $product['product_id'];
+            $price = $this->getRoundTaxPrice($product['price'], $product['tax_class_id'], $k);
+            $prices['products'][$id] = $price;
+            $newRealAmount += $price * $product['quantity'];
+        }
+
+        $shippingPrice = $this->getRoundTaxPrice($shipping['cost'], $shipping['tax_class_id'], $k);
+        $newRealAmount = $newRealAmount + $shippingPrice;
+        $diff = $amount - $newRealAmount;
+
+        if (abs($diff) >= 0.1) {
+            $shippingPrice = $shippingPrice + $diff;
+        }
+
+        $prices['shipping'] = $shippingPrice;
+
+        return $prices;
+    }
+
+    /**
+     * цена с ндс в копейках
+     * @param $price
+     * @param $taxClassId
+     * normalize coefficient @param $k
+     * @return float
+     */
+    function getRoundTaxPrice($price, $taxClassId, $k)
+    {
+        //сумма в копейках
+        return round($this->getVatPrice($price, $taxClassId) * $k, 2) * 100;
+    }
+
+    /**
+     * сумма позиций в цеке (всех товаров и доставки)
+     * @return int
+     */
+    function getRealAmount()
+    {
+        $realAmount = 0;
+
+        foreach ($this->cart->getProducts() as $product) {
+            $price = $this->getVatPrice($product['price'], $product['tax_class_id']);
+            $realAmount += $price * $product['quantity'];
+        }
+
+        if (isset($this->session->data['shipping_method'])) {
+            $shippingData = $this->cart->session->data['shipping_method'];
+            $shippingPrice = $this->getVatPrice($shippingData['cost'], $shippingData['tax_class_id']);
+            $realAmount += $shippingPrice;
+        }
+
+        return $realAmount;
+    }
+
+    /**
+     * цену с учетом ндс
+     * @param $price
+     * @param $vat
+     * @return mixed
+     */
+    public function getVatPrice($price, $vat)
+    {
+        return $this->cart->tax->calculate($price, $vat, true);
+    }
+
     /**
      * Recieves notification from TSC, checks is request valid.
      * Should OK in response
@@ -194,34 +396,32 @@ class Modelpaymenttinkoff extends Model {
      * @param array $params
      * @throws TinkoffException
      */
-    public function checkNotification(array $params) {
+    public function checkNotification(array $params)
+    {
         $requestParams = $params;
         unset($requestParams['Token']);
+        $requestParams['Success'] = $requestParams['Success'] ? 'true' : 'false';
 
         $token = $this->generateToken($requestParams);
-        $this->log->write(__FILE__.'::'.__LINE__);
 
-        if($params['Token'] != $token){
-            throw new TinkoffException(sprintf('Токены не совпадают. Запрос сервиса: %s', serialize($params)));
+        if ($params['Token'] != $token) {
+            die('NOTOK');
         }
-        $this->log->write(__FILE__.'::'.__LINE__);
+
         $this->isRequestSuccess($requestParams['Success']);
-        $this->log->write(__FILE__.'::'.__LINE__);
+
         $this->paymentStatus = $params['Status'];
         $this->paymentId = $params['PaymentId'];
 
         $this->saveOrder($params['OrderId']);
-        $this->log->write(__FILE__.'::'.__LINE__);
+
         $this->load->model('checkout/order');
 
-        if($this->isOrderPaid()){
-            $this->log->write(__FILE__.'::'.__LINE__);
+        if ($this->isOrderPaid()) {
             $this->model_checkout_order->confirm($params['OrderId'], $this->config->get('order_status_success_id'));
         } elseif ($this->isOrderFailed()) {
-            $this->log->write(__FILE__.'::'.__LINE__);
             $this->model_checkout_order->confirm($params['OrderId'], $this->config->get('order_status_failed_id'));
         }
-        $this->log->write(__FILE__.'::'.__LINE__);
     }
 
     /**
@@ -230,7 +430,8 @@ class Modelpaymenttinkoff extends Model {
      * @return bool
      * @throws TinkoffException
      */
-    public function isOrderPaid(){
+    public function isOrderPaid()
+    {
         $this->checkStatus();
 
         return in_array($this->paymentStatus, array(self::STATUS_CONFIRMED, self::STATUS_AUTHORIZED));
@@ -241,11 +442,13 @@ class Modelpaymenttinkoff extends Model {
      *
      * @return bool
      */
-    public function isOrderFailed(){
+    public function isOrderFailed()
+    {
         return in_array($this->paymentStatus, array(self::STATUS_CANCELED, self::STATUS_REJECTED, self::STATUS_REVERSED));
     }
 
-    public function saveOrder($orderId){
+    public function saveOrder($orderId)
+    {
         $date = new \DateTime();
 
         $currentDate = $date->format('Y-m-d h:i:s');
@@ -253,9 +456,9 @@ class Modelpaymenttinkoff extends Model {
         $orders = $this->db->query("
           SELECT `id`
           FROM " . DB_PREFIX . "tinkoff_payments
-          WHERE `order_id` = '" .(int)$orderId . "'");
+          WHERE `order_id` = '" . (int)$orderId . "'");
 
-        if($orders->num_rows > 0){
+        if ($orders->num_rows > 0) {
             $this->db->query("
 			    UPDATE " . DB_PREFIX . "tinkoff_payments
 			    SET payment_id = '" . $this->paymentId . "',
@@ -269,7 +472,7 @@ class Modelpaymenttinkoff extends Model {
 
         $this->db->query("
             INSERT INTO `" . DB_PREFIX . "tinkoff_payments`
-            SET order_id = '" .(int)$orderId . "',
+            SET order_id = '" . (int)$orderId . "',
 			    payment_id = '" . $this->paymentId . "',
 			    created = '" . $currentDate . "',
 				updated = '" . $currentDate . "',
@@ -284,11 +487,11 @@ class Modelpaymenttinkoff extends Model {
      *
      * @throws TinkoffException
      */
-    private function checkStatus(){
-        if(is_null($this->paymentStatus)){
-            throw new TinkoffException(sprintf('Статус заказа не определён. Чтобы запросить статус вызовите метод getStatus'));
+    private function checkStatus()
+    {
+        if (is_null($this->paymentStatus)) {
+            die(sprintf('Статус заказа не определён.'));
         }
-
     }
 
     /**
@@ -297,7 +500,8 @@ class Modelpaymenttinkoff extends Model {
      * @param $string
      * @return bool
      */
-    private function isJson($string) {
+    private function isJson($string)
+    {
         json_decode($string);
 
         return (json_last_error() == JSON_ERROR_NONE);
@@ -309,7 +513,8 @@ class Modelpaymenttinkoff extends Model {
      * @param array $params
      * @return string
      */
-    private function generateToken(array $params){
+    private function generateToken(array $params)
+    {
         $requestParams = $params;
         $requestParams['Password'] = $this->secret;
 
@@ -326,9 +531,10 @@ class Modelpaymenttinkoff extends Model {
      * @param $success
      * @throws TinkoffException
      */
-    private function isRequestSuccess($success){
-        if($success == false){
-            throw new TinkoffException(sprintf('Зарпос к сервису ТКС провален'));
+    private function isRequestSuccess($success)
+    {
+        if ($success == false) {
+            die(sprintf('Запрос к платежному сервису был отправлен некорректно'));;
         }
     }
 }
@@ -336,7 +542,9 @@ class Modelpaymenttinkoff extends Model {
 /**
  * Class TinkoffException
  */
-class TinkoffException extends Exception {
+class TinkoffException extends Exception
+{
 
 }
+
 ?>

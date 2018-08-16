@@ -1,27 +1,8 @@
 <?php
-/**
- * File TinkoffMerchantAPI
- *
- * PHP version 5.3
- *
- * @category Tinkoff
- * @package  Tinkoff
- * @author   Shuyskiy Sergey <s.shuyskiy@tinkoff.ru>
- * @license  http://opensource.org/licenses/MIT MIT license
- * @link     http://tinkoff.ru
- */
-//namespace Tinkoff;
-
-//use HttpException;
 
 /**
  * Class TinkoffMerchantAPI
  *
- * @category Tinkoff
- * @package  Tinkoff
- * @author   Shuyskiy Sergey <s.shuyskiy@tinkoff.ru>
- * @license  http://opensource.org/licenses/MIT MIT license
- * @link     http://tinkoff.ru
  * @property integer     orderId
  * @property integer     Count
  * @property bool|string error
@@ -49,9 +30,9 @@ class TinkoffMerchantAPI
      * @param string $secretKey   Secret key for terminal
      * @param string $api_url     Url for API
      */
-    public function __construct($terminalKey, $secretKey, $api_url)
+    public function __construct($terminalKey, $secretKey)
     {
-        $this->_api_url = $api_url;
+        $this->_api_url = 'https://securepay.tinkoff.ru/v2/';
         $this->_terminalKey = $terminalKey;
         $this->_secretKey = $secretKey;
     }

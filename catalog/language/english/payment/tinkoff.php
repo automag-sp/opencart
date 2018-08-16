@@ -13,7 +13,6 @@ $_['button_cancel']      = 'Cancel';
 $_['terminal_key']       = 'Shop ID (issued by the bank):';
 $_['secret_key']         = 'Secret key (issued by the bank):';
 $_['currency']           = 'Currency (RUB by default - 643, US - 840)';
-$_['payment_url']        = 'Payment Gateway (issued by the bank):';
 $_['description']        = 'Payment description:';
 $_['status']             = 'Status:';
 $_['status_success']     = 'Order status after successfull payment:';
@@ -23,7 +22,6 @@ $_['status_failed']      = 'Order status after failed payment:';
 $_['error_permission']   = 'Warning: You do not have permission to modify Tinkoff Bank account!';
 $_['error_terminal_key'] = 'Enter Shop ID!';
 $_['error_secret_key']   = 'Enter Secret key!';
-$_['error_payment_url']  = 'Enter Payment Gateway!';
 $_['error_currency']     = 'Enter Currency!';
 
 // Payment
