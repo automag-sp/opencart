@@ -481,3 +481,5 @@ admin/view/template/module/simple_custom.tpl
 admin/model/tool/simplecustom.php
 admin/view/template/module/simple_custom.tpl
 admin/language/russian/extension/openbay.php
+catalog/controller/payment/authorizenet_aim.php
+catalog/controller/payment/pp_pro.php
