@@ -484,3 +484,4 @@ admin/language/russian/extension/openbay.php
 catalog/controller/payment/authorizenet_aim.php
 catalog/controller/payment/pp_pro.php
 catalog/view/theme/lexus_happycook/template/saleepc/kia/groups.tpl
+admin/controller/payment/cod.php
