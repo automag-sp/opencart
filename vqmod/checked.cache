@@ -486,3 +486,10 @@ catalog/controller/payment/pp_pro.php
 catalog/view/theme/lexus_happycook/template/saleepc/kia/groups.tpl
 admin/controller/payment/cod.php
 catalog/view/theme/lexus_happycook/template/themecontrol/product.tpl
+admin/language/russian/setting/store.php
+admin/view/template/setting/store_list.tpl
+admin/controller/user/user.php
+admin/language/russian/user/user.php
+admin/model/user/user.php
+admin/view/template/user/user_list.tpl
+admin/view/template/user/user_form.tpl
