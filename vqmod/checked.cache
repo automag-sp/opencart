@@ -520,3 +520,9 @@ admin/controller/module/saleepcgarage.php
 admin/view/template/module/saleepcgarage.tpl
 admin/language/english/catalog/seoeditor.php
 catalog/view/theme/lexus_happycook/template/saleepc/audi/parts.tpl
+admin/language/russian/extension/feed.php
+admin/language/russian/feed/google_base.php
+admin/language/russian/feed/google_sitemap.php
+admin/view/template/extension/feed.tpl
+admin/controller/feed/google_sitemap.php
+admin/view/template/feed/google_sitemap.tpl
