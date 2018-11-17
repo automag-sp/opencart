@@ -526,3 +526,8 @@ admin/language/russian/feed/google_sitemap.php
 admin/view/template/extension/feed.tpl
 admin/controller/feed/google_sitemap.php
 admin/view/template/feed/google_sitemap.tpl
+admin/controller/module/themecontrol.php
+admin/model/sample/module.php
+admin/model/setting/themecontrol.php
+admin/model/design/banner.php
+admin/view/template/module/themecontrol/themecontrol.tpl
