@@ -1,8 +1,23 @@
-User-agent: *
-Host: automag-sp.ru
-Disallow:
-/admin/
-/catalog/
-/system/
-/vqmod/
-Sitemap: http://automag-sp.ru/sitemap.xml
+User-Agent: *
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /*?route=account*
+Disallow: /forgotten/
+Disallow: /?sort=*
+Disallow: /?limit=*
+
+User-Agent: Yandex
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /*?route=account*
+Disallow: /forgotten/
+Disallow: /?sort=*
+Disallow: /?limit=*
+
+User-Agent: Googlebot
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /*?route=account*
+Disallow: /forgotten/
+Disallow: /?sort=*
+Disallow: /?limit=*

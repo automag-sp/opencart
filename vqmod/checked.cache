@@ -531,3 +531,8 @@ admin/model/sample/module.php
 admin/model/setting/themecontrol.php
 admin/model/design/banner.php
 admin/view/template/module/themecontrol/themecontrol.tpl
+admin/language/russian/feed/fast_sitemap.php
+admin/controller/feed/fast_sitemap.php
+admin/view/template/feed/fast_sitemap.tpl
+catalog/controller/feed/fast_sitemap.php
+catalog/model/sitemap/fast_sitemap.php
