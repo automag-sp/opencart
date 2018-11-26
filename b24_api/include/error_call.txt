@@ -374,3 +374,52 @@ Array
     [error] => INTERNAL_SERVER_ERROR
     [error_description] => Internal server error
 )
+Array
+(
+    [result] => Array
+        (
+            [result] => Array
+                (
+                )
+
+            [result_error] => Array
+                (
+                    [contact_id] => Array
+                        (
+                            [error] => 
+                            [error_description] => Не введено значение обязательного поля "Имя" или "Фамилия"<br />
+                        )
+
+                    [contact_get] => Array
+                        (
+                            [error] => 
+                            [error_description] => ID is not defined or invalid.
+                        )
+
+                )
+
+            [result_total] => Array
+                (
+                )
+
+            [result_next] => Array
+                (
+                )
+
+            [result_time] => Array
+                (
+                )
+
+        )
+
+    [time] => Array
+        (
+            [start] => 1543173995.0419
+            [finish] => 1543173995.0874
+            [duration] => 0.045547962188721
+            [processing] => 0.0080211162567139
+            [date_start] => 2018-11-25T22:26:35+03:00
+            [date_finish] => 2018-11-25T22:26:35+03:00
+        )
+
+)
