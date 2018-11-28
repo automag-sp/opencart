@@ -34,7 +34,7 @@
 						<?php if( $i%$cols == 1 || $cols == 1) { ?>
 						<div class="<?php echo (count($tproducts) - $cols +1);?> row box-product <?php ;if($i == count($tproducts) - $cols +1) { echo "last";} ?>"><?php //start box-product?>
 						<?php } ?>
-								  <div class="pavcol-sm-<?php echo $cols;?> col-xs-12 col-sm-6 <?php if($i%$cols == 0) { echo "last";} ?>">
+								  <div class="pavcol-sm-<?php echo $cols;?> col-xs-12 col-sm-4 <?php if($i%$cols == 0) { echo "last";} ?>">
 								  	<div class="product-block">
 											<div class="product-inner"><?php //start product-inner?>
 											<?php if ($product['thumb']) { ?>

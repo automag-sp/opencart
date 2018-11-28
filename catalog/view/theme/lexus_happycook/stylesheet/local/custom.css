@@ -1,12 +1,14 @@
-#column-left{
-    margin: 20px 0;
-}
+
 .saleepc .icon li{
-display: inline;
-text-align: center;
+    display: inline-block;
+    text-align: center;
+    width: 7.2%;
+    padding: 0;
+    margin: 0;
 }
 .saleepc .icon img{
-margin: 5px;
+    margin: 5px 0;
+    width: 100% !important;
 }
 
 .saleepc div.icon {

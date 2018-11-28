@@ -33,6 +33,6 @@
     </div>
 <?php if( count($banners) > 1 ){ ?>
 <script type="text/javascript"><!--
- $('#pavcarousel<?php echo $id;?>').carousel({interval:1500});
+ $('#pavcarousel<?php echo $id;?>').carousel({interval:1500,item:9});
 --></script>
 <?php } ?>

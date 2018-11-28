@@ -49,17 +49,18 @@ html body #header {
       html body #header #pav-mainnav .topmenu-accessories .dropdown-menu.level1 .dropdown-menu-inner .row .mega-col:first-child {
         display: block; }
   html body #header #search .button-search {
-    color: white; }
-  html body #header #search input {
-    background: #1bbc9b;
-    color: white; }
+    color: #000; }
+html body #header #search input {
+    background: #fff;
+    color: #000;
+}
     html body #header #search input:-ms-input-placeholder, html body #header #search input:-moz-placeholder
      {
       color: white; }
   html body #header #logo {
     float: left; }
     html body #header #logo img {
-      height: 60px; }
+      height: 78px; }
   html body #header #top-social {
     text-align: center;
     padding-top: 10px; }

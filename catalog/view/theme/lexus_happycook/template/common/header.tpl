@@ -195,14 +195,8 @@ if (isset($_GET['qv']) && ($_GET['qv'] == 1)) {
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <?php if ($logo) { ?>
-                            <div id="logo"><a href="<?php echo $home; ?>"><img src="/image/data/logo.svg<?php // echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"/><br/>автозапчасти</a></div>
+                            <div id="logo"><a href="<?php echo $home; ?>"><img src="/image/data/automag-sp.jpg<?php // echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"/></a></div>
                         <?php } ?>
-                        <div id="top-social">
-                            <a href="http://vk.com/europa_automag" target="_blank"><img src="/image/data/банер/soc/VK.png"></a>
-                            <a href="https://www.facebook.com/898746126803454/" target="_blank"><img src="/image/data/банер/soc/FB.png"></a>
-                            <a class="text-link sergi" href="tel://<?php print $this->config->get('config_telephone'); ?>"></span><span class="text-link"><?php print $this->config->get('config_telephone'); ?></a>
-                            <a class="text-link alexa" href="tel://<?php print A_PHONE;?>"></span><span class="text-link"><?php print A_PHONE;?></a>
-                        </div>
                     </div>
                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mainmenu">
                         <?php
