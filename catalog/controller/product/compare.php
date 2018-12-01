@@ -79,7 +79,7 @@ class ControllerProductCompare extends Controller {
 				if ($product_info['image']) {
 					$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_compare_width'), $this->config->get('config_image_compare_height'));
 				} else {
-					$image = false;
+					$image = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_compare_width'), $this->config->get('config_image_compare_height'));
 				}
 
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {

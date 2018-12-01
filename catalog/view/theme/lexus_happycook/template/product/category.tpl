@@ -35,75 +35,76 @@
 <div id="content"><?php echo $content_top; ?>
   <h1 class="heading_title"><span><?php echo $heading_title; ?></span></h1>
 
-  <?php if ($thumb || $description) { ?>
+  <?php if ($description) { ?>
   <div class="category-info clearfix">
-    <?php if ($thumb) { ?>
-    <div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></div>
-    <?php } ?>
     <?php if ($description) { ?>
     <?php echo $description; ?>
     <?php } ?>
   </div>
   <?php } ?>
   <?php if ($categories) { ?>
-  <!--<h4><?php echo $text_refine; ?></h4>-->
-  <div class="category-list clearfix">
-    <?php if (count($categories) <= 5) { ?>
-    <ul>
-      <?php foreach ($categories as $category) { ?>
-      <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-      <?php } ?>
-    </ul>
-    <?php } else { ?>
-    <?php for ($i = 0; $i < count($categories);) { ?>
-    <ul>
-      <?php $j = $i + ceil(count($categories) / 4); ?>
-      <?php for (; $i < $j; $i++) { ?>
-      <?php if (isset($categories[$i])) { ?>
-      <li><a href="<?php echo $categories[$i]['href']; ?>"><?php echo $categories[$i]['name']; ?></a></li>
-      <?php } ?>
-      <?php } ?>
-    </ul>
-    <?php } ?>
-    <?php } ?>
-  </div>
+  	      <div class="row">
+	        <div class="categoryimgs">
+	          <div>
+	            <?php foreach ($categories as $category) { ?>
+	            <div class="blockcateg"><div class="relativeimgcat"><a href="<?php echo $category['href']; ?>">
+				<div class="catimgname">
+				<img src="<?php echo $category['thumb']; ?>">
+				<span><?php echo $category['name']; ?></span>
+				</div>
+				</a></div></div>
+	            <?php } ?>
+	          </div>
+	        </div>
+	      </div>
   <?php } ?>
-  <?php if ($products) { ?>
-  <div class="product-filter clearfix">
+  <?php if ($products) { ?><div class="well well-sm">
+	      <div class="row">
+	        <div class="col-lg-3 col-md-4 col-sm-3 col-xs-4">
+	          <div class="btn-group btn-group-justified">
+			  <div class="btn-group">
     <div class="display">
-		<span><?php echo $text_display; ?></span>
 		<span><?php echo $text_list; ?></span>
 		<a onclick="display('grid');"><?php echo $text_grid; ?></a>
 	</div>
-	<!--
-    <div class="product-compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div>
-    -->
-    
- 	 <div class="sort"><span><?php echo $text_sort; ?></span>
-      <select class="form-control" onchange="location = this.value;">
-        <?php foreach ($sorts as $sorts) { ?>
-        <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-        <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-        <?php } else { ?>
-        <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-        <?php } ?>
-        <?php } ?>
-      </select>
-    </div>
-	
-    	<div class="limit"><span><?php echo $text_limit; ?></span>
-	      <select class="form-control" onchange="location = this.value;">
-	        <?php foreach ($limits as $limits) { ?>
-	        <?php if ($limits['value'] == $limit) { ?>
-	        <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-	        <?php } else { ?>
-	        <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-	        <?php } ?>
-	        <?php } ?>
-	      </select>
-	    </div>
-    
-  </div>
+	          </div>
+	          </div>
+	        </div>
+	        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-4">
+	        <div class="input-group">
+	        <span class="input-group-addon">
+	          <i class="fa fa-sort"></i><span class="hidden-xs hidden-sm hidden-md"> <?php echo $text_sort; ?></span>
+	        </span>
+	          <select id="input-sort" class="form-control" onchange="location = this.value;">
+	            <?php foreach ($sorts as $sorts) { ?>
+	            <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+	            <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+	            <?php } else { ?>
+	            <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+	            <?php } ?>
+	            <?php } ?>
+	          </select>
+	        </div>
+	        </div>
+	        <div class="col-lg-4 col-md-3 col-sm-4 col-xs-4">
+	        <div class="input-group">
+	        <span class="input-group-addon">
+	          <i class="fa fa-eye"></i><span class="hidden-xs hidden-sm hidden-md"> <?php echo $text_limit; ?></span>
+	        </span>
+	          <select id="input-limit" class="form-control" onchange="location = this.value;">
+	            <?php foreach ($limits as $limits) { ?>
+	            <?php if ($limits['value'] == $limit) { ?>
+	            <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
+	            <?php } else { ?>
+	            <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
+	            <?php } ?>
+	            <?php } ?>
+	          </select>
+	        </div>
+	        </div>
+	      </div>
+	      </div>
+	      <br />
 
   
 <div class="product-list"> <div class="products-block">

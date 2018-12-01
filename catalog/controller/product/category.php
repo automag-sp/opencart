@@ -181,10 +181,16 @@ class ControllerProductCategory extends Controller {
 					'filter_category_id'  => $result['category_id'],
 					'filter_sub_category' => true
 				);
+				if ($result['image']) {
+                    $image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_category_width'), $this->config->get('config_image_category_height'));
+                } else {
+                    $image = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_category_width'), $this->config->get('config_image_category_height'));
+                }
 
 				$product_total = $this->model_catalog_product->getTotalProducts($data);				
 
 				$this->data['categories'][] = array(
+					'thumb' => $image,
 					'name'  => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $product_total . ')' : ''),
 					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
 				);
@@ -209,7 +215,7 @@ class ControllerProductCategory extends Controller {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				} else {
-					$image = false;
+					$image = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				}
 
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {

@@ -292,6 +292,13 @@ class ControllerProductProduct extends Controller{
                 }
             }
             $this->load->model('tool/image');
+			
+			$manufacturer_image = $this->model_catalog_manufacturer->getManufacturer($product_info['manufacturer_id']);
+			if($manufacturer_image){
+				$this->data['manufacturers_img'] = $this->model_tool_image->resize($manufacturer_image['image'], 300, 103);
+			} else  {
+				$this->data['manufacturers_img'] = false;
+			}
 
             if ($product_info['image']) {
                 $this->data['popup'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
@@ -302,7 +309,7 @@ class ControllerProductProduct extends Controller{
             if ($product_info['image']) {
                 $this->data['thumb'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
             } else {
-                $this->data['thumb'] = '';
+                $this->data['thumb'] = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_thumb_width'), $this->config->get('config_image_thumb_height'));
             }
 
             $this->data['images'] = array();

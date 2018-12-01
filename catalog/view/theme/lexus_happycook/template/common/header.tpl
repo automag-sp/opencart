@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /******************************************************
  * @package Pav Opencart Theme Framework for Opencart 1.5.x
  * @version 1.1
@@ -14,8 +14,10 @@ require_once(DIR_TEMPLATE . $this->config->get('config_template') . "/developmen
 $helper = ThemeControlHelper::getInstance($this->registry, $themeName);
 $helper->setDirection($direction);
 /* Add scripts files */
+
 $helper->addScript('catalog/view/javascript/jquery/jquery-1.7.1.min.js');
 $helper->addScript('catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js');
+
 //$helper->addScript('catalog/view/javascript/jquery/ui/minified/jquery.ui.dialog.min.js');
 $helper->addScript('catalog/view/javascript/jquery/ui/external/jquery.cookie.js');
 $helper->addScript('catalog/view/javascript/common.js?v23');
@@ -103,7 +105,7 @@ $layoutMode = $helper->getParam('layout');
         <?php } else { ?>
 
         <?php } ?>
-        <?php foreach ($helper->getScriptFiles() as $script) { ?>
+    <?php foreach ($helper->getScriptFiles() as $script) { ?>
             <script type="text/javascript" src="<?php echo $script; ?>"></script>
         <?php } ?>
 
@@ -131,15 +133,21 @@ $layoutMode = $helper->getParam('layout');
             <link href="catalog/view/javascript/jquery/colorpicker/css/colorpicker.css" rel="stylesheet"/>
         <?php } ?>
         <?php if (isset($stores) && $stores) { ?>
-            <script type="text/javascript"><!--
+            <script type="text/javascript">
                 $(document).ready(function () {
                     <?php foreach ($stores as $store) { ?>
                     $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></iframe>');
                     <?php } ?>
                 });
-                //--></script>
+                </script>
         <?php } ?>
         <?php echo $google_analytics; ?>
+			<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript">
+				var jQuery_1_11_1 = $.noConflict(true);
+			</script>
+			<script type="text/javascript" src="catalog/view/javascript/jquery.jcarousellite.js"></script>
+
     </head>
 <body id="offcanvas-container" class="<?php print (defined('ALEXA')?'alexa ':'sergi ');?>offcanvas-container layout-<?php echo $layoutMode; ?> fs<?php echo $themeConfig['fontsize']; ?> <?php echo $helper->getPageClass(); ?> <?php echo $helper->getParam('body_pattern', ''); ?>">
 <?php

@@ -95,11 +95,6 @@ ul.box-filter &gt; li ul {
 	border: 1px #eee solid;
 	padding: 5px;
 	margin: 10px 0;
-	
-    border-radius: 8px;
-    -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.4);	
 }
 .boxzzz{
 border: 1px #CCC solid;

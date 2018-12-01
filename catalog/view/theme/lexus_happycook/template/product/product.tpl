@@ -38,19 +38,28 @@
   
  
   <div class="product-info">
-	<div class="row">
-    
+	<div class="row else__top_prod">
+    <div class="col-lg-12 col-md-12">
+		 <h1><?php echo $heading_title; ?></h1>
+	</div>
         <?php if ($thumb || $images) { ?>
-    <div class="col-lg-5 col-md-5 image-container">
+    <div class="col-lg-8 col-md-8 image-container">
   <?php if( $special )  { ?>
           <div class="product-label-special label"><?php echo $this->language->get( 'text_sale' ); ?></div>
         <?php } ?>
+		<div class="<?php if (count($images) > 0) {echo 'col-sm-10';} else {echo 'col-sm-12';}?> big__images">
         <?php if ($thumb) { ?>
         <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox">
           <img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image"  data-zoom-image="<?php echo $popup; ?>" class="product-image-zoom"/></a></div>
         <?php } ?>
+		</div>
+		<div class="col-sm-2 smalls___imgs">
         <?php if ($images) { ?>
-        <div class="image-additional slide carousel" id="image-additional"><div id="image-additional-carousel" class="carousel-inner">
+        <div class="image-additional slide carousel" id="image-additional" style="padding: 0px;">
+	  <a href="#" class="prev"><i class="fa fa-chevron-down"></i></a>		
+		<div id="image-additional-carousel" class="carousel-inner">
+
+		<ul>
         <?php 
         if( $productConfig['product_zoomgallery'] == 'slider' && $thumb ) {  
           $eimages = array( 0=> array( 'popup'=>$popup,'thumb'=> $thumb )  ); 
@@ -58,62 +67,40 @@
         }
         $icols = 3; $i= 0;
         foreach ($images as  $image) { ?>
-          <?php if( (++$i)%$icols == 1 ) { ?>
-          <div class="item">
-          <?php } ?>
-
+          
+          
+         
+		<li>
               <a href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" class="colorbox" data-zoom-image="<?php echo $image['popup']; ?>" data-image="<?php echo $image['popup']; ?>">
-                <img src="<?php echo $image['thumb']; ?>" style="max-width:<?php echo $this->config->get('config_image_additional_width');?>px"  title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" data-zoom-image="<?php echo $image['popup']; ?>" class="product-image-zoom" />
+				<span>
+                <img src="<?php echo $image['thumb']; ?>" style="max-width:100%;width: 100%;"  title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" data-zoom-image="<?php echo $image['popup']; ?>" class="product-image-zoom" />
+				</span>
               </a>
-            <?php if( $i%$icols == 0 || $i==count($images) ) { ?>
-              </div>
-          <?php } ?>
+            
+        </li>
+          
         <?php } ?>
+		</ul>
       </div>
-            <a class="carousel-control left" href="#image-additional" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#image-additional" data-slide="next">&rsaquo;</a>
+	  <a href="#" class="next"><i class="fa fa-chevron-up"></i></a>
         </div>
-          <script type="text/javascript">
-            $('#image-additional .item:first').addClass('active');
-            $('#image-additional').carousel({interval:false})
-          </script>
+<script>
+jQuery_1_11_1("#image-additional-carousel").jCarouselLite({
+    btnNext: ".image-additional .next",
+    btnPrev: ".image-additional .prev",
+    vertical: true	
+
+});
+</script>
 
         <?php } ?>
+		</div>
      
          </div>
     <?php } ?>
-    <div class="col-lg-7 col-md-7">
-		 <h1><?php echo $heading_title; ?></h1>
-		  <?php if ($review_status) { ?>
-      <div class="review">
-        <div><img src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>"/>&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div>
-      </div>
-      <?php } ?>
-
-      <div class="share clearfix"><!-- AddThis Button BEGIN -->
-          <div class="addthis_default_style"><a class="addthis_button_compact"><?php echo $text_share; ?></a> <a class="addthis_button_email"></a><a class="addthis_button_print"></a> <a class="addthis_button_facebook"></a> <a class="addthis_button_twitter"></a></div>
-          <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js"></script> 
-          <!-- AddThis Button END --> 
-        </div>
-
-      <div class="description">
-        <?php if ($manufacturer) { ?>
-        <span><?php echo $text_manufacturer; ?></span> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
-        <?php } ?>
-        <span><?php echo $text_model; ?></span> <?php echo $model; ?><br />
-        <?php if ($reward) { ?>
-        <span><?php echo $text_reward; ?></span> <?php echo $reward; ?><br />
-        <?php } ?>
-        <span><?php echo $text_stock; ?></span> <?php echo $stock; ?></div>
-		 
-      
-		 <div class="compare-wish">
-          <a class="wishlist" onclick="addToWishList('<?php echo $product_id; ?>');"><span class="fa fa-heart"></span><?php echo $button_wishlist; ?></a>
-            <a class="compare" onclick="addToCompare('<?php echo $product_id; ?>');"><span class="fa fa-retweet"></span><?php echo $button_compare; ?></a>
-		</div>
-
-    <div class="price-cart row">
-      <div class="col-sm-4">
+    <div class="col-lg-4 col-md-4 all_right__colls_pr">
+    <div class="right__colls_pr">
+	<div class="col-sm-12 cennic__products">
         <?php if ($price) { ?>
     <div class="price ">
      <?php if (!$special) { ?>
@@ -142,19 +129,22 @@
       <?php } ?>
     <?php } ?>
       </div>
+		 
+      
 
-      <div class="col-sm-8">
+
+    <div class="price-cart row">
+
+
+      <div class="col-sm-12">
         <div class="product-extra">
-          <div class="quantity-adder">
+          <div class="quantity-adder my_quantity col-sm-6 padding-rl0">
           
             <div class="quantity-number pull-left">
-                <span>Кол<?//php echo $text_qty; ?></span> 
-                <input class="form-control" type="text" name="quantity" id="input-quantity" size="2" value="<?php echo $minimum; ?>">
-            </div>
-            <div class="quantity-wrapper pull-left">
-                <span class="add-up add-action fa fa-plus"></span> 
-                <span class="add-down add-action fa fa-minus"></span>
-            </div>                  
+                <span class="add-up add-action fa fa-pluss col-xs-2"><i class="fa fa-plus"></i></span> 
+                <input class="col-xs-8 quant" type="text" name="quantity" id="input-quantity" size="2" value="<?php echo $minimum; ?>">
+                <span class="add-down add-action fa fa-minuss col-xs-2"><i class="fa fa-minus"></i></span>
+            </div>                
           
           </div>
           
@@ -162,11 +152,26 @@
           
           <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
 
-    <div class="product-action pull-left">
+    <div class="product-action pull-left col-sm-6  padding-rlr padding-rlr-mob">
         <div class="cart pull-left">
-            <button type="button" id="button-cart" data-loading-text="Loading..." class="btn btn-outline"><span class="fa fa-shopping-cart fa-fw"></span><?php echo $button_cart; ?></button>
-            
-<a id="fast_order" href="#fast_order_form" class="button" />Быстрый заказ</a>
+            <button type="button" id="button-cart" data-loading-text="Loading..." class="buttonse"><?php echo $button_cart; ?></button>            
+        </div>                            
+    </div>
+
+
+<div class="knopki">	
+
+		 <div class="compare-wish col-sm-6 col-md-6 col-xs-6 padding-rl0">
+			<div class="col-sm-6 col-md-6 col-xs-6 padding-rll">
+				<a class="btn-grays" onclick="addToWishList('<?php echo $product_id; ?>');"><span class="fa fa-heart"></span></a>
+			</div>
+			<div class="col-sm-6 col-md-6 col-xs-6 padding-rl0">
+				<a class="btn-grays" onclick="addToCompare('<?php echo $product_id; ?>');"><span class="fa fa-retweet"></span></a>
+			</div>
+		</div>
+		
+<div class="col-sm-6 col-md-6 col-xs-6 padding-rlr">		
+<a id="fast_order" href="#fast_order_form" class="btn-gray" />Быстрый заказ</a>
 <div style="display:none">
 <div id="fast_order_form">       
 <input id="product_name" type="hidden" value="<?php echo $heading_title; ?>">
@@ -187,12 +192,9 @@
 <button class="fast_order_button"><span>Оформить заказ</span></button>
 </div>
 </div>
-</div>            
-            
-            
-        </div>
-                            
-    </div>
+</div>   
+</div>   
+</div>   
     <div class="clearfix"></div>
 
     
@@ -205,6 +207,36 @@
         </div>
       </div>
 
+      <ul class="description time__worke">
+        <?php if ($manufacturer) { ?>
+		<li>
+        <span class="txt__attribpre"><span class="txt__attrib"><?php echo $text_manufacturer; ?></span> </span> <span><a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></span>
+        <?php } ?>
+		</li>
+		<li>
+        <span class="txt__attribpre"><span class="txt__attrib"><?php echo $text_model; ?></span></span> <span><?php echo $model; ?></span>
+		</li>
+        <?php if ($reward) { ?>
+		<li>
+        <span class="txt__attribpre"><span class="txt__attrib"><?php echo $text_reward; ?></span></span> <span><?php echo $reward; ?></span>
+        <?php } ?>
+		</li>
+		<li>
+        <span class="txt__attribpre"><span class="txt__attrib"><?php echo $text_stock; ?></span></span> <span><?php echo $stock; ?></span>
+		</li>
+		</ul>
+<ul class="list-unstyled inform-block-prod">
+                    <li><a class="clickmodal" href="/ucloviya-doctavki">Доставка</a></li>
+                    <li><a class="clickmodal" href="/ucloviya-oplati">Оплата</a></li>
+                    <li><a class="clickmodal" href="/kontakti">Контакты</a></li>
+                    <li><a class="clickmodal" href="/index.php?route=information/information/agree&information_id=14">Как заказать </a></li>
+			  
+</ul>
+    <div class="buttom__prod_manufact">
+		<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,twitter,viber,skype"></div>
+	</div>
       <?php if ($profiles): ?>
       <div class="option">
           <h2><span class="required">*</span><?php echo $text_payment_profile ?></h2>
@@ -385,6 +417,7 @@
   <?php } ?>
   
 
+    </div>
     </div>
 	</div>
   </div>
@@ -748,7 +781,7 @@ $('#button-review').bind('click', function() {
     }
   });
 });
-//--></script> 
+//--></script>
 <script type="text/javascript"><!--
 $('#tabs a').tabs();
 //--></script> 
