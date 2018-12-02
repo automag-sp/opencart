@@ -71,6 +71,8 @@
     <div>
       <?php if ($product['thumb']) { ?>
       <div class="image"><a href="<?php echo $product['href']; ?>"><img class="main" src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+      <?php } else { ?>
+      <div class="image"><a href="<?php echo $product['href']; ?>"><img class="main" src="/image/cache/data/product/%20временно%20отсутствует-240x240.jpg" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
       <?php } ?>
       <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
       <div class="description"><div><?php echo $product['model']; ?></div><?php echo $product['description']; ?></div>

@@ -97,6 +97,17 @@ jQuery_1_11_1("#image-additional-carousel").jCarouselLite({
 		</div>
      
          </div>
+    <?php } else { ?>
+    <div class="col-lg-8 col-md-8 image-container">
+  <?php if( $special )  { ?>
+          <div class="product-label-special label"><?php echo $this->language->get( 'text_sale' ); ?></div>
+        <?php } ?>
+		<div class="col-sm-12 big__images">
+        <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox">
+          <img src="/image/cache/data/product/%20временно%20отсутствует-240x240.jpg" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image"  data-zoom-image="<?php echo $popup; ?>" class="product-image-zoom"/></a></div>
+		</div>
+     
+         </div>
     <?php } ?>
     <div class="col-lg-4 col-md-4 all_right__colls_pr">
     <div class="right__colls_pr">

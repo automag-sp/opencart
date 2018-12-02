@@ -86,6 +86,37 @@
             			<a class="hover-image" href="<?php echo $product['href']; ?>"><img src="<?php echo $thumb2; ?>" alt="<?php echo $product['name']; ?>"></a>
             			<?php } }?>
             	      </div>
+                  <?php } else { ?>
+                 <div class="image">
+                 	<?php if( $product['special'] ) {   ?>
+                	<div class="product-label-special label"><?php echo $this->language->get( 'text_sale' ); ?></div>
+                	<?php } ?>
+                		<a class="img" href="<?php echo $product['href']; ?>"><img src="/image/cache/data/product/%20временно%20отсутствует-240x240.jpg" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a>
+            	      	<div class="compare-wishlish">
+            			 <div class="wishlist"><a class="fa fa-heart" onclick="addToWishList('<?php echo $product['product_id']; ?>');"  data-placement="top" data-toggle="tooltip" data-original-title="<?php echo $button_wishlist; ?>"><span><?php echo $button_wishlist; ?></span></a></div>
+            			 <?php if( $categoryPzoom ) { $zimage = str_replace( "cache/","", preg_replace("#-\d+x\d+#", "",  $product['thumb'] ));  ?>
+            	      	 <div class="product-zoom hidden-xs hidden-sm">
+            	      	 	<a href="<?php echo $zimage;?>" class="colorbox" rel="nofollow" title="<?php echo $product['name']; ?>"><span class="fa fa-search-plus"></span></a>
+            	      	 </div>
+            	      	 <?php } ?>
+            		      <div class="compare"><a class="fa fa-retweet" onclick="addToCompare('<?php echo $product['product_id']; ?>');"  data-placement="top" data-toggle="tooltip" data-original-title="<?php echo $button_compare; ?>"><span><?php echo $button_compare; ?></span></a></div>
+            	    	</div>
+            			<?php //#2 Start fix quickview in fw?>
+            			<?php if ($quickview) { ?>
+            			<div class="product-quickview hidden-xs hidden-sm">
+            				<a class="pav-colorbox" href="<?php echo $this->url->link("themecontrol/product",'product_id='.$product['product_id'] );?>"><?php echo $this->language->get('quick_view'); ?></a>
+            			</div>
+            			<?php } ?>
+            			<?php //#2 End fix quickview in fw?>
+            	    	<?php 
+              			if( $swapimg ){
+                  		$product_images = $this->model_catalog_product->getProductImages( $product['product_id'] );
+            			if(isset($product_images) && !empty($product_images)) {
+            				$thumb2 = $this->model_tool_image->resize($product_images[0]['image'],  $this->config->get('config_image_product_width'),  $this->config->get('config_image_product_height') );
+            			?>	
+            			<a class="hover-image" href="<?php echo $product['href']; ?>"><img src="/image/cache/data/product/%20временно%20отсутствует-240x240.jpg" alt="<?php echo $product['name']; ?>"></a>
+            			<?php } }?>
+            	      </div>
                   <?php } ?>
                   <div class="product-meta">
                   <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
