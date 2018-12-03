@@ -575,3 +575,5 @@ admin/language/russian/catalog/review.php
 admin/view/template/catalog/review_list.tpl
 admin/view/template/catalog/review_form.tpl
 catalog/view/theme/lexus_happycook/template/product/category.tpl
+admin/controller/module/category.php
+admin/view/template/module/category.tpl
