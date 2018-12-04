@@ -577,3 +577,5 @@ admin/view/template/catalog/review_form.tpl
 catalog/view/theme/lexus_happycook/template/product/category.tpl
 admin/controller/module/category.php
 admin/view/template/module/category.tpl
+admin/view/template/module/pavblog/category_form.tpl
+admin/view/template/module/pavblog/category.tpl
