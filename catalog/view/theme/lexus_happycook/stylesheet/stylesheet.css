@@ -5045,10 +5045,20 @@ body,
 }
 
 .h1ps{
-    line-height: 32px !important;
+  line-height: 32px !important;
 	text-align: center;
 }
-
+.h1ps1{
+	text-align: center;
+	padding:0px !important;
+	margin: 0px !important;
+}
+.h2ps{
+text-align: center;
+}
+.text_c{
+text-align: center;
+}
 .sub_h1{
     font-size:20px;
     padding-bottom: 10px;
@@ -5058,6 +5068,30 @@ body,
 .sub_h2{
     font-size: 17px;
     padding-bottom: 10px;
+}
+.primary__pic {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.primary__pc{
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 16px;
+    box-shadow: 0 0 3pt #727272;
+    border-radius: 2pt;
+    width: 67%;
+    display: inline-block;
+    padding: 8pt;
+}
+.row1ps1{
+    display: flex;
+}
+.row1ps_item1{
+    padding-right: 8px;
+    border: 1px solid #1b65b9;
+    padding-left: 8px;
 }
 .centr_text img {
 	max-width: 80px;

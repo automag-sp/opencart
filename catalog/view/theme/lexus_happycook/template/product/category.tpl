@@ -21,7 +21,6 @@
 ?>
 <?php echo $header; ?>
  
-
 <?php require( DIR_TEMPLATE.$this->config->get('config_template')."/template/common/breadcrumb.tpl" ); ?>
 
 
