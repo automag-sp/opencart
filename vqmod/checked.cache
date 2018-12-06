@@ -630,3 +630,15 @@ admin/view/template/module/pavmap/location.tpl
 admin/controller/module/pavsliderlayer.php
 admin/model/pavsliderlayer/slider.php
 admin/view/template/module/sliderlayer/sliders.tpl
+admin/controller/module/pavnewsletter.php
+admin/model/pavnewsletter/newsletter.php
+admin/view/template/module/pavnewsletter/panel.tpl
+admin/controller/module/pavpopulartags.php
+admin/view/template/module/pavpopulartags.tpl
+admin/controller/module/pavproductfeatured.php
+admin/view/template/module/pavproductfeatured.tpl
+admin/controller/module/pavtestimonial.php
+admin/view/template/module/pavtestimonial.tpl
+admin/controller/module/pavtwitter.php
+admin/view/template/module/pavtwitter.tpl
+admin/view/template/module/themecontrol/customize.tpl
