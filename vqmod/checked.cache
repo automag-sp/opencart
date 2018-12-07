@@ -642,3 +642,8 @@ admin/view/template/module/pavtestimonial.tpl
 admin/controller/module/pavtwitter.php
 admin/view/template/module/pavtwitter.tpl
 admin/view/template/module/themecontrol/customize.tpl
+admin/controller/tool/error_log.php
+admin/language/russian/tool/error_log.php
+admin/controller/catalog/filter.php
+admin/language/russian/catalog/filter.php
+admin/view/template/catalog/filter_list.tpl
