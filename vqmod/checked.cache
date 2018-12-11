@@ -647,3 +647,7 @@ admin/language/russian/tool/error_log.php
 admin/controller/catalog/filter.php
 admin/language/russian/catalog/filter.php
 admin/view/template/catalog/filter_list.tpl
+catalog/controller/account/reward.php
+catalog/language/russian/account/reward.php
+catalog/model/account/reward.php
+catalog/view/theme/lexus_happycook/template/account/reward.tpl
