@@ -651,3 +651,8 @@ catalog/controller/account/reward.php
 catalog/language/russian/account/reward.php
 catalog/model/account/reward.php
 catalog/view/theme/lexus_happycook/template/account/reward.tpl
+admin/controller/catalog/attribute_group.php
+admin/language/russian/catalog/attribute_group.php
+admin/view/template/catalog/attribute_group_list.tpl
+admin/view/template/catalog/attribute_group_form.tpl
+admin/view/template/catalog/attribute_form.tpl
