@@ -34,13 +34,6 @@
 <div id="content"><?php echo $content_top; ?>
   <h1 class="heading_title"><span><?php echo $heading_title; ?></span></h1>
 
-  <?php if ($description) { ?>
-  <div class="category-info clearfix">
-    <?php if ($description) { ?>
-    <?php echo $description; ?>
-    <?php } ?>
-  </div>
-  <?php } ?>
   <?php if ($categories) { ?>
   	      <div class="row">
 	        <div class="categoryimgs">
@@ -238,6 +231,13 @@ $(document).ready(function() {
    <div class="pagination">
    	<?php echo $pagination; ?>
    </div>
+  <?php } ?>
+  <?php if ($description) { ?>
+  <div class="category-info clearfix">
+    <?php if ($description) { ?>
+    <?php echo $description; ?>
+    <?php } ?>
+  </div>
   <?php } ?>
   <?php if (!$categories && !$products) { ?>
   <div class="content"><?php echo $text_empty; ?></div>
