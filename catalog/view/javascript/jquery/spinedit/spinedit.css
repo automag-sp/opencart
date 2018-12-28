@@ -1,0 +1,15 @@
+.cart .quantity, .quantity .quantity {
+	margin-bottom:3px;
+	height:21px;
+	border-radius:2px;
+	padding:0;
+	text-align:center;
+	width:30px;
+}
+.cart .qty-minus, .quantity .qty-minus, .cart .qty-plus, .quantity .qty-plus {	
+	width:23px;
+    height: 23px;
+    margin: 0;
+    text-align:center;
+	padding:0 4px;
+}

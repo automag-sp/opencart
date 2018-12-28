@@ -48,7 +48,10 @@
         		<ul>
                     <?php
                         foreach ($saleepc['models'] as $model){
+							if ($model['MOD_ID'] == 647 || $model['MOD_ID'] == 648) {
+							} else {
                             echo '<li><a href="/index.php?route=saleepc/general/modifications&model_id='.$model['MOD_ID'].'&cartype='.$saleepc['cartype'].'" title="'.$model['TEX_TEXT'].'">'.$model['TEX_TEXT'].' <i>('.dt($model['MOD_PCON_START']).' - '.dt($model['MOD_PCON_END']).')</i> </a></li>';
+							}
                         }
                     ?>
                 </ul>

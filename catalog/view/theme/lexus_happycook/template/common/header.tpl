@@ -375,6 +375,6 @@ if (isset($_GET['qv']) && ($_GET['qv'] == 1)) {
     <section id="columns">
     <div class="container">
 <?php } ?>
-    <div class="row">
+    <div class="">
     <?php
 }

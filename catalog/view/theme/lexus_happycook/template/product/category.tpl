@@ -200,7 +200,6 @@
 	      </div>
 	      <?php } ?>
 	      <div class="cart">
-	      	<span class="fa fa-shopping-cart"></span>
 	        <input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />
 	      </div>
 

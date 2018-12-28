@@ -5,19 +5,7 @@ $(document).ready(function() {
         window.location = $('base').attr('href') + 'index.php?route=product/search&search=' + encodeURIComponent($('input[name=\'search\']:visible').val());
     });
 
-	$('#header input[name=\'search\']').bind('keydown', function(e) {
-		if (e.keyCode == 13) {
-			url = $('base').attr('href') + 'index.php?route=product/search';
-			 
-			var search = $('input[name=\'search\']:visible').attr('value');
-			
-			if (search) {
-				url += '&search=' + encodeURIComponent(search);
-			}
-			
-			location = url;
-		}
-	});
+
 	
 	/* Ajax Cart */
 	$('#cart > .heading a').live('click', function() {

@@ -1,0 +1,38 @@
+<modification>
+	<id>SpinEdit Qty</id>
+	<version>1.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>Dragon</author>	
+			
+
+	<file name="catalog/view/theme/*/template/product/category.tpl">
+
+		<operation>
+			<search position="replace"><![CDATA[<input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />]]></search>
+			<add><![CDATA[<div class="qty-spinedit">
+<span class="all__count_cartcat">
+<input type="button" onclick="minusQty(this)" value="-" class="qty-minus" />
+<input type="text" value="1" size="2" class="quantity" name="quantity_<?php echo $product['product_id']; ?>">
+<input type="button" onclick="plusQty(this)" value="+" class="qty-plus" />
+</span>
+<span class="all__butt_cartcat">
+<span class="fa fa-shopping-cart"></span>
+<input class="cart__push" type="button" value="Купить" onclick="addToCartQty('<?php echo $product['product_id']; ?>', this);" class="button" />
+</span>
+</div>]]>
+			</add>
+		</operation>		
+	</file>	
+	<file name="catalog/view/theme/*/template/common/header.tpl">
+		
+		<operation>
+			<search position="before"><![CDATA[<?php if (isset($themeConfig['custom_javascript']) && !empty($themeConfig['custom_javascript'])) { ?>]]></search>
+			<add><![CDATA[<script type="text/javascript" src="catalog/view/javascript/jquery/spinedit.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/spinedit/spinedit.css" />]]>
+			</add>
+		</operation>
+		
+	</file>	
+
+		
+</modification>

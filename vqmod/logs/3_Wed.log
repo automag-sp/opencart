@@ -1,14 +1,657 @@
----------- Date: 2018-10-10 09:51:14 ~ IP : 31.47.191.194 ----------
-REQUEST URI : /admin/index.php?route=catalog/seopack&amp;token=13c6fe6ee881d0e7ace349bfad68b8f5
+---------- Date: 2018-12-26 14:46:35 ~ IP : 91.144.149.209 ----------
+REQUEST URI : /
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
 MOD DETAILS:
-   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/custom_title.xml
-   id        : Custom titles
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:46:37 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /akkumulyatori/forse/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:47:33 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /akkumulyatori/forse/akb-74-ach-forse-o-p-nizkii
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
    version   : 1.0.0
    vqmver    : 2.1.5
    author    : ovife21
 
-File Name    : admin/controller/catalog/seopack.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function cleartags() {
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:48:52 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/polucinteticheckoe-motornoe-maclo-mobil-super-2000-10w40-4l
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:54:23 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:54:58 ~ IP : 82.137.12.120 ----------
+REQUEST URI : /index.php?route=saleepc/general/carinfo&amp;modification_id=18407
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:55:01 ~ IP : 46.229.168.142 ----------
+REQUEST URI : /akceccuari/xranenie-i-uxod/aromatizatori/aromatizator-slim-coblazn-8ml
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:55:02 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:55:40 ~ IP : 82.137.12.120 ----------
+REQUEST URI : /index.php?route=saleepc/general/modifications&amp;model_id=5377
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:58:20 ~ IP : 46.229.168.143 ----------
+REQUEST URI : /akceccuari/inctrument/pictoleti-pokracochnie/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:58:35 ~ IP : 46.229.168.129 ----------
+REQUEST URI : /macla/motornie-macla/lukoil/maclo-trancmiccionnoe-lukoil-tm-5-75w-90-gl-5-1l-p-cint
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:58:55 ~ IP : 141.8.183.213 ----------
+REQUEST URI : /index.php?route=saleepc/general/parts&amp;modification_id=1000813&amp;partnode_id=3463
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/SpinEditQty.xml
+   id        : SpinEdit Qty
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : Dragon
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:58:59 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 14:59:13 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/polucinteticheckoe-motornoe-maclo-mobil-super-2000-10w40-4l
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:05:24 ~ IP : 83.149.46.245 ----------
+REQUEST URI : /index.php?route=saleepc/general/parts&amp;modification_id=7852&amp;partnode_id=682
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/SpinEditQty.xml
+   id        : SpinEdit Qty
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : Dragon
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:05:50 ~ IP : 46.229.168.154 ----------
+REQUEST URI : /shini-dicki/dicki/kfz-7710-6-0-r15-5-105-et39-d56-5
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:06:45 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:07:11 ~ IP : 37.9.113.20 ----------
+REQUEST URI : /macla/motornie-macla/gm-891134565/cinteticheckoe-motornoe-maclo-gm-dexos2-5w30-5l
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:08:57 ~ IP : 94.130.10.89 ----------
+REQUEST URI : /index.php?route=saleepc/general/partnodes&amp;modification_id=15797&amp;ga=10112
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:10:10 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:14:19 ~ IP : 46.229.168.131 ----------
+REQUEST URI : /avtoximiya/antifrizi-tocoli/antifriz-zheltii-nord-5kg
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:29:10 ~ IP : 94.130.10.89 ----------
+REQUEST URI : /index.php?route=saleepc/general/partnodes&amp;modification_id=1580&amp;ga=10442
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:29:45 ~ IP : 94.130.10.89 ----------
+REQUEST URI : /index.php?route=saleepc/general/partnodes&amp;modification_id=15811&amp;ga=10314
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:30:20 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:31:00 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:31:08 ~ IP : 94.130.10.89 ----------
+REQUEST URI : /index.php?route=saleepc/general/partnodes&amp;modification_id=15809&amp;ga=10106
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 15:34:53 ~ IP : 66.249.69.236 ----------
+REQUEST URI : /index.php?route=product/product/review&amp;product_id=44298
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:01:30 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:01:40 ~ IP : 94.130.10.89 ----------
+REQUEST URI : /index.php?route=saleepc/general/partnodes&amp;modification_id=1582&amp;ga=10116
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:02:06 ~ IP : 46.229.168.133 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:02:11 ~ IP : 94.130.10.89 ----------
+REQUEST URI : /index.php?route=saleepc/general/partnodes&amp;modification_id=1582&amp;ga=10150
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:02:36 ~ IP : 213.87.153.204 ----------
+REQUEST URI : /macla/trancmiccionnii-macla/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:04:37 ~ IP : 5.45.207.62 ----------
+REQUEST URI : /shini-dicki/shini/gud-ear-185-65-14-t-86-ug-ice-2-ms
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:33:23 ~ IP : 94.130.10.89 ----------
+REQUEST URI : /index.php?route=saleepc/general/parts&amp;modification_id=15672&amp;partnode_id=139
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:33:25 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:33:59 ~ IP : 37.9.113.20 ----------
+REQUEST URI : /shini-dicki/dicki/rw-classic-h-335-7-0-r15-4-114-3-et42-d73-1-ti-hp-hpt
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:34:19 ~ IP : 94.130.10.89 ----------
+REQUEST URI : /index.php?route=saleepc/general/parts&amp;modification_id=15672&amp;partnode_id=179
+VQMod::_parseMods - INVALID XML FILE: : Start tag expected, '&lt;' not found in /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/sticky_menu.xml, line: 1
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/vqmm_pav_blogs_menu_shortcut.xml
+   id        : VQMod Pavo Blogs Shortcut
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : pavothemes.com
+
+File Name    : catalog/language/*/common/header.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $_['text_home']           = 'Home';
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:34:30 ~ IP : 37.9.113.20 ----------
+REQUEST URI : /shini-dicki/dicki/ckad-sakura-7-5-r17-5-112-et45-d66-6-grei-1706834
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/autolinks.xml
+   id        : autolinks
+   version   : 1.0.0
+   vqmver    : 2.1.5
+   author    : ovife21
+
+File Name    : catalog/controller/product/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function captcha() {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-12-26 16:35:32 ~ IP : 46.201.114.74 ----------
+REQUEST URI : /macla/motornie-macla/mobil-1398610155/
+MOD DETAILS:
+   modFile   : /var/www/www-root/data/www/automag-sp.ru/vqmod/xml/pavdeals.xml
+   id        : Pavo Deals
+   version   : 1.0.0
+   vqmver    : 2.3.0
+   author    : PavoThemes
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): var rating = $(element).find('.rating').html();
 
 ----------------------------------------------------------------------
 

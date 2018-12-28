@@ -1,11 +1,11 @@
-<div class="box category">
+<div class="box category new__categorise">
   <div class="box-heading"><span><?php echo $heading_title; ?></span></div>
   <div class="box-content">
     <ul class="box-category">
       <?php foreach ($categories as $category) { 
 	     $class = "";
 		 if(isset($category["children"]) && !empty($category["children"])){
-			$class = "haschild";
+			$class = "haschild dropdown-toggle";
 		 }
       $name = str_replace("(", '<span class="badge">(',  $category['name'] );
       $category['name'] = str_replace(")", ')</span>', $name); 
@@ -16,8 +16,17 @@
         <?php } else { ?>
         <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
         <?php } ?>
+		<?php if ($category['category_id'] == $category_id) {  ?>
+		<span class="ochow-menu-item-arrow hidden-xs hidden-sm">
+			<i class="fa fa-angle-down arrow"></i>
+		</span>
+		<?php } else { ?>
+		<span class="ochow-menu-item-arrow hidden-xs hidden-sm">
+			<i class="fa fa-angle-right arrow"></i>
+		</span>
+		<?php } ?>
         <?php if ($category['children']) { ?>
-        <ul>
+        <ul class="level1 dropdown-menu">
           <?php foreach ($category['children'] as $child) { ?>
           <?php
              $child['name'] = str_replace("(", '<span class="badge">(',  $child['name'] );
