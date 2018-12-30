@@ -328,3 +328,9 @@ catalog/model/saleepc/kia.php
 catalog/view/theme/lexus_happycook/template/saleepc/kia/parts.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/hyundai/subgroups.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/seat/groups.tpl
+catalog/controller/feed/google_sitemap.php
+catalog/controller/pavblog/blog.php
+catalog/view/theme/lexus_happycook/template/pavblog/blog.tpl
+catalog/controller/account/logout.php
+catalog/language/russian/account/logout.php
+catalog/view/theme/lexus_happycook/template/common/success.tpl
