@@ -1,11 +1,21 @@
-	2018-12-30 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
-	2018-12-30 02:37:03	:Fetched 795402 bytes type 1
-	2018-12-30 02:37:03	:Disabled 795 items of type 1
-	2018-12-30 02:37:03	:Updated product SATOYA  185/75/16  R 104/102C  Cargo S(31842)
-	2018-12-30 02:37:03	:Updated product Бриджстоун  235/45/17  W 94 T001(32216)
-	2018-12-30 02:37:04	:Updated product Мишелин  215/50/17  W 95 PRIMACY 4  XL(54228)
-	2018-12-30 02:37:04	:Updated product Мишелин  225/45/17  W 94 PRIMACY 4  XL(51787)
-	2018-12-30 02:37:04	:Updated product Нордман  225/55/17  V 101 NORDMAN SZ  XL(35260)
-	2018-12-30 02:37:04	:Updated product Нордман  245/60/18  T 109 NORDMAN 7 SUV  XL Ш.(41374)
-	2018-12-30 02:37:04	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2018-12-30.xml already exists
-	2018-12-30 02:37:04	:Disabled 0 items of type 2
+	2018-12-31 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
+	2018-12-31 02:37:04	:Fetched 794425 bytes type 1
+	2018-12-31 02:37:04	:Disabled 792 items of type 1
+	2018-12-31 02:37:04	:Updated product VIATTI  175/70/14  H  Strada Asimmetriсo V-130(31968)
+	2018-12-31 02:37:04	:Updated product VIATTI  185/55/15  Strada Asimmetriсo V-130(48576)
+	2018-12-31 02:37:04	:Updated product VIATTI  185/65/14  H  Strada Asimmetriсo V-130(31971)
+	2018-12-31 02:37:04	:Updated product VIATTI  195/60/15  V 88 Strada Asimmetriсo V-130(31972)
+	2018-12-31 02:37:04	:Updated product VIATTI  205/65/16  V 95 Strada Asimmetriсo V-130(51976)
+	2018-12-31 02:37:04	:Updated product VIATTI  215/55/17  V  Strada Asimmetriсo V-130(40790)
+	2018-12-31 02:37:04	:Updated product VIATTI  215/55/17  V 94 Bosco A/T V-237(40768)
+	2018-12-31 02:37:04	:Updated product VIATTI  225/45/17  V 94 Strada Asimmetriсo V-130(40791)
+	2018-12-31 02:37:04	:Updated product VIATTI  225/50/17  V  Strada Asimmetriсo V-130(40792)
+	2018-12-31 02:37:04	:Updated product VIATTI  235/40/18  V 95 Strada Asimmetriсo V-130(50731)
+	2018-12-31 02:37:04	:Updated product Волж.ШЗ  215/90/15  K C  Я-245 к  н/ш.(36272)
+	2018-12-31 02:37:04	:Updated product КАМА  175/65/14  H  ЕВРО 129(33622)
+	2018-12-31 02:37:04	:Updated product КАМА  195/65/15  H  ЕВРО 129(47915)
+	2018-12-31 02:37:04	:Updated product Мишелин  215/50/17  W 95 PRIMACY 4  XL(54228)
+	2018-12-31 02:37:04	:Updated product Нокиан  185/65/14  H 86 HAKKA GREEN 2(41742)
+	2018-12-31 02:37:04	:Updated product Роудстоун  265/65/17  S 110 ROADIAN HT SUV(36054)
+	2018-12-31 02:37:04	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2018-12-31.xml already exists
+	2018-12-31 02:37:04	:Disabled 0 items of type 2
