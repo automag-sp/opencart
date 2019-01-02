@@ -1,6 +1,11 @@
-	2019-01-01 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
-	2019-01-01 02:37:03	:Fetched 794425 bytes type 1
-	2019-01-01 02:37:03	:Disabled 791 items of type 1
-	2019-01-01 02:37:04	:Updated product Нокиан  185/65/14  H 86 HAKKA GREEN 2(41742)
-	2019-01-01 02:37:04	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2019-01-01.xml already exists
-	2019-01-01 02:37:04	:Disabled 0 items of type 2
+	2019-01-02 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
+	2019-01-02 02:37:03	:Fetched 793457 bytes type 1
+	2019-01-02 02:37:03	:Disabled 791 items of type 1
+	2019-01-02 02:37:03	:Updated product Данлоп  225/60/18  H 100 SP SPORT FM800(32995)
+	2019-01-02 02:37:03	:Updated product Кумхо  185/60/14  T 82 KH-27(45130)
+	2019-01-02 02:37:03	:Updated product Кумхо  235/55/17  W 103 PS-31  XL(47479)
+	2019-01-02 02:37:03	:Updated product Нордман  205/55/16  H 91 NORDMAN SX2(35228)
+	2019-01-02 02:37:03	:Updated product Файрстоун  185/65/15  S 88 TOURING FS100(51572)
+	2019-01-02 02:37:03	:Updated product Файрстоун  225/60/17  V 99 LE-02(52903)
+	2019-01-02 02:37:03	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2019-01-02.xml already exists
+	2019-01-02 02:37:03	:Disabled 0 items of type 2
