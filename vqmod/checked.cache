@@ -345,3 +345,8 @@ catalog/controller/module/affiliate.php
 catalog/language/russian/module/affiliate.php
 catalog/view/theme/lexus_happycook/template/module/affiliate.tpl
 catalog/view/theme/lexus_happycook/template/affiliate/forgotten.tpl
+catalog/controller/pavblog/blogs.php
+catalog/view/theme/lexus_happycook/template/pavblog/blogs.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/hyundai/groups.tpl
+catalog/language/russian/information/contact.php
+catalog/view/theme/lexus_happycook/template/information/contact.tpl
