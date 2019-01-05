@@ -1,14 +1,13 @@
-	2019-01-04 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
-	2019-01-04 02:37:03	:Fetched 792403 bytes type 1
-	2019-01-04 02:37:03	:Disabled 790 items of type 1
-	2019-01-04 02:37:03	:Updated product Данлоп  255/60/18  V 112 GRANTREK PT3(33200)
-	2019-01-04 02:37:03	:Updated product Кумхо  185/60/14  T 82 KH-27(45130)
-	2019-01-04 02:37:03	:Updated product Кумхо  205/60/16  T 92 WI-31  Ш.(41198)
-	2019-01-04 02:37:03	:Updated product Кумхо  235/55/17  V 103 KL-33  XL(52068)
-	2019-01-04 02:37:03	:Updated product Мишелин  235/40/18  Y 95 PILOT SPORT-4  XL(34457)
-	2019-01-04 02:37:03	:Updated product Нордман  245/60/18  T 109 NORDMAN 7 SUV  XL Ш.(41374)
-	2019-01-04 02:37:03	:Updated product Роудстоун  215/55/17  V 94 CP 672(40955)
-	2019-01-04 02:37:03	:Updated product Тайгер  175/70/13  T 82 SIGURA STUD  Ш.(41035)
-	2019-01-04 02:37:03	:Updated product ТУНГА  185/65/14  T 90 ZODIAK_2(36203)
-	2019-01-04 02:37:03	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2019-01-04.xml already exists
-	2019-01-04 02:37:03	:Disabled 0 items of type 2
+	2019-01-05 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
+	2019-01-05 02:37:03	:Fetched 793437 bytes type 1
+	2019-01-05 02:37:03	:Disabled 789 items of type 1
+	2019-01-05 02:37:03	:Updated product Бриджстоун  195/50/15  W 82 RE-003(32053)
+	2019-01-05 02:37:03	:Updated product Кумхо  175/80/14  T 88 KH-27(33849)
+	2019-01-05 02:37:03	:Updated product Кумхо  185/60/15  T 84 KH-27(41112)
+	2019-01-05 02:37:03	:Updated product Нордман  205/55/16  H 91 NORDMAN SX2(35228)
+	2019-01-05 02:37:03	:Updated product Пирелли  245/45/19  T 102 W-Ice ZERO  XL Run Flat Ш.(48805)
+	2019-01-05 02:37:04	:Updated product Файрстоун  185/60/14  H 82 TOURING FS100(36207)
+	2019-01-05 02:37:04	:Updated product Файрстоун  185/65/14  H 86 TOURING FS100(36208)
+	2019-01-05 02:37:04	:Updated product Файрстоун  185/65/15  S 88 TOURING FS100(51572)
+	2019-01-05 02:37:04	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2019-01-05.xml already exists
+	2019-01-05 02:37:04	:Disabled 0 items of type 2
