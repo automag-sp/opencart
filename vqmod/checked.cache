@@ -350,3 +350,6 @@ catalog/view/theme/lexus_happycook/template/pavblog/blogs.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/hyundai/groups.tpl
 catalog/language/russian/information/contact.php
 catalog/view/theme/lexus_happycook/template/information/contact.tpl
+catalog/controller/affiliate/login.php
+catalog/language/russian/affiliate/login.php
+catalog/view/theme/lexus_happycook/template/affiliate/login.tpl

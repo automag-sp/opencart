@@ -1,13 +1,12 @@
-	2019-01-05 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
-	2019-01-05 02:37:03	:Fetched 793437 bytes type 1
-	2019-01-05 02:37:03	:Disabled 789 items of type 1
-	2019-01-05 02:37:03	:Updated product Бриджстоун  195/50/15  W 82 RE-003(32053)
-	2019-01-05 02:37:03	:Updated product Кумхо  175/80/14  T 88 KH-27(33849)
-	2019-01-05 02:37:03	:Updated product Кумхо  185/60/15  T 84 KH-27(41112)
-	2019-01-05 02:37:03	:Updated product Нордман  205/55/16  H 91 NORDMAN SX2(35228)
-	2019-01-05 02:37:03	:Updated product Пирелли  245/45/19  T 102 W-Ice ZERO  XL Run Flat Ш.(48805)
-	2019-01-05 02:37:04	:Updated product Файрстоун  185/60/14  H 82 TOURING FS100(36207)
-	2019-01-05 02:37:04	:Updated product Файрстоун  185/65/14  H 86 TOURING FS100(36208)
-	2019-01-05 02:37:04	:Updated product Файрстоун  185/65/15  S 88 TOURING FS100(51572)
-	2019-01-05 02:37:04	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2019-01-05.xml already exists
-	2019-01-05 02:37:04	:Disabled 0 items of type 2
+	2019-01-06 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
+	2019-01-06 02:37:03	:Fetched 791491 bytes type 1
+	2019-01-06 02:37:03	:Disabled 790 items of type 1
+	2019-01-06 02:37:03	:Updated product Йокохама  195/55/16  V 87 AE50(33332)
+	2019-01-06 02:37:04	:Updated product Кумхо  185/60/14  T 82 KH-27(45130)
+	2019-01-06 02:37:04	:Updated product Кумхо  235/45/17  Y 94 PS-71(34024)
+	2019-01-06 02:37:04	:Updated product Мишелин  225/45/17  W 94 PRIMACY 4  XL(51787)
+	2019-01-06 02:37:04	:Updated product Нокиан  295/35/21  Y 107 HAKKA BLACK SUV  XL(35195)
+	2019-01-06 02:37:04	:Updated product Роудстоун  315/35/20  W 110 N'FERA RU5  XL(51514)
+	2019-01-06 02:37:04	:Updated product Файрстоун  185/60/14  H 82 TOURING FS100(36207)
+	2019-01-06 02:37:04	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2019-01-06.xml already exists
+	2019-01-06 02:37:04	:Disabled 0 items of type 2
