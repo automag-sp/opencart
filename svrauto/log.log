@@ -1,10 +1,8 @@
-	2019-01-07 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
-	2019-01-07 02:37:03	:Fetched 789511 bytes type 1
-	2019-01-07 02:37:03	:Disabled 788 items of type 1
-	2019-01-07 02:37:03	:Updated product Йокохама  195/55/16  V 87 AE50(33332)
-	2019-01-07 02:37:03	:Updated product КОРДИАНТ  195/55/15  H  Комфорт 2(52586)
-	2019-01-07 02:37:03	:Updated product Кумхо  185/60/14  T 82 KH-27(45130)
-	2019-01-07 02:37:03	:Updated product Мишелин  225/45/17  W 94 PRIMACY 4  XL(51787)
-	2019-01-07 02:37:04	:Updated product Файрстоун  185/60/14  H 82 TOURING FS100(36207)
-	2019-01-07 02:37:04	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2019-01-07.xml already exists
-	2019-01-07 02:37:04	:Disabled 0 items of type 2
+	2019-01-08 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
+	2019-01-08 02:37:03	:Fetched 789511 bytes type 1
+	2019-01-08 02:37:03	:Disabled 786 items of type 1
+	2019-01-08 02:37:03	:Updated product Кумхо  185/60/14  T 82 KH-27(45130)
+	2019-01-08 02:37:03	:Updated product Файрстоун  185/60/14  H 82 TOURING FS100(36207)
+	2019-01-08 02:37:03	:Updated product Файрстоун  205/55/16  T 91 ICE CRUISER 7  Ш.(46547)
+	2019-01-08 02:37:03	:File /var/www/www-root/data/www/automag-sp.ru/svrauto/xml/2019-01-08.xml already exists
+	2019-01-08 02:37:03	:Disabled 0 items of type 2
