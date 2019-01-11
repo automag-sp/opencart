@@ -355,3 +355,4 @@ catalog/language/russian/affiliate/login.php
 catalog/view/theme/lexus_happycook/template/affiliate/login.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/audi/index.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/seat/index.tpl
+catalog/controller/account/newsletter.php
