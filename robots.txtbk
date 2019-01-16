@@ -1,0 +1,23 @@
+User-Agent: *
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /*?route=account*
+Disallow: /forgotten/
+Disallow: /?sort=*
+Disallow: /?limit=*
+
+User-Agent: Yandex
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /*?route=account*
+Disallow: /forgotten/
+Disallow: /?sort=*
+Disallow: /?limit=*
+
+User-Agent: Googlebot
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /*?route=account*
+Disallow: /forgotten/
+Disallow: /?sort=*
+Disallow: /?limit=*

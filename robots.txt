@@ -5,6 +5,11 @@ Disallow: /*?route=account*
 Disallow: /forgotten/
 Disallow: /?sort=*
 Disallow: /?limit=*
+Disallow: /search/
+Disallow: /download
+Disallow: /system
+Disallow: /*search_auto*
+Disallow: /*?route=checkout*
 
 User-Agent: Yandex
 Disallow: /checkout/
@@ -13,6 +18,12 @@ Disallow: /*?route=account*
 Disallow: /forgotten/
 Disallow: /?sort=*
 Disallow: /?limit=*
+Disallow: /search/
+Disallow: /download
+Disallow: /system
+Disallow: /*search_auto*
+Disallow: /*?route=checkout*
+Clean-param: tracking
 
 User-Agent: Googlebot
 Disallow: /checkout/
@@ -21,3 +32,10 @@ Disallow: /*?route=account*
 Disallow: /forgotten/
 Disallow: /?sort=*
 Disallow: /?limit=*
+Disallow: /search/
+Disallow: /download
+Disallow: /system
+Disallow: /*search_auto*
+Disallow: /*?route=checkout*
+
+Sitemap: http://automag-sp.ru/index.php?route=feed/fast_sitemap

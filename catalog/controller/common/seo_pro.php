@@ -6,9 +6,13 @@ class ControllerCommonSeoPro extends Controller {
 		parent::__construct($registry);
 		$this->cache_data = $this->cache->get('seo_pro');
 		if (!$this->cache_data) {
-			$query = $this->db->query("SELECT LOWER(`keyword`) as 'keyword', `query` FROM " . DB_PREFIX . "url_alias");
+			$query = $this->db->query("SELECT LOWER(`keyword`) as 'keyword', `query` FROM " . DB_PREFIX . "url_alias ORDER BY url_alias_id");
 			$this->cache_data = array();
 			foreach ($query->rows as $row) {
+				if (isset($this->cache_data['keywords'][$row['keyword']])){
+					$this->cache_data['keywords'][$row['query']] = $this->cache_data['keywords'][$row['keyword']];
+					continue;
+				}
 				$this->cache_data['keywords'][$row['keyword']] = $row['query'];
 				$this->cache_data['queries'][$row['query']] = $row['keyword'];
 			}
@@ -42,6 +46,12 @@ class ControllerCommonSeoPro extends Controller {
 				}
 			}
 
+			if (isset($this->cache_data['keywords'][$route])){
+				$keyword = $route;
+				$parts = array($keyword);
+				$rows = array(array('keyword' => $keyword, 'query' => $this->cache_data['keywords'][$keyword]));
+			}
+
 			if (count($rows) == sizeof($parts)) {
 				$queries = array();
 				foreach ($rows as $row) {
@@ -50,6 +60,7 @@ class ControllerCommonSeoPro extends Controller {
 
 				reset($parts);
 				foreach ($parts as $part) {
+					if(!isset($queries[$part])) return false;
 					$url = explode('=', $queries[$part], 2);
 
 					if ($url[0] == 'category_id') {
@@ -156,27 +167,30 @@ class ControllerCommonSeoPro extends Controller {
 		}
 
 		$queries = array();
-		foreach ($data as $key => $value) {
-			switch ($key) {
-				case 'product_id':
-				case 'manufacturer_id':
-				case 'category_id':
-				case 'information_id':
-					$queries[] = $key . '=' . $value;
-					unset($data[$key]);
-					$postfix = 1;
-					break;
+		if(!in_array($route, array('product/search'))) {
+			foreach($data as $key => $value) {
+				switch($key) {
+					case 'product_id':
+					case 'manufacturer_id':
+					case 'category_id':
+					case 'information_id':
+					case 'order_id':
+						$queries[] = $key . '=' . $value;
+						unset($data[$key]);
+						$postfix = 1;
+						break;
 
-				case 'path':
-					$categories = explode('_', $value);
-					foreach ($categories as $category) {
-						$queries[] = 'category_id=' . $category;
-					}
-					unset($data[$key]);
-					break;
+					case 'path':
+						$categories = explode('_', $value);
+						foreach($categories as $category) {
+							$queries[] = 'category_id=' . $category;
+						}
+						unset($data[$key]);
+						break;
 
-				default:
-					break;
+					default:
+						break;
+				}
 			}
 		}
 
@@ -233,9 +247,9 @@ class ControllerCommonSeoPro extends Controller {
 		if ($product_id < 1) return false;
 
 		static $path = null;
-		if (!is_array($path)) {
+		if (!isset($path)) {
 			$path = $this->cache->get('product.seopath');
-			if (!is_array($path)) $path = array();
+			if (!isset($path)) $path = array();
 		}
 
 		if (!isset($path[$product_id])) {
@@ -254,9 +268,9 @@ class ControllerCommonSeoPro extends Controller {
 		if ($category_id < 1) return false;
 
 		static $path = null;
-		if (!is_array($path)) {
+		if (!isset($path)) {
 			$path = $this->cache->get('category.seopath');
-			if (!is_array($path)) $path = array();
+			if (!isset($path)) $path = array();
 		}
 
 		if (!isset($path[$category_id])) {
@@ -286,6 +300,11 @@ class ControllerCommonSeoPro extends Controller {
 		if (isset($this->request->get['route']) && $this->request->get['route'] == 'error/not_found') {
 			return;
 		}
+		if (ltrim($this->request->server['REQUEST_URI'], '/') =='sitemap.xml') {
+			$this->request->get['route'] = 'feed/google_sitemap';
+			return;
+		}
+
 		if(empty($this->request->get['route'])) {
 			$this->request->get['route'] = 'common/home';
 		}
