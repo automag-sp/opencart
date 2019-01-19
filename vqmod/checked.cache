@@ -416,3 +416,4 @@ catalog/language/russian/checkout/success.php
 catalog/controller/account/forgotten.php
 catalog/language/russian/account/forgotten.php
 catalog/view/theme/lexus_happycook/template/account/forgotten.tpl
+catalog/controller/affiliate/transaction.php
