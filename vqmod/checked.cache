@@ -420,3 +420,5 @@ catalog/controller/affiliate/transaction.php
 catalog/view/theme/lexus_happycook/template/saleepc/kia/modifications.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/kia/groups.tpl
 catalog/view/theme/lexus_happycook/template/saleepc/kia/vin.tpl
+catalog/controller/account/wishlist.php
+catalog/language/russian/account/wishlist.php
