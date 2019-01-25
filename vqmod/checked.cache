@@ -423,3 +423,5 @@ catalog/view/theme/lexus_happycook/template/saleepc/kia/vin.tpl
 catalog/controller/account/wishlist.php
 catalog/language/russian/account/wishlist.php
 catalog/controller/affiliate/account.php
+catalog/view/theme/default/template/checkout/simplecheckout_cart_empty.tpl
+catalog/controller/affiliate/tracking.php
