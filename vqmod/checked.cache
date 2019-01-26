@@ -425,3 +425,8 @@ catalog/language/russian/account/wishlist.php
 catalog/controller/affiliate/account.php
 catalog/view/theme/default/template/checkout/simplecheckout_cart_empty.tpl
 catalog/controller/affiliate/tracking.php
+catalog/controller/account/voucher.php
+catalog/language/russian/account/voucher.php
+catalog/model/checkout/voucher_theme.php
+catalog/view/theme/lexus_happycook/template/account/voucher.tpl
+catalog/controller/affiliate/payment.php
