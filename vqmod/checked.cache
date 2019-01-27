@@ -430,3 +430,4 @@ catalog/language/russian/account/voucher.php
 catalog/model/checkout/voucher_theme.php
 catalog/view/theme/lexus_happycook/template/account/voucher.tpl
 catalog/controller/affiliate/payment.php
+catalog/controller/information/liber.php
