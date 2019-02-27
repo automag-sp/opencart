@@ -434,3 +434,4 @@ catalog/controller/information/liber.php
 catalog/controller/affiliate/register.php
 catalog/language/russian/affiliate/register.php
 catalog/view/theme/lexus_happycook/template/affiliate/register.tpl
+admin/view/template/catalog/information_list.tpl
