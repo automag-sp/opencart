@@ -450,3 +450,4 @@ admin/view/template/module/pavmap/location_form.tpl
 admin/controller/design/layout.php
 admin/language/russian/design/layout.php
 admin/view/template/design/layout_list.tpl
+catalog/controller/account/download.php
