@@ -526,3 +526,5 @@ admin/model/catalog/priceloader.php
 admin/view/template/catalog/priceloader_list.tpl
 admin/controller/module/account.php
 admin/view/template/module/account.tpl
+catalog/controller/account/success.php
+catalog/language/russian/account/success.php
