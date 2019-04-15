@@ -528,3 +528,4 @@ admin/controller/module/account.php
 admin/view/template/module/account.tpl
 catalog/controller/account/success.php
 catalog/language/russian/account/success.php
+catalog/view/theme/lexus_happycook/template/checkout/cart.tpl
