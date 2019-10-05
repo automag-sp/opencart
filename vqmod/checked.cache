@@ -534,3 +534,4 @@ admin/language/russian/user/user.php
 admin/view/template/user/user_list.tpl
 admin/model/user/user_group.php
 admin/view/template/user/user_form.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/vw/parts.tpl
