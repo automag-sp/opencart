@@ -563,3 +563,6 @@ admin/view/template/report/sale_order.tpl
 admin/controller/catalog/review.php
 admin/language/russian/catalog/review.php
 admin/view/template/catalog/review_list.tpl
+catalog/controller/information/sitemap.php
+catalog/language/russian/information/sitemap.php
+catalog/view/theme/lexus_happycook/template/information/sitemap.tpl
