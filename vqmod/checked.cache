@@ -569,3 +569,4 @@ catalog/view/theme/lexus_happycook/template/information/sitemap.tpl
 catalog/controller/payment/tinkoff.php
 catalog/view/theme/default/template/payment/tinkoff_checkout.tpl
 catalog/view/theme/lexus_happycook/template/account/order_info.tpl
+catalog/view/theme/lexus_happycook/template/saleepc/kia/subgroups.tpl
