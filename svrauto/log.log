@@ -1,3 +1,3 @@
-	2020-06-06 02:37:02	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
-	2020-06-06 02:37:11	:Fetched 18840751 bytes type 1
-	2020-06-06 02:37:11	:Disabled 869 items of type 1
+	2020-06-07 02:37:01	:Fetching http://webmim.svrauto.ru/api/v1/catalog/unload?access-token=lzVs7SZu42VZu-PjwfHahvPK1EH3X6_G&format=xml&gzip=0&types=1%3B2
+	2020-06-07 02:37:10	:Fetched 18751710 bytes type 1
+	2020-06-07 02:37:10	:Disabled 3 items of type 1
