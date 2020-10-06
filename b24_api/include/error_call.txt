@@ -8722,4 +8722,8 @@ Array
     [error] => expired_token
     [error_description] => The access token provided has expired.
 )
-Arra
+ArraArray
+(
+    [error] => expired_token
+    [error_description] => The access token provided has expired.
+)
