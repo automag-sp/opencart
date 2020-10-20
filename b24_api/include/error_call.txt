@@ -9002,3 +9002,18 @@ Array
     [error] => expired_token
     [error_description] => The access token provided has expired.
 )
+Array
+(
+    [error] => CONNECTION_ERROR
+    [error_description] => Error connecting to authorization server
+)
+Array
+(
+    [error] => expired_token
+    [error_description] => The access token provided has expired.
+)
+Array
+(
+    [error] => expired_token
+    [error_description] => The access token provided has expired.
+)
