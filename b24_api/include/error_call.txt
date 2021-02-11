@@ -10812,3 +10812,8 @@ Array
     [error] => ACCESS_DENIED
     [error_description] => REST is available only on commercial plans.
 )
+Array
+(
+    [error] => expired_token
+    [error_description] => The access token provided has expired.
+)
